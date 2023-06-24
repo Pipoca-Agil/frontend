@@ -13,6 +13,18 @@ export const Container = w.button(
   px-8
   sm:px-[46px] 
   transition duration-300
-  bg-custom-YELLOW   
-`
+`,
+  {
+    variants: {
+      variables: {
+        deafult: "bg-white",
+        primary: "bg-custom-YELLOW",
+        secondary:
+          "bg-custom-BLACK-100 text-custom-GRAY py-[19px] text-[1.25rem] font-semibold  w-[18.25rem]"
+      }
+    },
+    defaultVariants: {
+      variables: "deafult"
+    }
+  }
 );

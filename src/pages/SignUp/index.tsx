@@ -46,7 +46,7 @@ export function SignUp() {
                 size={24}
               />
               <Checkbox />
-              <Button title="Criar" />
+              <Button variable="secondary" title="Criar" />
             </S.Form>
           </aside>
         </S.Section>

@@ -7,7 +7,7 @@ export function Header() {
     <S.Container>
       <S.Nav>
         <img src={logo} alt="foto do ibson, dono do site" />
-        <Button title="Home" />
+        <Button variable="primary" title="Home" />
       </S.Nav>
     </S.Container>
   );
