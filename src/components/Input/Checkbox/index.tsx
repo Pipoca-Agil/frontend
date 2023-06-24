@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import * as S from "./style";
 
 type Checkbox = {

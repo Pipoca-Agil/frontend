@@ -10,5 +10,6 @@ export const GlobalStyle = createGlobalStyle`
   };
   body{
     background-color: #FFFCF3;
+    font-family: 'Inter', sans-serif;
   }
 `;
