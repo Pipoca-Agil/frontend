@@ -6,7 +6,7 @@ export const Container = w.main(`
   container 
   flex 
   flex-col 
-  items-center
+  items-center 
   justify-between 
 `);
 
@@ -19,7 +19,6 @@ export const Section = w.section(`
   items-center 
   justify-center 
   px-4 
-  lg:px-[11.375rem]
   md:gap-6 
   lg:justify-between 
 `);
@@ -32,11 +31,20 @@ export const Form = w.form(`
   gap-6 
   rounded-lg 
   border-2 
-  border-[#DCDCDC] 
-  px-3  
+  border-custom-GRAY
+  px-3 
   lg:px-6 
   pb-20 
   lg:pb-36 
   pt-7 
   lg:pt-14"
+`);
+export const TextBox = w.div(`
+  mb-8 
+  lg:mb-16
+  flex 
+  flex-col 
+  items-center
+  justify-center 
+  gap-6 
 `);

@@ -6,7 +6,7 @@ type Checkbox = {
 export function Checkbox({ text }: Checkbox) {
   return (
     <>
-      <div className="flex gap-2 items-center justify-center">
+      <div className="flex gap-2 items-center text-custom-BLACK-100 w-full">
         <S.Input id="checked-checkbox" type="checkbox" />
         <S.Label htmlFor="checked-checkbox">
           {text ? (

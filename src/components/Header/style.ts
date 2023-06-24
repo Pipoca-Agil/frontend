@@ -10,7 +10,6 @@ export const Container = w.header(`
 
 export const Nav = w.nav(`
   px-4 
-  lg:px-[11.375rem] 
   flex  container 
   items-center 
   justify-between
