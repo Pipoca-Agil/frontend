@@ -19,6 +19,7 @@ module.exports = {
       custom: {
         GREEN: "#37595B",
         YELLOW: "#FFBC11",
+        GOLD: "#D09600",
         BLACK: "#181818",
         "BLACK-100": "#141414",
         GRAY: "#DCDCDC"
