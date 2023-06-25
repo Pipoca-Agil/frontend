@@ -22,7 +22,8 @@ module.exports = {
         GOLD: "#D09600",
         BLACK: "#181818",
         "BLACK-100": "#141414",
-        GRAY: "#DCDCDC"
+        GRAY: "#DCDCDC",
+        RED: "#DB3838"
       }
     },
     plugins: []

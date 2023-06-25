@@ -1,5 +1,4 @@
 import { InputHTMLAttributes } from "react";
-import React from "react";
 
 import * as S from "./style";
 
@@ -8,11 +7,11 @@ interface checkBoxProps extends InputHTMLAttributes<HTMLInputElement> {
   errorMessage?: string;
 }
 
-export const Checkbox = React.forwardRef<HTMLInputElement, checkBoxProps>(
-  ({ text, errorMessage, ...props }, ref) => (
+export function Checkbox({ text }: checkBoxProps) {
+  return (
     <>
-      <div className="flex gap-2 items-baseline text-custom-BLACK-100 w-full">
-        <S.Input ref={ref} {...props} type="checkbox" />
+      <div className="flex gap-2 items-center justify-center">
+        <S.Input id="checked-checkbox" type="checkbox" />
         <S.Label htmlFor="checked-checkbox">
           {text ? (
             text
@@ -22,11 +21,8 @@ export const Checkbox = React.forwardRef<HTMLInputElement, checkBoxProps>(
               <S.Link href="#">Política de Privacidade</S.Link>
             </p>
           )}
-          {errorMessage && <S.P>{errorMessage}</S.P>}
         </S.Label>
       </div>
     </>
-  )
-);
-
-Checkbox.displayName = "Checkbox";
+  );
+}

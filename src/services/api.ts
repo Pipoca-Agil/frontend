@@ -13,6 +13,5 @@ const api = axios.create({
 export const createUser = async (user: INewUser): Promise<INewUser> => {
   const response = await api.post<INewUser>("user", user);
   const createdUser = await response.data;
-
   return createdUser;
 };
