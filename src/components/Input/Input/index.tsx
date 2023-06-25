@@ -5,25 +5,24 @@ import * as S from "./style";
 import { Eye } from "@phosphor-icons/react";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  type: string;
-  placeholder: string;
-  name: string;
+  errorMessage?: string;
   isPassword?: boolean;
-  size?: number;
 }
 export function Input({
-  size,
-  type,
-  placeholder,
+  errorMessage,
   isPassword = false,
-  name
+  ...props
 }: InputProps) {
   return (
     <>
       <S.Container>
-        <S.Input type={type} placeholder={placeholder} name={name} />
+        <S.Input {...props} />
         {isPassword && (
-          <Eye size={size} className="absolute right-3 cursor-pointer " />
+          <Eye size={24} className="absolute right-3 cursor-pointer " />
+        )}
+
+        {errorMessage && (
+          <p className="text-red-600 text-base font-medium">{errorMessage}</p>
         )}
       </S.Container>
     </>
