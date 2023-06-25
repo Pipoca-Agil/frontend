@@ -36,3 +36,9 @@ export const Link = w.a(`
   text-custom-GOLD 
   underline
 `);
+export const P = w.span(`
+  text-[#DB3838] 
+  text-base
+  font-thin
+  text-left
+`);

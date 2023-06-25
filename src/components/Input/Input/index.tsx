@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from "react";
+import React, { InputHTMLAttributes } from "react";
 
 import * as S from "./style";
 
@@ -8,23 +8,18 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   errorMessage?: string;
   isPassword?: boolean;
 }
-export function Input({
-  errorMessage,
-  isPassword = false,
-  ...props
-}: InputProps) {
-  return (
+export const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ errorMessage, isPassword = false, ...props }, ref) => (
     <>
       <S.Container>
-        <S.Input {...props} />
+        <S.Input ref={ref} {...props} />
         {isPassword && (
           <Eye size={24} className="absolute right-3 cursor-pointer " />
         )}
-
-        {errorMessage && (
-          <p className="text-red-600 text-base font-medium">{errorMessage}</p>
-        )}
+        {errorMessage && <S.P>{errorMessage}</S.P>}
       </S.Container>
     </>
-  );
-}
+  )
+);
+
+Input.displayName = "Input";

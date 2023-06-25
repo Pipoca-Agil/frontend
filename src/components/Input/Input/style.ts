@@ -3,7 +3,8 @@ import { w } from "windstitch";
 export const Container = w.fieldset(`
   relative 
   flex w-full 
-  items-center 
+  flex-col
+  items-start
   justify-center
 `);
 
@@ -21,4 +22,11 @@ export const Input = w.input(`
   text-base  
   font-normal 
   placeholder-black
+`);
+
+export const P = w.span(`
+  text-[#DB3838] 
+  text-base
+  font-thin
+  text-left
 `);

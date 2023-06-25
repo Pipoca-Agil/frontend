@@ -1,11 +1,12 @@
 import * as S from "./style";
 type ButtonProps = {
   title: string;
+  type: "button" | "submit" | "reset";
   variable?: "primary" | "secondary";
 };
-export function Button({ variable, title, ...props }: ButtonProps) {
+export function Button({ type, variable, title, ...props }: ButtonProps) {
   return (
-    <S.Container variables={variable} {...props}>
+    <S.Container type={type} {...props} variables={variable}>
       {title}
     </S.Container>
   );
