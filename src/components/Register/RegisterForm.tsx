@@ -1,49 +1,35 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useState, useContext} from 'react';
 import {RegisterContext} from '../../context/RegisterContext';
+import {type RegisterData} from '../../interfaces/formInterfaces';
 const RegisterForm: React.FC = () => {
 	const {setName, setLastName, setEmail, setPassword, setCheckPassword} = useContext(RegisterContext);
-	const [inputName, setInputName] = useState('');
-	const [inputLastName, setInputLastName] = useState('');
-	const [inputPassword, setInputPassword] = useState('');
-	const [inputEmail, setInputEmail] = useState('');
-	const [inputCheckPassword, setInputCheckPassword] = useState('');
 
-	const handleChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const {value} = event.target;
-		setInputName(value);
-	};
-
-	const handleChangeLastName = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const {value} = event.target;
-		setInputLastName(value);
-	};
-
-	const handleChangeEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const {value} = event.target;
-		setInputEmail(value);
-	};
-
-	const handleChangePassword = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const {value} = event.target;
-		setInputPassword(value);
-	};
-
-	const handleChangeCheckPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const {value} = event.target;
-		setInputCheckPassword(value);
+	const [formRegister, setFormRegister] = useState<RegisterData>({
+		name: '',
+		lastName: '',
+		email: '',
+		password: '',
+		checkPassword: '',
+	},
+	);
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		const {name, value} = event.target;
+		setFormRegister(prevFormRegister => ({
+			...prevFormRegister,
+			[name]: value,
+		}));
 	};
 
 	const handleClick = (): void => {
 		/*eslint-disable */
-		setName(inputName);
-		setLastName(inputLastName);
-		setEmail(inputEmail);
-		setPassword(inputPassword);
-		setCheckPassword(inputCheckPassword);
+		setName(formRegister.name);
+		setLastName(formRegister.lastName);
+		setEmail(formRegister.email);
+		setPassword(formRegister.password);
+		setCheckPassword(formRegister.checkPassword);
 		/*eslint-disable*/
 	};
-
 	return (
 		<form>
 			<div>
@@ -51,33 +37,38 @@ const RegisterForm: React.FC = () => {
 				<input
 					type='text'
 					id='name-field'
-					value={inputName}
-					onChange={handleChangeName}/>
+					name= 'name'
+					value={formRegister.name}
+					onChange={handleChange}/>
 				<label htmlFor='lastName-field'>Sobrenome*</label>
 				<input
 					type='text'
 					id='lastName-field'
-					value={inputLastName}
-					onChange={handleChangeLastName}/>
+					name= 'lastName'
+					value={formRegister.lastName}
+					onChange={handleChange}/>
 			</div>
 			<label htmlFor='email-field'>E-mail*</label>
 			<input
 				type='text'
 				id='email-field'
-				value={inputEmail}
-				onChange={handleChangeEmail}/>
+				name= 'email'
+				value={formRegister.email}
+				onChange={handleChange}/>
 			<label htmlFor='password-field'>Senha*</label>
 			<input
 				type='password'
 				id='password-field'
-				value={inputPassword}
-				onChange={handleChangePassword}/>
+				name='password'
+				value={formRegister.password}
+				onChange={handleChange}/>
 			<label htmlFor='confirmPassword-field'>Confirme sua Senha*</label>
 			<input
 				type='password'
 				id='confirmPassword-field'
-				value={inputCheckPassword}
-				onChange={handleChangeCheckPassword}/>
+				name='checkPassword'
+				value={formRegister.checkPassword}
+				onChange={handleChange}/>
 			<div>
 				<input type='checkbox' id='terms'/>
 				<label htmlFor='terms'>
