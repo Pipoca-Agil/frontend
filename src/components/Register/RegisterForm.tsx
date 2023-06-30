@@ -1,18 +1,12 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useState, useContext} from 'react';
 import {RegisterContext} from '../../context/RegisterContext';
-import {type RegisterData} from '../../interfaces/formInterfaces';
-const RegisterForm: React.FC = () => {
-	const {setName, setLastName, setEmail, setPassword, setCheckPassword} = useContext(RegisterContext);
+import {type RegisterData} from '../../interfaces/registerInterfaces';
+import {inicialRegisterData} from '../../assets/consts';
 
-	const [formRegister, setFormRegister] = useState<RegisterData>({
-		name: '',
-		lastName: '',
-		email: '',
-		password: '',
-		checkPassword: '',
-	},
-	);
+const RegisterForm: React.FC = () => {
+	const {setRegisterData} = useContext(RegisterContext);
+	const [formRegister, setFormRegister] = useState<RegisterData>(inicialRegisterData);
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const {name, value} = event.target;
 		setFormRegister(prevFormRegister => ({
@@ -22,14 +16,9 @@ const RegisterForm: React.FC = () => {
 	};
 
 	const handleClick = (): void => {
-		/*eslint-disable */
-		setName(formRegister.name);
-		setLastName(formRegister.lastName);
-		setEmail(formRegister.email);
-		setPassword(formRegister.password);
-		setCheckPassword(formRegister.checkPassword);
-		/*eslint-disable*/
+		setRegisterData(formRegister);
 	};
+
 	return (
 		<form>
 			<div>

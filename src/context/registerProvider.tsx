@@ -1,31 +1,14 @@
 import React, {useMemo, useState, ReactNode} from 'react';
 import {RegisterContext} from './RegisterContext';
-import type{FormContextValue, RegisterProviderProps} from './contextInterface';
-
+import type{RegisterData, RegisterProviderProps} from '../interfaces/registerInterfaces';
+import {inicialRegisterData} from '../assets/consts';
 // eslint-disable-next-line
 const RegisterProvider = ({children}:RegisterProviderProps) => {
-	const [name, setName] = useState('');
-	const [lastName, setLastName] = useState('');
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
-	const [checkPassword, setCheckPassword] = useState('');
-
+	const [registerData, setRegisterData] = useState<RegisterData>(inicialRegisterData);
 	const context = useMemo(() => ({
-		name,
-		lastName,
-		email,
-		password,
-		checkPassword,
-		setName,
-		setLastName,
-		setEmail,
-		setPassword,
-		setCheckPassword,
-	}), [name,
-		lastName,
-		email,
-		password,
-		checkPassword]);
+		registerData,
+		setRegisterData,
+	}), [registerData]);
 	return (
 		<RegisterContext.Provider value={context}>
 			{children}
