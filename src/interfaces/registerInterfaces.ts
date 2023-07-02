@@ -13,3 +13,12 @@ export type RegisterContextValue = {
 export type RegisterProviderProps = {
 	children: React.ReactNode;
 };
+
+export type PasswordRequirements = {
+	arePasswordsEqual: [boolean, string];
+	passLen: [boolean, string];
+	containsUpperCase: [boolean, string];
+	containsLowerCase: [boolean, string];
+	containsNumber: [boolean, string];
+	containsSpecialCharacters: [boolean, string];
+};

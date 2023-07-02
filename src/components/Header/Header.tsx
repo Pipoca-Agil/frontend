@@ -1,7 +1,7 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import {HeaderWrapper, ActionWrapper, HeaderButton} from './HeaderStyle';
-import Logo from '../../assets/Logo.png';
+import Logo from '../../assets/icons/Logo.png';
 
 const Header: React.FC = () => {
 	const navigate = useNavigate();
