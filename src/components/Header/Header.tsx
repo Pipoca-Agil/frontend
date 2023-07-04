@@ -1,19 +1,20 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import {HeaderWrapper, ActionWrapper, HeaderButton} from './HeaderStyle';
+import {ActionWrapper, HeaderButton} from '../../styles/Header';
+import {HeaderWrapper} from '../../styles/Register';
 import Logo from '../../assets/icons/Logo.png';
-
+import {navigateTo} from '../../functions/headerFunctions';
 const Header: React.FC = () => {
 	const navigate = useNavigate();
-	const buttonValue = 'Login';
+	const currentUrl = window.location.href;
 	return (
 		<HeaderWrapper>
 			<ActionWrapper>
 				<img alt='logo-icon' src={Logo}/>
 				<HeaderButton onClick={() => {
-					navigate('/login');
+					navigate(`/${navigateTo(currentUrl)}`);
 				}}>
-					{`${buttonValue}`}
+					{`${navigateTo(currentUrl)}`}
 				</HeaderButton>
 
 			</ActionWrapper>

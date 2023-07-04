@@ -1,4 +1,4 @@
-import React, {useMemo, useState, ReactNode} from 'react';
+import React, {useMemo, useState} from 'react';
 import {RegisterContext} from './RegisterContext';
 import type{RegisterData, RegisterProviderProps} from '../interfaces/registerInterfaces';
 import {inicialRegisterData} from '../assets/utils';

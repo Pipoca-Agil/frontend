@@ -1,14 +1,6 @@
 /* eslint-disable */
 import styled from 'styled-components';
 
-export const HeaderWrapper = styled.div`
-background: linear-gradient(135deg, rgba(148, 20, 109, 0.80) 0%, rgba(241, 77, 26, 0.88) 100%);
-box-shadow: 0px 0px 51px 0px rgba(0, 0, 0, 0.15);
- width: 100%;
- height: 8rem;
- 
- /* height: 133px; */
-`;
 export const ActionWrapper = styled.div `
  display: flex;
  padding: 12px, 18px, 12px, 18px;

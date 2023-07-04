@@ -65,3 +65,16 @@ export const checkPass = (values: RegisterData) => {
 	return arrRequirements;
 };
 
+export const checkForm = (values: RegisterData, checked: boolean): boolean => {
+	const checkName = validateName(values.name);
+	const checkLenPass = values.password.length > 0 && values.checkPassword.length > 0;
+	const checkLastName = validateLastName(values.lastName);
+	const checkEmail = validateEmail(values.email);
+	const verifyCheckPass = checkPass(values);
+	if ((verifyCheckPass === true && checkLenPass)
+		&& checkName && checkLastName && checkEmail && checked) {
+		return true;
+	}
+
+	return false;
+};
