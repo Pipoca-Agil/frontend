@@ -12,6 +12,9 @@ grid-template-areas:
 '. . . .'
 ;
 height: 100vh;
+&.fade {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 `
 export const HeaderWrapper = styled.div`
 background: linear-gradient(135deg, rgba(148, 20, 109, 0.80) 0%, rgba(241, 77, 26, 0.88) 100%);

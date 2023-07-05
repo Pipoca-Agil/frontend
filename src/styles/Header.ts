@@ -1,14 +1,14 @@
-/* eslint-disable */
+/* eslint-disable @typescript-eslint/naming-convention */
 import styled from 'styled-components';
 
-export const ActionWrapper = styled.div `
+export const ActionWrapper = styled.div`
  display: flex;
  padding: 12px, 18px, 12px, 18px;
  align-items: center;
  justify-content: space-between;
  margin: 0 10rem 0 10rem;
-`
-export const HeaderButton = styled.button `
+`;
+export const HeaderButton = styled.button`
 border-radius: 1.5rem;
 border: none;
 width: 8.375rem;
@@ -22,5 +22,4 @@ font-family: Inter;
 font-style: normal;
 font-weight: 700;
 line-height: 1rem;
-`
-/* eslint-disable */
+`;

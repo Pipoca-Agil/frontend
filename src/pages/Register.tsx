@@ -1,15 +1,23 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import RegisterComponent from '../components/Register/Register';
 import Header from '../components/Header/Header';
 import {RegisterWrapper} from '../styles/Register';
 import PhotosContainer from '../components/photos/Photos';
+import RegisterModal from '../components/modal/Register';
+import {RegisterModalContext} from '../context/RegisterContext';
+import {fadeBackground} from '../functions/registerFunctions';
+const Register: React.FC = () => {
+	const {visible} = useContext(RegisterModalContext);
+	const addClassFade = fadeBackground(visible);
 
-const Register: React.FC = () => (
-	<RegisterWrapper>
-		<Header/>
-		<PhotosContainer/>
-		<RegisterComponent/>
-	</RegisterWrapper>
-);
+	return (
+		<RegisterWrapper className={addClassFade}>
+			<Header/>
+			<PhotosContainer/>
+			<RegisterComponent/>
+			{visible && <RegisterModal/>}
+		</RegisterWrapper>
+	);
+};
 
 export default Register;

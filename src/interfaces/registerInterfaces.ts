@@ -31,6 +31,8 @@ export type RegisterProviderProps = {
 
 export type ModalContext = {
 	visible: boolean;
+	newRegister: boolean;
+	setNewRegister: React.Dispatch<React.SetStateAction<boolean>>;
 	setVisible: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
@@ -47,4 +49,6 @@ export type RegisterModalType = {
 	icon: string;
 	title: string;
 	message: string;
+	backgroundColor: string;
+	buttonBackgroundColor: string;
 };

@@ -7,7 +7,6 @@ export const FormWrapper = styled.form`
   font-size: 1rem;
   font-family: Inter;
   font-style: normal;
-  background: #FFFCF3;
   font-size: 0.875rem;
   /* padding: 1rem; */
   gap: 1rem;

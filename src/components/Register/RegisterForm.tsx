@@ -4,7 +4,7 @@ import React, {
 	useContext,
 } from 'react';
 
-import {RegisterContext} from '../../context/RegisterContext';
+import {RegisterContext, RegisterModalContext} from '../../context/RegisterContext';
 import {type RegisterData} from '../../interfaces/registerInterfaces';
 import {inicialRegisterData} from '../../assets/utils';
 import eye from '../../assets/icons/eye.svg';
@@ -15,6 +15,7 @@ import {registerToken} from '../../localStorage/index';
 import {
 	checkPass,
 	checkForm,
+	fadeBackground,
 } from '../../functions/registerFunctions';
 import {postRegister} from '../../api/Register';
 import {
@@ -36,11 +37,11 @@ import {
 const RegisterForm: React.FC = () => {
 	const [isChecked, setIsChecked] = useState(false);
 	const {setRegisterData} = useContext(RegisterContext);
+	const {setVisible, setNewRegister, visible} = useContext(RegisterModalContext);
 	const [formRegister, setFormRegister] = useState<RegisterData>(inicialRegisterData);
 	const [submitBtn, setSubmitBtn] = useState<boolean>(true);
 	const [typePassword, setTypePassword] = useState(true);
 	const [typeCheckPassword, setTypeCheckPassword] = useState(true);
-	const [modal, setModal] = useState(false);
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const {name, value} = event.target;
@@ -71,9 +72,10 @@ const RegisterForm: React.FC = () => {
 	};
 
 	const verifyCheckPass = checkPass(formRegister);
-
+	const addFadeClass = fadeBackground(visible);
 	const handleClick = async () => {
 		setRegisterData(formRegister);
+		setVisible(true);
 		const requestBody = {
 			name: formRegister.name,
 			surname: formRegister.lastName,
@@ -84,10 +86,10 @@ const RegisterForm: React.FC = () => {
 		if (typeof postData !== 'undefined' && 'token' in postData) {
 			console.log('Success! Token:', postData.token);
 			registerToken(postData.token);
-			setModal(true);
+			setNewRegister(true);
 		} else if (typeof postData !== 'undefined' && 'message' in postData) {
 			console.log('Error:', postData.message);
-			setModal(true);
+			setNewRegister(false);
 		}
 	};
 
@@ -109,7 +111,7 @@ const RegisterForm: React.FC = () => {
 	};
 
 	return (
-		<FormWrapper>
+		<FormWrapper className={addFadeClass}>
 			<NameLastName>
 				<InputField
 					type='text'

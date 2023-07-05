@@ -1,4 +1,8 @@
-import {type PasswordRequirements, type RegisterData} from '../interfaces/registerInterfaces';
+import {
+	type PasswordRequirements,
+	type RegisterData,
+	type RegisterModalType,
+} from '../interfaces/registerInterfaces';
 
 export const passHasUppercaseLetter = (pass: string): boolean => /[A-Z]/.test(pass);
 export const passHasLowercaseLetter = (str: string): boolean => /[a-z]/.test(str);
@@ -78,3 +82,31 @@ export const checkForm = (values: RegisterData, checked: boolean): boolean => {
 
 	return false;
 };
+
+export const modalInfo = (
+	success: string,
+	fail: string,
+	userCreated: boolean,
+): RegisterModalType => {
+	if (userCreated) {
+		return ({
+			icon: success,
+			title: 'Sucesso!',
+			message: `Seu cadastro foi efetuado com sucesso! Verifique seu e-mail 
+			com instruções para ativar a conta.`,
+			backgroundColor: '#FFFCF3',
+			buttonBackgroundColor: '#25AE88',
+		});
+	}
+
+	return ({
+		icon: fail,
+		title: 'Erro ao criar cadastro!',
+		message: `Verifique se as informações descritas
+		no momento do cadastro estão corretas e tente novamente.`,
+		backgroundColor: '#FFAEAE',
+		buttonBackgroundColor: '#C00000',
+	});
+};
+
+export const fadeBackground = (modalIsVisible: boolean) => modalIsVisible ? 'fade' : '';
