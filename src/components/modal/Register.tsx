@@ -14,8 +14,13 @@ const RegisterModal: React.FC = () => {
 				style={{backgroundColor: renderInfo.backgroundColor}}
 			>
 				<ModalIcon src={renderInfo.icon} alt='icon'/>
-				<h1>{renderInfo.title}</h1>
-				<p>{renderInfo.message}</p>
+				<h1
+					style={{fontWeight: '600', fontSize: '1.5rem'}}
+				>
+					{renderInfo.title}</h1>
+				<p
+					style={{fontWeight: '300', fontSize: '1rem', width: '75%'}}
+				>{renderInfo.message}</p>
 				<ModalButton
 					type='button'
 					onClick={() => {

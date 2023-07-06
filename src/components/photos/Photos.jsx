@@ -1,13 +1,28 @@
 import React from 'react';
 import {Photos} from '../../styles/Register';
+import {
+	FirstLayer,
+	SecondLayer,
+	PhotoLayer,
+	PhotoImg,
+	// LayerWrapper,
+} from '../../styles/Photo';
+import firstLayer from '../../assets/vector/Vector.svg';
+import secondLayer from '../../assets/vector/Vector2layer.svg';
+import photo from '../../assets/vector/photo.png';
 
-const PhotosContainer = () => {
-	const photos = 'fotos do Ibson';
+function PhotosContainer() {
 	return (
 		<Photos>
-			<h1>{photos}</h1>
+			<div>
+				<FirstLayer src={firstLayer} />
+				<PhotoLayer>
+					<SecondLayer src={secondLayer} />
+					<PhotoImg src={photo}/>
+				</PhotoLayer>
+			</div>
 		</Photos>
 	);
-};
+}
 
 export default PhotosContainer;

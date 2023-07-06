@@ -108,5 +108,3 @@ export const modalInfo = (
 		buttonBackgroundColor: '#C00000',
 	});
 };
-
-export const fadeBackground = (modalIsVisible: boolean) => modalIsVisible ? 'fade' : '';

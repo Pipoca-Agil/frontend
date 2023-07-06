@@ -15,7 +15,6 @@ import {registerToken} from '../../localStorage/index';
 import {
 	checkPass,
 	checkForm,
-	fadeBackground,
 } from '../../functions/registerFunctions';
 import {postRegister} from '../../api/Register';
 import {
@@ -37,7 +36,7 @@ import {
 const RegisterForm: React.FC = () => {
 	const [isChecked, setIsChecked] = useState(false);
 	const {setRegisterData} = useContext(RegisterContext);
-	const {setVisible, setNewRegister, visible} = useContext(RegisterModalContext);
+	const {setVisible, setNewRegister} = useContext(RegisterModalContext);
 	const [formRegister, setFormRegister] = useState<RegisterData>(inicialRegisterData);
 	const [submitBtn, setSubmitBtn] = useState<boolean>(true);
 	const [typePassword, setTypePassword] = useState(true);
@@ -72,7 +71,7 @@ const RegisterForm: React.FC = () => {
 	};
 
 	const verifyCheckPass = checkPass(formRegister);
-	const addFadeClass = fadeBackground(visible);
+
 	const handleClick = async () => {
 		setRegisterData(formRegister);
 		setVisible(true);
@@ -111,7 +110,7 @@ const RegisterForm: React.FC = () => {
 	};
 
 	return (
-		<FormWrapper className={addFadeClass}>
+		<FormWrapper>
 			<NameLastName>
 				<InputField
 					type='text'

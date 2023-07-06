@@ -5,13 +5,10 @@ import {RegisterWrapper} from '../styles/Register';
 import PhotosContainer from '../components/photos/Photos';
 import RegisterModal from '../components/modal/Register';
 import {RegisterModalContext} from '../context/RegisterContext';
-import {fadeBackground} from '../functions/registerFunctions';
 const Register: React.FC = () => {
 	const {visible} = useContext(RegisterModalContext);
-	const addClassFade = fadeBackground(visible);
-
 	return (
-		<RegisterWrapper className={addClassFade}>
+		<RegisterWrapper>
 			<Header/>
 			<PhotosContainer/>
 			<RegisterComponent/>
