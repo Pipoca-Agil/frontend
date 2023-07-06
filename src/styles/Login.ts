@@ -47,3 +47,7 @@ cursor: pointer;
 color: #D09600;
 text-decoration: underline;
 `;
+export const LoginPass = styled.div`
+display: flex;
+justify-content: space-evenly;
+`;

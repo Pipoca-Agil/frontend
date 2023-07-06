@@ -13,7 +13,7 @@ import {
 	SubmitBtn,
 	FormWrapper,
 } from '../../styles/RegisterForm';
-import {LoginFormContainer} from '../../styles/Login';
+import {LoginFormContainer, LoginPass} from '../../styles/Login';
 import square from '../../assets/icons/square.svg';
 import box from '../../assets/icons/box.svg';
 import eye from '../../assets/icons/eye.svg';
@@ -64,9 +64,7 @@ const LoginForm: React.FC = () => {
 					onClick={toggleTypePassword}
 				/>
 			</PasswordField>
-			<div
-				style={{display: 'flex', justifyContent: 'space-between'}}
-			>
+			<LoginPass>
 				<CheckboxTerms htmlFor='forgotPassCheck'>
 					<CheckBox
 						type='checkbox'
@@ -77,7 +75,7 @@ const LoginForm: React.FC = () => {
         Lembrar-me
 				</CheckboxTerms>
 				<TermsColor>Esqueceu sua senha?</TermsColor>
-			</div>
+			</LoginPass>
 			<SubmitBtn>Entrar</SubmitBtn>
 		</FormWrapper>
 	);
