@@ -13,3 +13,7 @@ export const modalInicial = {
 export const isRegisterNew = {
 	newRegister: false,
 };
+export const inicialLoginState = {
+	email: '',
+	password: '',
+};

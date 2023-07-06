@@ -3,6 +3,8 @@ export const navigateTo = (url: string): string => {
 	switch (currentPath) {
 		case '/':
 			return 'Login';
+		case '/Home':
+			return 'Login';
 		default:
 			return 'Home';
 	}

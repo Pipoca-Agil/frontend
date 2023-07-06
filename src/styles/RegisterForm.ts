@@ -16,6 +16,10 @@ gap: 1rem;
 `;
 export const PasswordField = styled.div`
 position: relative;
+&.loginInput {
+  /* align-self: center;
+  width: 65%; */
+};
 `;
 export const EyeIcon = styled.img`
 position: absolute;
@@ -24,6 +28,9 @@ top:0.5rem;
 width: 1.2rem;
 color: #141414;
 cursor: pointer;
+&.loginInput {
+  left: 75%;
+}
 `;
 export const InputField = styled.input`
 border-radius: 1.5rem;
@@ -37,7 +44,10 @@ background-color: #FFFCF3;
 &.regularInputSize {
   width: 96.5%;
   }
-
+  &.loginInput{
+    margin-left: 10%;
+    width: 70%;
+  }
   &::placeholder {
     color: #141414;
   }

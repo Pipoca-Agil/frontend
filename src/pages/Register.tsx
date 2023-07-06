@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import RegisterComponent from '../components/Register/Register';
 import Header from '../components/Header/Header';
 import {RegisterWrapper} from '../styles/Register';
-import PhotosContainer from '../components/photos/Photos';
+import PhotosContainer from '../components/Register/Photos';
 import RegisterModal from '../components/modal/Register';
 import {RegisterModalContext} from '../context/RegisterContext';
 const Register: React.FC = () => {

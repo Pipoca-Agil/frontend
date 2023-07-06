@@ -8,9 +8,9 @@ import {RegisterContext, RegisterModalContext} from '../../context/RegisterConte
 import {type RegisterData} from '../../interfaces/registerInterfaces';
 import {inicialRegisterData} from '../../assets/utils';
 import eye from '../../assets/icons/eye.svg';
+import eyeClosed from '../../assets/icons/eye-closed.svg';
 import square from '../../assets/icons/square.svg';
 import box from '../../assets/icons/box.svg';
-import eyeClosed from '../../assets/icons/eye-closed.svg';
 import {registerToken} from '../../localStorage/index';
 import {
 	checkPass,
@@ -141,7 +141,11 @@ const RegisterForm: React.FC = () => {
 					value={formRegister.password}
 					style={verifyCheckPass instanceof Array ? {borderColor: '#C00000', color: '#C00000'} : {}}
 					onChange={handleChange} />
-				<EyeIcon src={typePassword ? eye : eyeClosed} alt='makes password visible/invisible' onClick={toggleTypePassword} />
+				<EyeIcon
+					src={typePassword ? eye : eyeClosed}
+					alt='makes password visible/invisible'
+					onClick={toggleTypePassword}
+				/>
 			</PasswordField>
 			<div>
 				<PasswordField>

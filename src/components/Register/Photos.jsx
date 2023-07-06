@@ -5,7 +5,6 @@ import {
 	SecondLayer,
 	PhotoLayer,
 	PhotoImg,
-	// LayerWrapper,
 } from '../../styles/Photo';
 import firstLayer from '../../assets/vector/Vector.svg';
 import secondLayer from '../../assets/vector/Vector2layer.svg';
