@@ -31,8 +31,8 @@ export type RegisterProviderProps = {
 
 export type ModalContext = {
 	visible: boolean;
-	newRegister: boolean;
-	setNewRegister: React.Dispatch<React.SetStateAction<boolean>>;
+	newRegister: boolean | undefined;
+	setNewRegister: React.Dispatch<React.SetStateAction<boolean | undefined>>;
 	setVisible: React.Dispatch<React.SetStateAction<boolean>>;
 };
 

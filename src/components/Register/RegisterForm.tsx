@@ -51,7 +51,7 @@ const RegisterForm: React.FC = () => {
 	};
 
 	useEffect(() => {
-		const setEnableBtn = checkForm(formRegister, isChecked);
+		const setEnableBtn = checkForm(formRegister);
 		if (setEnableBtn) {
 			setSubmitBtn(false);
 		}
@@ -177,7 +177,7 @@ const RegisterForm: React.FC = () => {
 			</CheckboxTerms> */}
 			<SubmitBtn
 				type='button'
-				disabled={!checkForm(formRegister, isChecked) && submitBtn}
+				disabled={!checkForm(formRegister) && submitBtn}
 				onClick={handleClick}
 			>
 				Criar

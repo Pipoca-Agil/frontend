@@ -20,6 +20,7 @@ text-align: center;
 font-family: Inter;
 font-style: normal;
 line-height: 1rem;
+width: 30%;
 `;
 export const ModalWrapper = styled.div`
 width: 100vw;
@@ -42,5 +43,6 @@ border-radius: 1.5rem;
 color: #DCDCDC;
 font-size: 1rem;
 font-weight: 600;
+cursor: pointer;
 `;
 

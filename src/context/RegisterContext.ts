@@ -9,7 +9,7 @@ export const RegisterContext = createContext<RegisterContextValue>({
 });
 export const RegisterModalContext = createContext<ModalContext>({
 	visible: false,
-	newRegister: false,
+	newRegister: false as boolean || undefined,
 	setNewRegister: () => isRegisterNew,
 	setVisible: () => modalInicial,
 });

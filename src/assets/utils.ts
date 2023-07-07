@@ -11,7 +11,7 @@ export const modalInicial = {
 	visible: false,
 };
 export const isRegisterNew = {
-	newRegister: false,
+	newRegister: undefined,
 };
 export const inicialLoginState = {
 	email: '',

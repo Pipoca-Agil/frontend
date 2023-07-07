@@ -8,6 +8,7 @@ const RegisterModal: React.FC = () => {
 	const {newRegister, setVisible} = useContext(RegisterModalContext);
 
 	const renderInfo = modalInfo(successIcon, failIcon, newRegister);
+
 	return (
 		<ModalWrapper>
 			<ModalSection

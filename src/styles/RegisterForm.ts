@@ -92,7 +92,7 @@ export const SubmitBtn = styled.button`
 border-radius: 1.5rem;
 padding: 0.5rem;
 background: #141414;
-width: 15rem;
+width: 10rem;
 align-self: center;
 cursor: pointer;
 text-align: center;

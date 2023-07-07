@@ -4,7 +4,7 @@ import type{RegisterProviderProps} from '../interfaces/registerInterfaces';
 // eslint-disable-next-line
 const ModalProvider = ({children}:RegisterProviderProps) => {
 	const [visible, setVisible] = useState<boolean>(false);
-	const [newRegister, setNewRegister] = useState<boolean>(false);
+	const [newRegister, setNewRegister] = useState<boolean | undefined>(undefined);
 	const context = useMemo(() => ({
 		visible,
 		newRegister,
