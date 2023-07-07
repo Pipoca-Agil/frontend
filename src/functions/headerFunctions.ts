@@ -1,9 +1,7 @@
 export const navigateTo = (url: string): string => {
-	const currentPath = url.replace('http://localhost:3000', '');
+	const currentPath = url.endsWith('/home') || url.endsWith('.app');
 	switch (currentPath) {
-		case '/':
-			return 'Login';
-		case '/Home':
+		case true:
 			return 'Login';
 		default:
 			return 'Home';

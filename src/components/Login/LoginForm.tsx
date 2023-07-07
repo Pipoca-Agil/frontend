@@ -76,7 +76,7 @@ const LoginForm: React.FC = () => {
 				</CheckboxTerms>
 				<TermsColor>Esqueceu sua senha?</TermsColor>
 			</LoginPass>
-			<SubmitBtn>Entrar</SubmitBtn>
+			<SubmitBtn type='button'>Entrar</SubmitBtn>
 		</FormWrapper>
 	);
 };
