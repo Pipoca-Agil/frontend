@@ -64,7 +64,7 @@ const LoginForm: React.FC = () => {
 					onClick={toggleTypePassword}
 				/>
 			</PasswordField>
-			<LoginPass>
+			{/* <LoginPass>
 				<CheckboxTerms htmlFor='forgotPassCheck'>
 					<CheckBox
 						type='checkbox'
@@ -75,7 +75,7 @@ const LoginForm: React.FC = () => {
         Lembrar-me
 				</CheckboxTerms>
 				<TermsColor>Esqueceu sua senha?</TermsColor>
-			</LoginPass>
+			</LoginPass> */}
 			<SubmitBtn type='button'>Entrar</SubmitBtn>
 		</FormWrapper>
 	);

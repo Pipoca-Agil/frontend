@@ -166,7 +166,7 @@ const RegisterForm: React.FC = () => {
 				{verifyCheckPass instanceof Array && renderRequirements(verifyCheckPass)}
 			</div>
 
-			<CheckboxTerms htmlFor='terms'>
+			{/* <CheckboxTerms htmlFor='terms'>
 				<CheckBox
 					type='checkbox'
 					id='terms'
@@ -174,7 +174,7 @@ const RegisterForm: React.FC = () => {
 					onClick={handleCheckboxToggle} />
 				<CheckedIcon src={isChecked ? box : square} alt='checkbox' />
 					Li e concordo com os <TermsColor>Termos de uso</TermsColor> e <TermsColor>Política de Privacidade</TermsColor>
-			</CheckboxTerms>
+			</CheckboxTerms> */}
 			<SubmitBtn
 				type='button'
 				disabled={!checkForm(formRegister, isChecked) && submitBtn}
