@@ -1,5 +1,7 @@
 export const navigateTo = (url: string): string => {
-	const currentPath = url.endsWith('/home') || url.endsWith('.app');
+	console.log('url => ', url);
+	const currentPath = url.endsWith('/Home') || url.endsWith('app') || url.endsWith('/');
+	console.log('currentPath => ', currentPath);
 	switch (currentPath) {
 		case true:
 			return 'Login';
