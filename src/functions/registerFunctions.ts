@@ -92,8 +92,7 @@ export const modalInfo = (
 		return ({
 			icon: success,
 			title: 'Sucesso!',
-			message: `Seu cadastro foi efetuado com sucesso! Verifique seu e-mail 
-			com instruções para ativar a conta.`,
+			message: 'Seu cadastro foi efetuado com sucesso!',
 			backgroundColor: '#FFFCF3',
 			buttonBackgroundColor: '#25AE88',
 		});
