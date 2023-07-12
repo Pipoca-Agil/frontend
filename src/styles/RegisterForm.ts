@@ -100,4 +100,7 @@ color: #DCDCDC;
 font-size: 1rem;
 font-weight: 600;
 font-style: normal;
+&:hover {
+  background-color: #252525;
+}
 `;
