@@ -7,7 +7,7 @@ import {
 export const passHasUppercaseLetter = (pass: string): boolean => /[A-Z]/.test(pass);
 export const passHasLowercaseLetter = (str: string): boolean => /[a-z]/.test(str);
 export const passHasNumber = (str: string): boolean => /[0-9]/.test(str);
-export const passHasSpecialCharacters = (str: string): boolean => /[#!\-_&]/.test(str);
+export const passHasSpecialCharacters = (str: string): boolean => /[!@#$%^&*()\-=_+{}[\]|:;"'<>,.?/]/.test(str);
 
 export const passwordsMatch = (pass: string, confirmPass: string): boolean => pass === confirmPass;
 export const validateEmail = (mail: string): boolean => {
