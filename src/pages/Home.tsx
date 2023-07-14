@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
 	return (
 		<HomeContainer>
 			<Header/>
-			<ImgHome src={imgHome}/>
+			<ImgHome src={imgHome} alt='homepage-default-img'/>
 		</HomeContainer>
 
 	);
