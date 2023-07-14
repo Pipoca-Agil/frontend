@@ -8,14 +8,17 @@ const LoginPhotos: React.FC = () => (
 		<LoginImg
 			src={first}
 			className='firstPhoto'
+			alt='a microphone'
 		/>
 		<LoginImg
 			src={second}
 			className='secondPhoto'
+			alt='a man smiling'
 		/>
 		<LoginImg
 			src={third}
 			className='thirdPhoto'
+			alt='a man with arms crossed'
 		/>
 	</PhotosContainer>
 );
