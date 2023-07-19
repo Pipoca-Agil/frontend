@@ -106,6 +106,7 @@ const RegisterForm: React.FC = () => {
 		}
 	};
 
+	const buttonChecker = !checkForm(formRegister) && submitBtn;
 	return (
 		<FormWrapper>
 			<NameLastName>
@@ -177,8 +178,10 @@ const RegisterForm: React.FC = () => {
 			</CheckboxTerms> */}
 			<SubmitBtn
 				type='button'
-				disabled={!checkForm(formRegister) && submitBtn}
+				disabled={buttonChecker}
+				title={buttonChecker ? 'Preencha todos os campos' : 'Criar cadastro'}
 				onClick={handleClick}
+				style={buttonChecker ? {cursor: 'not-allowed'} : {}}
 			>
 				Criar
 			</SubmitBtn>
