@@ -161,7 +161,7 @@ const RegisterForm: React.FC = () => {
 				</PasswordField>
 				{verifyCheckPass === true
 					&& <PasswordInstructions>
-						Sua senha deve conter entre 8 caracteres, uma letra maiúscula, uma minúscula e um número.
+						ATENÇÃO! Sua senha deve conter entre 8  a 12 caracteres, sendo letras maiúscula e minúscula, números e caracteres especiais
 					</PasswordInstructions>}
 				{verifyCheckPass instanceof Array && renderRequirements(verifyCheckPass)}
 			</div>

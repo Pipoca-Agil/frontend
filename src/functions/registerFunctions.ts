@@ -20,7 +20,7 @@ export const validateLastName = (lastName: string) => lastName.length >= 3;
 export const passwordRequirementsCheck = (pass: string, confirmPass: string): true | PasswordRequirements => {
 	let isPasswordValid: true | PasswordRequirements;
 	const arePasswordsEqual = passwordsMatch(pass, confirmPass);
-	const passLen = pass.length >= 8;
+	const passLen = pass.length >= 8 && pass.length <= 12;
 	const containsUpperCase = passHasUppercaseLetter(pass);
 	const containsLowerCase = passHasLowercaseLetter(pass);
 	const containsNumber = passHasNumber(pass);
@@ -39,7 +39,7 @@ export const passwordRequirementsCheck = (pass: string, confirmPass: string): tr
 	} else {
 		isPasswordValid = {
 			arePasswordsEqual: [arePasswordsEqual, 'As senhas devem ser iguais'],
-			passLen: [passLen, '8 caracteres'],
+			passLen: [passLen, '8 a 12 caracteres'],
 			containsUpperCase: [containsUpperCase, 'Letra maiúscula'],
 			containsLowerCase: [containsLowerCase, 'Letra minúscula'],
 			containsNumber: [containsNumber, 'Número'],
