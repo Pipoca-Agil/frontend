@@ -16,10 +16,6 @@ gap: 1rem;
 `;
 export const PasswordField = styled.div`
 position: relative;
-&.loginInput {
-  /* align-self: center;
-  width: 65%; */
-};
 `;
 export const EyeIcon = styled.img`
 position: absolute;

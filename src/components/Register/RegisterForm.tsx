@@ -15,6 +15,7 @@ import {registerToken} from '../../localStorage/index';
 import {
 	checkPass,
 	checkForm,
+	validateEmail,
 } from '../../functions/registerFunctions';
 import {postRegister} from '../../api/Register';
 import {
@@ -26,10 +27,6 @@ import {
 	PasswordInstructions,
 	RequirementsList,
 	PasswordFailed,
-	CheckboxTerms,
-	TermsColor,
-	CheckBox,
-	CheckedIcon,
 	SubmitBtn,
 } from '../../styles/RegisterForm';
 
@@ -117,10 +114,12 @@ const RegisterForm: React.FC = () => {
 					name='name'
 					placeholder='Nome*'
 					value={formRegister.name}
+					style={formRegister.name.length <= 3 ? {borderColor: '#C00000', color: '#C00000'} : {}}
 					onChange={handleChange} />
 				<InputField
 					type='text'
 					name='lastName'
+					style={formRegister.lastName.length <= 3 ? {borderColor: '#C00000', color: '#C00000'} : {}}
 					placeholder='Sobrenome*'
 					value={formRegister.lastName}
 					onChange={handleChange} />
@@ -131,6 +130,7 @@ const RegisterForm: React.FC = () => {
 				name='email'
 				placeholder='E-mail*'
 				value={formRegister.email}
+				style={validateEmail(formRegister.email) ? {} : {borderColor: '#C00000', color: '#C00000'} }
 				onChange={handleChange} />
 			<PasswordField>
 				<InputField
