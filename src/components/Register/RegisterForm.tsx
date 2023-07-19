@@ -110,18 +110,22 @@ const RegisterForm: React.FC = () => {
 	return (
 		<FormWrapper>
 			<NameLastName>
+				{ <label htmlFor='name_field'>Nome:</label>}
 				<InputField
 					type='text'
 					name='name'
-					placeholder='Nome*'
+					placeholder='mínimo 3 caracteres'
+					id='name_field'
 					value={formRegister.name}
 					style={formRegister.name.length <= 3 ? {borderColor: '#C00000', color: '#C00000'} : {}}
 					onChange={handleChange} />
+				{<label htmlFor='lastName_field'>Sobrenome:</label>}
 				<InputField
 					type='text'
 					name='lastName'
+					id='lastName_field'
 					style={formRegister.lastName.length <= 3 ? {borderColor: '#C00000', color: '#C00000'} : {}}
-					placeholder='Sobrenome*'
+					placeholder='mínimo 3 caracteres'
 					value={formRegister.lastName}
 					onChange={handleChange} />
 			</NameLastName>
@@ -129,7 +133,8 @@ const RegisterForm: React.FC = () => {
 				type='text'
 				className='regularInputSize'
 				name='email'
-				placeholder='E-mail*'
+				placeholder='exemplo@exemplo.com'
+				id='email_field'
 				value={formRegister.email}
 				style={validateEmail(formRegister.email) ? {} : {borderColor: '#C00000', color: '#C00000'} }
 				onChange={handleChange} />

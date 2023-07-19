@@ -12,7 +12,8 @@ export const FormWrapper = styled.form`
 `;
 export const NameLastName = styled.div`
 display: flex;
-gap: 1rem;
+gap: 0.5rem;
+align-items: center;
 `;
 export const PasswordField = styled.div`
 position: relative;
