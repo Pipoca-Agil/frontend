@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {ActionWrapper, HeaderButton, LoginPageNavigate} from '../../styles/Header';
 import {HeaderWrapper} from '../../styles/Register';
-import Logo from '../../assets/icons/Popcorn Logo.png';
+import Logo from '../../assets/icons/Logo Pipoca Ágil.png';
 import {navigateTo} from '../../functions/headerFunctions';
 
 const Header: React.FC = () => {
@@ -14,7 +14,11 @@ const Header: React.FC = () => {
 	return (
 		<HeaderWrapper>
 			<ActionWrapper>
-				<img alt='logo-icon' src={Logo}/>
+				<img
+					alt='logo-icon'
+					src={Logo}
+					style={{width: '100px', height: '5rem'}}
+				/>
 				{isLoginPage
 					? <LoginPageNavigate>
 						<HeaderButton
