@@ -38,6 +38,8 @@ const RegisterForm: React.FC = () => {
 	const [typePassword, setTypePassword] = useState(true);
 	const [typeCheckPassword, setTypeCheckPassword] = useState(true);
 
+	const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+	const isEdge = /edg/i.test(navigator.userAgent);
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const {name, value} = event.target;
 		setFormRegister(prevFormRegister => ({
@@ -144,11 +146,12 @@ const RegisterForm: React.FC = () => {
 					value={formRegister.password}
 					style={verifyCheckPass instanceof Array ? {borderColor: '#C00000', color: '#C00000'} : {}}
 					onChange={handleChange} />
-				<EyeIcon
+				{isEdge || isSafari ? <></> : <EyeIcon
 					src={typePassword ? eye : eyeClosed}
 					alt='makes password visible/invisible'
 					onClick={toggleTypePassword}
-				/>
+				/>}
+
 			</PasswordField>
 			<div>
 				<PasswordField>
@@ -160,7 +163,12 @@ const RegisterForm: React.FC = () => {
 						value={formRegister.checkPassword}
 						style={verifyCheckPass instanceof Array ? {borderColor: '#C00000', color: '#C00000'} : {}}
 						onChange={handleChange} />
-					<EyeIcon src={typeCheckPassword ? eye : eyeClosed} alt='makes password visible/invisible' onClick={toggleTypeCheckPassword} />
+					{isEdge || isSafari ? <></> : <EyeIcon
+						src={typeCheckPassword ? eye : eyeClosed}
+						alt='makes password visible/invisible'
+						onClick={toggleTypeCheckPassword}
+					/>}
+					{/* <EyeIcon src={typeCheckPassword ? eye : eyeClosed} alt='makes password visible/invisible' onClick={toggleTypeCheckPassword} /> */}
 				</PasswordField>
 				{verifyCheckPass === true
 					&& <PasswordInstructions>
