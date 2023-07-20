@@ -10,11 +10,7 @@ export const FormWrapper = styled.form`
   font-size: 0.875rem;
   gap: 1rem;
 `;
-export const NameLastName = styled.div`
-display: flex;
-gap: 0.5rem;
-align-items: center;
-`;
+
 export const PasswordField = styled.div`
 position: relative;
 `;
