@@ -45,7 +45,7 @@ background-color: #FFFCF3;
     color: #141414;
   }
 `;
-export const PasswordInstructions = styled.p`
+export const FieldInstructions = styled.p`
 color: #DB3838;
 font-style: italic;
 font-weight: 200;

@@ -3,7 +3,8 @@ import {
 	type RegisterData,
 	type RegisterModalType,
 } from '../interfaces/registerInterfaces';
-const specialCharactersRegex = (value: string) => /[!@#$%^&*()\-=_+{}[\]|:;"'<>,.?/]/.test(value);
+// eslint-disable-next-line no-useless-escape
+const specialCharactersRegex = (value: string) => /[!@#$%^&*()\\\-=_+{}[\]|:;<>,.¿?§ºª/¢~¨¬]/.test(value);
 export const passHasUppercaseLetter = (pass: string): boolean => /[A-Z]/.test(pass);
 export const passHasLowercaseLetter = (str: string): boolean => /[a-z]/.test(str);
 export const passHasNumber = (str: string): boolean => /[0-9]/.test(str);

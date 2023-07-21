@@ -25,7 +25,7 @@ import {
 	PasswordField,
 	EyeIcon,
 	InputField,
-	PasswordInstructions,
+	FieldInstructions,
 	RequirementsList,
 	PasswordFailed,
 	SubmitBtn,
@@ -131,13 +131,13 @@ const RegisterForm: React.FC = () => {
 				style={nameChecker ? {} : {borderColor: '#C00000', color: '#C00000'}}
 				onChange={handleChange} />
 			{formRegister.name.length > 0 && formRegister.name.length < 3
-				? <PasswordInstructions>
+				? <FieldInstructions>
 				Nome deve ser no mínimo 3 letras e não conter caracteres especiais.
-				</PasswordInstructions>
+				</FieldInstructions>
 				: formRegister.name.length > 0 && !nameChecker
-				&& <PasswordInstructions>
+				&& <FieldInstructions>
 				Nome deve ser no mínimo 3 letras e não conter caracteres especiais.
-				</PasswordInstructions>
+				</FieldInstructions>
 			}
 			<InputField
 				type='text'
@@ -148,13 +148,13 @@ const RegisterForm: React.FC = () => {
 				value={formRegister.lastName}
 				onChange={handleChange} />
 			{formRegister.lastName.length > 0 && formRegister.lastName.length <= 3
-				? <PasswordInstructions>
+				? <FieldInstructions>
 				Sobrenome deve ser no mínimo 3 letras e não conter caracteres especiais.
-				</PasswordInstructions>
+				</FieldInstructions>
 				: formRegister.lastName.length > 0 && !lastNameChecker
-				&& <PasswordInstructions>
+				&& <FieldInstructions>
 				Sobrenome deve ser no mínimo 3 letras e não conter caracteres especiais.
-				</PasswordInstructions>
+				</FieldInstructions>
 			}
 			<InputField
 				type='text'
@@ -166,9 +166,9 @@ const RegisterForm: React.FC = () => {
 				style={emailChecker ? {} : {borderColor: '#C00000', color: '#C00000'} }
 				onChange={handleChange} />
 			{formRegister.email.length > 0 && !emailChecker
-				&& <PasswordInstructions>
+				&& <FieldInstructions>
 					E-mail deve ser no formato: exemplo@exemplo.com
-				</PasswordInstructions>
+				</FieldInstructions>
 			}
 			<PasswordField>
 				<InputField
@@ -201,13 +201,9 @@ const RegisterForm: React.FC = () => {
 						onClick={toggleTypeCheckPassword}
 					/>}
 				</PasswordField>
-				{verifyCheckPass === true
-					&& <PasswordInstructions>
-						ATENÇÃO! Sua senha deve conter entre 8  a 12 caracteres, sendo letras maiúscula e minúscula, números e caracteres especiais
-					</PasswordInstructions>}
 				{verifyCheckPass instanceof Array && renderRequirements(verifyCheckPass)}
 			</div>
-			<CheckboxTerms htmlFor='terms'>
+			{/* <CheckboxTerms htmlFor='terms'>
 				<CheckBox
 					type='checkbox'
 					id='terms'
@@ -215,7 +211,7 @@ const RegisterForm: React.FC = () => {
 					onClick={handleCheckboxToggle} />
 				<CheckedIcon src={isChecked ? box : square} alt='checkbox' />
 					Li e concordo com os <TermsColor>Termos de uso</TermsColor> e <TermsColor>Política de Privacidade</TermsColor>
-			</CheckboxTerms>
+			</CheckboxTerms> */}
 			<SubmitBtn
 				type='button'
 				disabled={buttonChecker}
