@@ -18,10 +18,11 @@ left: 3rem;
 `;
 export const PhotoImg = styled.img`
 position: relative;
-transform: rotate(-5deg);
+transform: rotate(-15deg);
 z-index: 1;
-width: 40rem;
-height: 30rem;
-margin-top: 4rem;
-right: 5rem
+width: 28rem;
+height: 20rem;
+margin-top: 12.7rem;
+left: 20px;
+border-radius: 100%;
 `;
