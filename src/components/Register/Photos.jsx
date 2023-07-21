@@ -8,7 +8,7 @@ import {
 } from '../../styles/Photo';
 import firstLayer from '../../assets/vector/Vector.svg';
 import secondLayer from '../../assets/vector/Vector2layer.svg';
-import photo from '../../assets/vector/photo.png';
+import photo from '../../assets/vector/ibson-pipoca-agil-removebg-preview 1.png';
 
 function PhotosContainer() {
 	return (
