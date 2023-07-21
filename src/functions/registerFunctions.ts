@@ -3,7 +3,7 @@ import {
 	type RegisterData,
 	type RegisterModalType,
 } from '../interfaces/registerInterfaces';
-// eslint-disable-next-line no-useless-escape
+
 const specialCharactersRegex = (value: string) => /[!@#$%^&*()\\\-=_+{}[\]|:;<>,.¿?§ºª/¢~¨¬]/.test(value);
 export const passHasUppercaseLetter = (pass: string): boolean => /[A-Z]/.test(pass);
 export const passHasLowercaseLetter = (str: string): boolean => /[a-z]/.test(str);
@@ -59,7 +59,7 @@ export const funcRequirementsCheck = (requirements: Array<Array<string | boolean
 
 export const checkPass = (values: RegisterData): true | string[][] => {
 	const verifyPass: true | PasswordRequirements = passwordRequirementsCheck(values.password, values.checkPassword);
-	const lenPassword = values.password.length === 0 || values.checkPassword.length === 0;
+	const lenPassword = values.password.length === 0;
 	if (typeof verifyPass === 'boolean' || lenPassword) {
 		return true;
 	}

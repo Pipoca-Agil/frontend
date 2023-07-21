@@ -51,6 +51,9 @@ font-style: italic;
 font-weight: 200;
 font-size: 0.875rem;
 margin: 0;
+&.equal_password_check {
+  margin-top: 10px;
+}
 `;
 export const PasswordFailed = styled.div`
 color: #37595B;
