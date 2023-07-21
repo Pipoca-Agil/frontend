@@ -50,6 +50,7 @@ color: #DB3838;
 font-style: italic;
 font-weight: 200;
 font-size: 0.875rem;
+margin: 0;
 `;
 export const PasswordFailed = styled.div`
 color: #37595B;

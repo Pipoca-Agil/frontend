@@ -16,6 +16,8 @@ import {
 	checkPass,
 	checkForm,
 	validateEmail,
+	validateName,
+	validateLastName,
 } from '../../functions/registerFunctions';
 import {postRegister} from '../../api/Register';
 import {
@@ -27,8 +29,13 @@ import {
 	RequirementsList,
 	PasswordFailed,
 	SubmitBtn,
+	TermsColor,
+	CheckboxTerms,
+	CheckBox,
+	CheckedIcon,
 } from '../../styles/RegisterForm';
 
+// eslint-disable-next-line complexity
 const RegisterForm: React.FC = () => {
 	const [isChecked, setIsChecked] = useState(false);
 	const {setRegisterData} = useContext(RegisterContext);
@@ -108,26 +115,47 @@ const RegisterForm: React.FC = () => {
 	};
 
 	const buttonChecker = !checkForm(formRegister) && submitBtn;
+	const nameChecker = formRegister.name.length > 0 ? validateName(formRegister.name) : true;
+	const lastNameChecker = formRegister.lastName.length > 0 ? validateLastName(formRegister.lastName) : true;
+	const emailChecker = formRegister.email.length > 0 ? validateEmail(formRegister.email) : true;
+
 	return (
 		<FormWrapper>
+
 			<InputField
 				type='text'
 				name='name'
 				placeholder='Nome*'
-				id='name_field'
 				className='regularInputSize'
 				value={formRegister.name}
-				style={formRegister.name.length <= 3 ? {borderColor: '#C00000', color: '#C00000'} : {}}
+				style={nameChecker ? {} : {borderColor: '#C00000', color: '#C00000'}}
 				onChange={handleChange} />
+			{formRegister.name.length > 0 && formRegister.name.length < 3
+				? <PasswordInstructions>
+				Nome deve ser no mínimo 3 letras e não conter caracteres especiais.
+				</PasswordInstructions>
+				: formRegister.name.length > 0 && !nameChecker
+				&& <PasswordInstructions>
+				Nome deve ser no mínimo 3 letras e não conter caracteres especiais.
+				</PasswordInstructions>
+			}
 			<InputField
 				type='text'
 				name='lastName'
-				id='lastName_field'
 				className='regularInputSize'
-				style={formRegister.lastName.length <= 3 ? {borderColor: '#C00000', color: '#C00000'} : {}}
+				style={lastNameChecker ? {} : {borderColor: '#C00000', color: '#C00000'}}
 				placeholder='Sobrenome*'
 				value={formRegister.lastName}
 				onChange={handleChange} />
+			{formRegister.lastName.length > 0 && formRegister.lastName.length <= 3
+				? <PasswordInstructions>
+				Sobrenome deve ser no mínimo 3 letras e não conter caracteres especiais.
+				</PasswordInstructions>
+				: formRegister.lastName.length > 0 && !lastNameChecker
+				&& <PasswordInstructions>
+				Sobrenome deve ser no mínimo 3 letras e não conter caracteres especiais.
+				</PasswordInstructions>
+			}
 			<InputField
 				type='text'
 				className='regularInputSize'
@@ -135,8 +163,13 @@ const RegisterForm: React.FC = () => {
 				placeholder='E-mail*'
 				id='email_field'
 				value={formRegister.email}
-				style={validateEmail(formRegister.email) ? {} : {borderColor: '#C00000', color: '#C00000'} }
+				style={emailChecker ? {} : {borderColor: '#C00000', color: '#C00000'} }
 				onChange={handleChange} />
+			{formRegister.email.length > 0 && !emailChecker
+				&& <PasswordInstructions>
+					E-mail deve ser no formato: exemplo@exemplo.com
+				</PasswordInstructions>
+			}
 			<PasswordField>
 				<InputField
 					type={typePassword ? 'password' : 'text'}
@@ -151,7 +184,6 @@ const RegisterForm: React.FC = () => {
 					alt='makes password visible/invisible'
 					onClick={toggleTypePassword}
 				/>}
-
 			</PasswordField>
 			<div>
 				<PasswordField>
@@ -168,7 +200,6 @@ const RegisterForm: React.FC = () => {
 						alt='makes password visible/invisible'
 						onClick={toggleTypeCheckPassword}
 					/>}
-					{/* <EyeIcon src={typeCheckPassword ? eye : eyeClosed} alt='makes password visible/invisible' onClick={toggleTypeCheckPassword} /> */}
 				</PasswordField>
 				{verifyCheckPass === true
 					&& <PasswordInstructions>
@@ -176,8 +207,7 @@ const RegisterForm: React.FC = () => {
 					</PasswordInstructions>}
 				{verifyCheckPass instanceof Array && renderRequirements(verifyCheckPass)}
 			</div>
-
-			{/* <CheckboxTerms htmlFor='terms'>
+			<CheckboxTerms htmlFor='terms'>
 				<CheckBox
 					type='checkbox'
 					id='terms'
@@ -185,7 +215,7 @@ const RegisterForm: React.FC = () => {
 					onClick={handleCheckboxToggle} />
 				<CheckedIcon src={isChecked ? box : square} alt='checkbox' />
 					Li e concordo com os <TermsColor>Termos de uso</TermsColor> e <TermsColor>Política de Privacidade</TermsColor>
-			</CheckboxTerms> */}
+			</CheckboxTerms>
 			<SubmitBtn
 				type='button'
 				disabled={buttonChecker}

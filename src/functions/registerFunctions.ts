@@ -3,11 +3,11 @@ import {
 	type RegisterData,
 	type RegisterModalType,
 } from '../interfaces/registerInterfaces';
-
+const specialCharactersRegex = (value: string) => /[!@#$%^&*()\-=_+{}[\]|:;"'<>,.?/]/.test(value);
 export const passHasUppercaseLetter = (pass: string): boolean => /[A-Z]/.test(pass);
 export const passHasLowercaseLetter = (str: string): boolean => /[a-z]/.test(str);
 export const passHasNumber = (str: string): boolean => /[0-9]/.test(str);
-export const passHasSpecialCharacters = (str: string): boolean => /[!@#$%^&*()\-=_+{}[\]|:;"'<>,.?/]/.test(str);
+export const passHasSpecialCharacters = (str: string): boolean => specialCharactersRegex(str);
 
 export const passwordsMatch = (pass: string, confirmPass: string): boolean => pass === confirmPass;
 export const validateEmail = (mail: string): boolean => {
@@ -15,8 +15,8 @@ export const validateEmail = (mail: string): boolean => {
 	return emailRegex.test(mail);
 };
 
-export const validateName = (name: string) => name.length >= 3;
-export const validateLastName = (lastName: string) => lastName.length >= 3;
+export const validateName = (name: string) => name.length >= 3 && !specialCharactersRegex(name);
+export const validateLastName = (lastName: string) => lastName.length >= 3 && !specialCharactersRegex(lastName);
 export const passwordRequirementsCheck = (pass: string, confirmPass: string): true | PasswordRequirements => {
 	let isPasswordValid: true | PasswordRequirements;
 	const arePasswordsEqual = passwordsMatch(pass, confirmPass);
