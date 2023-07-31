@@ -99,9 +99,15 @@ const RegisterForm: React.FC = () => {
 
 	const renderRequirements = (functionReturn: true | string[][]): JSX.Element | undefined => {
 		if (functionReturn instanceof Array) {
+			const passDontMacth = functionReturn.filter(item => item[0] === 'X');
+			console.log(passDontMacth.length);
+			if (passDontMacth.length === 1 && passDontMacth[0][1] === 'As senhas devem ser iguais') {
+				return <FieldInstructions className='equal_password_check'>As senhas devem ser iguais</FieldInstructions>;
+			}
+
 			return (
 				<PasswordFailed>
-					<h4>A senha deve conter,  no mínimo:</h4>
+					<h4>A senha deve atender aos seguintes requisitos:</h4>
 					<ul>
 						{functionReturn.map(item =>
 							<RequirementsList key={item[1]} className={item[0].includes('V') ? 'requirement-passed' : 'requirement-failed'}>
@@ -118,7 +124,7 @@ const RegisterForm: React.FC = () => {
 	const nameChecker = formRegister.name.length > 0 ? validateName(formRegister.name) : true;
 	const lastNameChecker = formRegister.lastName.length > 0 ? validateLastName(formRegister.lastName) : true;
 	const emailChecker = formRegister.email.length > 0 ? validateEmail(formRegister.email) : true;
-
+	console.log(verifyCheckPass);
 	return (
 		<FormWrapper>
 
