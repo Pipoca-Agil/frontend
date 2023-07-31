@@ -24,5 +24,6 @@ width: 28rem;
 height: 20rem;
 margin-top: 12.7rem;
 left: 20px;
+/* right: 5rem; */
 border-radius: 100%;
 `;
