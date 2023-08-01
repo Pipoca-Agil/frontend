@@ -1,51 +1,26 @@
-import React, {useContext} from 'react';
-import {useNavigate} from 'react-router-dom';
-import {ActionWrapper, HeaderButton, LoginPageNavigate} from '../../styles/Header';
-import {HeaderWrapper} from '../../styles/Register';
-import Logo from '../../assets/icons/Logo Pipoca Ágil.png';
-import {navigateTo} from '../../functions/headerFunctions';
+import React from 'react';
+import {Link} from 'react-router-dom';
+import * as S from '../../styles/Header';
+import Logo from '../../assets/logo-pipoca-agil.png';
 
-const Header: React.FC = () => {
-	const navigate = useNavigate();
-	const currentUrl = window.location.href;
-	const isLoginPage = currentUrl.endsWith('/Login');
-	console.log(isLoginPage);
-
+export default function Header() {
 	return (
-		<HeaderWrapper>
-			<ActionWrapper>
-				<img
-					alt='logo-icon'
-					src={Logo}
-					style={{width: '100px', height: '5rem'}}
-				/>
-				{isLoginPage
-					? <LoginPageNavigate>
-						<HeaderButton
-							onClick={() => {
-								navigate(`/${navigateTo(currentUrl)}`);
-							}}
-							className='homeLoginPage'>
-						Voltar
-						</HeaderButton>
-						<HeaderButton
-							onClick={() => {
-								navigate('/Register');
-							}}
-						>
-					Cadastro
-						</HeaderButton>
-					</LoginPageNavigate>
-					:	<HeaderButton onClick={() => {
-						navigate(`/${navigateTo(currentUrl)}`);
-					}}>
-						{`${navigateTo(currentUrl)}`}
-					</HeaderButton>
-				}
-
-			</ActionWrapper>
-		</HeaderWrapper>
+		<S.Header>
+			<S.Wrapper>
+				<Link to='/'>
+					<S.Logo src={Logo}></S.Logo>
+				</Link>
+				<S.Navigation>
+					<S.NavLink to='/'>Projetos</S.NavLink>
+					<S.NavLink to='/'>Episódios</S.NavLink>
+					<S.NavLink to='/'>Blog</S.NavLink>
+					<S.NavLink to='/'>Contato</S.NavLink>
+				</S.Navigation>
+			</S.Wrapper>
+			<S.AuthButtons>
+				<S.Button buttonType='type1' to='/login'>Login</S.Button>
+				<S.Button buttonType='type2' to='/register'>Cadastro</S.Button>
+			</S.AuthButtons>
+		</S.Header>
 	);
-};
-
-export default Header;
+}
