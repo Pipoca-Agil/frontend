@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
 /* eslint-disable @typescript-eslint/naming-convention */
 import React from 'react';
-import * as S from '../../styles/MostListenedEpisodes/EpisodeCard';
+import * as S from '../../styles/EpisodeCard';
 
 export interface IEpisodeCard {
 	thumb: string;

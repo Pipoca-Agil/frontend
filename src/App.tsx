@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import RegisterProvider from './context/registerProvider';
 import ModalProvider from './context/ModalProvider';
 import MostListenedEpisodesTest from './pages/MostListenedEpisodesTest';
+import About from './pages/About';
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 							<Route path='/register' element= {<Register/>}/>
 							<Route path='/login' element= {<Login/>}/>
 							<Route path='/mostListenedTest' element= {<MostListenedEpisodesTest/>}/>
+							<Route path='/about' element={<About/>}/>
 						</Routes>
 					</BrowserRouter>
 

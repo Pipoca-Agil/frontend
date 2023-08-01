@@ -32,6 +32,7 @@ export const EpisodeTitle = styled.h3`
     font-family: Inter;
     font-size: 2.4rem;
     font-weight: 800;
+    
 `;
 
 export const EpisodeDescription = styled.p`
@@ -42,6 +43,7 @@ export const EpisodeDescription = styled.p`
 `;
 
 export const InformationWrapper = styled.div`
+    width: 35.8rem;
     display: flex;
     flex-direction: column;
     gap: .9rem;
