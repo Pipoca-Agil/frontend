@@ -24,7 +24,7 @@ height: 6rem;
 margin: 0 40px;
 `;
 
-export const CarouselWrapper = styled.div`
+export const LogoCarouselWrapper = styled.div`
 display: flex;
 flex-direction: column;
 background-color: #B33B3B;
