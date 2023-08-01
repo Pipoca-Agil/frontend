@@ -60,18 +60,25 @@ const CarouselSlides: React.FC = () => {
 		img27,
 		img28,
 	];
+	const carouselItems = (logosList: string[]) => logosList.map(item => <LogoImg alt='logo' src={item} key={item}/>);
+
+	const repeatItems = (max: number, logosList: string[]) => {
+		if (max > 2) {
+			return;
+		}
+
+		max++;
+		repeatItems(max, logosList);
+		return (
+			<LogosSlide>
+				{carouselItems(logos)}
+			</LogosSlide>
+		);
+	};
+
 	return (
 		<Logos>
-			<LogosSlide>
-				{logos.map(logo => (
-					<LogoImg alt='logo' src={logo} key={logo}/>
-				))}
-			</LogosSlide>
-			<LogosSlide>
-				{logos.map(logo => (
-					<LogoImg alt='logo' src={logo} key={logo}/>
-				))}
-			</LogosSlide>
+			{repeatItems(1, logos)}
 		</Logos>
 	);
 };
