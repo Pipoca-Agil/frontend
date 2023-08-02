@@ -4,6 +4,8 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
+    padding-inline: 18.2rem;
+    padding-block: 6rem;
     gap: 2.8rem;
 `;
 
@@ -31,4 +33,5 @@ export const SeePlaylistButton = styled.button`
     background-color: #B33B3B;
     color: white;
     font-family: 'Inter';
+    font-size: 2.2rem;
 `;
