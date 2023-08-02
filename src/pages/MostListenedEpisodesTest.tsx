@@ -1,6 +1,6 @@
 import {getMostListenedEpisodes} from '../api/GetMostListenedEpisodes';
 import EpisodeCard, {type IEpisodeCard} from '../components/EpisodeCard';
-import * as S from '../styles/MostListenedEpisodes/Section';
+import * as S from '../styles/MostListenedEpisodes/styled';
 import React from 'react';
 
 export default function MostListenedTest() {
