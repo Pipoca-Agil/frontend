@@ -27,14 +27,13 @@ function App() {
 							<Route path='*' element={<NotFound/>}/>
 							<Route path='/register' element= {<Register/>}/>
 							<Route path='/login' element= {<Login/>}/>
-						  <Route path='/mostListenedTest' element= {<MostListenedEpisodesTest/>}/>
+							<Route path='/mostListenedTest' element= {<MostListenedEpisodesTest/>}/>
 							<Route path='/about' element={<About/>}/>
 							<Route path='/listenOnPlatforms' element={<ListenOnPlatforms/>}/>
 						</Routes>
 					</BrowserRouter>
 				</ModalProvider>
 			</RegisterProvider>
-		</>
 		</>
 	);
 }
