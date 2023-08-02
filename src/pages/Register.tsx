@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import RegisterComponent from '../components/Register/Register';
-import Header from '../components/Header/Header';
 import {RegisterWrapper} from '../styles/Register';
 import PhotosContainer from '../components/Register/Photos';
 import RegisterModal from '../components/modal/Register';
@@ -9,7 +8,6 @@ const Register: React.FC = () => {
 	const {visible} = useContext(RegisterModalContext);
 	return (
 		<RegisterWrapper>
-			<Header/>
 			<PhotosContainer/>
 			<RegisterComponent/>
 			{visible && <RegisterModal/>}
