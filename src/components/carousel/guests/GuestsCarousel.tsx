@@ -7,6 +7,7 @@ import rightQuote from '../../../assets/carousel/sliderPhotos/”.png';
 import {
 	GuestsCarouselTrack,
 	EpisodyWrapper,
+	CarouselSectionName,
 	InfoEpisodyWrapper, EpisodyPhrase, PhotoEpisodyGuest,
 	EpisodyDetails, Episody, Indicators, Indicator, ArrowButton,
 } from '../../../styles/GuestsCarousel';
@@ -33,6 +34,7 @@ const GuestsCarousel: React.FC = () => {
 
 	return (
 		<div>
+			<CarouselSectionName>Nossos convidados</CarouselSectionName>
 			<GuestsCarouselTrack>
 				<ArrowButton onClick={prevSlide}>
 					<img src={leftArrow}/>

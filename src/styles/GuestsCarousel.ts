@@ -122,3 +122,12 @@ color: #E49D9D;
 font-weight: 400;
 font-size: 1rem;
 `;
+export const CarouselSectionName = styled.h1`
+color: #B33B3B;
+font-family: Cherry Bomb One;
+font-size: 2rem;
+padding: 2rem;
+font-weight: 400;
+text-align: center;
+text-transform: uppercase;
+`;
