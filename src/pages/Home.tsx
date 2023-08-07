@@ -1,14 +1,13 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import LogoCarousel from '../components/carousel/logos/LogoCarousel';
+
+import imgHome from '../assets/Time Vermelho 2.png';
+import {ImgHome, HomeContainer} from '../styles/Home';
 const HomePage: React.FC = () => {
 	const page = 'Home';
 	return (
-		<>
-			<Header/>
-			<LogoCarousel/>
-		</>
-
+		<HomeContainer>
+			<ImgHome src={imgHome} alt='default-homepage-img'/>
+		</HomeContainer>
 	);
 };
 
