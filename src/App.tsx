@@ -12,6 +12,7 @@ import ModalProvider from './context/ModalProvider';
 import MostListenedEpisodesTest from './pages/MostListenedEpisodesTest';
 import About from './pages/About';
 import ListenOnPlatforms from './pages/ListenOnPlatforms';
+import LogoCarouselSlides from './components/carousel/logos/LogoCarouselSlides';
 
 function App() {
 	return (
@@ -30,6 +31,7 @@ function App() {
 							<Route path='/mostListenedTest' element= {<MostListenedEpisodesTest/>}/>
 							<Route path='/about' element={<About/>}/>
 							<Route path='/listenOnPlatforms' element={<ListenOnPlatforms/>}/>
+							<Route path='/footerCarousel' element={<LogoCarouselSlides/>}/>
 						</Routes>
 					</BrowserRouter>
 				</ModalProvider>
