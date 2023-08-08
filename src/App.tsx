@@ -13,6 +13,8 @@ import MostListenedEpisodesTest from './pages/MostListenedEpisodesTest';
 import About from './pages/About';
 import ListenOnPlatforms from './pages/ListenOnPlatforms';
 import LogoCarouselSlides from './components/carousel/logos/LogoCarouselSlides';
+import GuestsCarousel from './components/carousel/guests/GuestsCarousel';
+import Aside from './components/aside/Index';
 
 function App() {
 	return (
@@ -32,6 +34,8 @@ function App() {
 							<Route path='/about' element={<About/>}/>
 							<Route path='/listenOnPlatforms' element={<ListenOnPlatforms/>}/>
 							<Route path='/footerCarousel' element={<LogoCarouselSlides/>}/>
+							<Route path='/Carousel' element={<GuestsCarousel/>}/>
+							<Route path='/Aside' element={<Aside/>}/>
 						</Routes>
 					</BrowserRouter>
 				</ModalProvider>

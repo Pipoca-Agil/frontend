@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 62.5%;
     }
     body {
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
         ::-webkit-scrollbar {display:none;}
         scroll-behavior: auto;
     }
