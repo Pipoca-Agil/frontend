@@ -6,10 +6,11 @@ export const Header = styled.header`
     display: flex;
     padding: 2rem  1rem;
     align-items: center;
-    justify-content: space-between;
-    gap: 13.5rem;
-    max-width: 155.5rem;
+    justify-content: space-around;
+    width: 100%;
+    height: 10rem;
     margin: 0 auto;
+    align-items: center;
 `;
 
 export const Wrapper = styled.div`
@@ -17,30 +18,34 @@ export const Wrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-    width: 13.4rem;
-    height: 12rem;
+    width: 10rem;
+    height: 50%;
+    /* margin: 1rem; */
 `;
 
 export const Navigation = styled.nav`
     display: flex;
-    width: 92.4rem;
-    padding: 1.8rem 1.2rem;
+    flex-wrap: wrap;
+    width: 50%;
     justify-content: center;
-    align-items: center;
-    gap: 9.8rem;
+    gap: 10%;
 `;
 
 export const NavLink = styled(Link)`
     text-align: center;
     text-decoration: none;
     font-family: Inter;
-    font-size: 2.8rem;
-    font-weight: 600;     
+    font-weight: 600;   
+     font-size: 2rem;  
     color: #2D2D2D;
 `;
 
 export const AuthButtons = styled.div`
     display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    
+    gap: 10px;
 `;
 
 type ButtonProps = {
@@ -63,16 +68,15 @@ export const Button = styled(Link)<ButtonProps>`
       border: none;
     `};
     border-radius: 2.4rem;
-    padding: 1rem 3.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1rem 3rem;
+ 
     text-decoration: none;
-    font-size: 2.2rem;
+    /* margin: 10px 0; */
+    font-size: 2rem;
     font-weight: 500;
     font-family: 'Inter';
     cursor: pointer;
     &:last-child {
-    margin-left: 2.4rem;
+    /* margin-left: 2.4rem; */
   }
 `;
