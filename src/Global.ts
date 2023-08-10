@@ -15,7 +15,8 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 62.5%;
     }
     body {
-        ::-webkit-scrollbar {display:none}
+        /* overflow-x: hidden; */
+        ::-webkit-scrollbar {display:none;}
         scroll-behavior: auto;
     }
 `;
