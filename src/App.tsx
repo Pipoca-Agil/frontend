@@ -15,6 +15,7 @@ import ListenOnPlatforms from './pages/ListenOnPlatforms';
 import LogoCarouselSlides from './components/carousel/logos/LogoCarouselSlides';
 import GuestsCarousel from './components/carousel/guests/GuestsCarousel';
 import Aside from './components/aside/Index';
+import AudioMessage from './pages/AudioMessage';
 
 function App() {
 	return (
@@ -36,6 +37,7 @@ function App() {
 							<Route path='/footerCarousel' element={<LogoCarouselSlides/>}/>
 							<Route path='/Carousel' element={<GuestsCarousel/>}/>
 							<Route path='/Aside' element={<Aside/>}/>
+              <Route path='/audiomessage' element={<AudioMessage/>} />
 						</Routes>
 					</BrowserRouter>
 				</ModalProvider>
