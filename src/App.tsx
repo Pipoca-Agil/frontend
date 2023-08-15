@@ -10,7 +10,6 @@ import RegisterProvider from './context/registerProvider';
 import ModalProvider from './context/ModalProvider';
 import MostListenedEpisodesTest from './pages/MostListenedEpisodesTest';
 import About from './pages/About';
-import ListenOnPlatforms from './pages/ListenOnPlatforms';
 
 function App() {
 	return (
@@ -27,7 +26,6 @@ function App() {
 							<Route path='/login' element= {<Login/>}/>
 							<Route path='/mostListenedTest' element= {<MostListenedEpisodesTest/>}/>
 							<Route path='/about' element={<About/>}/>
-							<Route path='/listenOnPlatforms' element={<ListenOnPlatforms/>}/>
 						</Routes>
 					</BrowserRouter>
 

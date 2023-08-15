@@ -17,7 +17,7 @@ export const SeePlaylistDiv = styled.div`
 `;
 
 export const Title = styled.h2`
-    font-family: 'Cherry Bomb One', cursive;
+    font-family: 'Maven Pro', sans-serif;
     font-size: 4.2rem;
     color: #B33B3B;
 `;

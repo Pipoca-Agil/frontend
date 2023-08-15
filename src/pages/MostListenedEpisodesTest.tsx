@@ -1,5 +1,6 @@
 import {getMostListenedEpisodes} from '../api/GetMostListenedEpisodes';
 import EpisodeCard, {type IEpisodeCard} from '../components/EpisodeCard';
+import Footer from '../components/Footer';
 import * as S from '../styles/MostListenedEpisodes/styled';
 import React from 'react';
 
@@ -16,14 +17,17 @@ export default function MostListenedTest() {
 	}, []);
 
 	return (
-		<S.Wrapper>
-			<S.Title>EPISÓDIOS MAIS OUVIDOS</S.Title>
-			{episodes.map((episode, index) => (
-				<EpisodeCard {...episode} key={index}/>
-			))}
-			<S.SeePlaylistDiv>
-				<S.SeePlaylistButton>Ver Playlist</S.SeePlaylistButton>
-			</S.SeePlaylistDiv>
-		</S.Wrapper>
+		<>
+			<S.Wrapper>
+				<S.Title>EPISÓDIOS MAIS OUVIDOS</S.Title>
+				{episodes.map((episode, index) => (
+					<EpisodeCard {...episode} key={index}/>
+				))}
+				<S.SeePlaylistDiv>
+					<S.SeePlaylistButton>Ver Playlist</S.SeePlaylistButton>
+				</S.SeePlaylistDiv>
+			</S.Wrapper>
+			<Footer/>
+		</>
 	);
 }
