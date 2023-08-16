@@ -3,49 +3,50 @@ import styled, {css, keyframes} from 'styled-components';
 
 export const Wrapper = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    padding-inline: 18.2rem;
-    padding-block: 6rem;
+    justify-content: center;
+    align-items: flex-start;
 `;
 
 export const Title = styled.h3`
-    color: #FD0000;
+    color: #B33B3B;
     font-family: Inter;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
     text-align: left;
     line-height: normal;
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.7rem;
 `;
 
 export const AudioMessage = styled.div`
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
 `;
 
 export const FaceImage = styled.img`
-    width: 6.5rem;
-    margin-right: 2.8rem;
+    width: 4rem;
+    margin-left: 1.3rem;
+    flex-direction: flex-start;
 `;
 
 export const CardWrapper = styled.div`
-    height: 6.8rem;
-    padding: 1.4rem 1rem 0.9rem 2.2rem;
-    border-radius: 2.4rem;
+    padding: 0.6rem 1rem;
+    border-radius: 1.5rem;
     border: 2px solid #B33B3B;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 `;
 
 export const PlayPauseButton = styled.div`
-    margin-right: 1.1rem;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente no eixo Y */
+    justify-content: center;
 `;
 
 export const PlayPauseIcon = styled.img`
-    height: 3rem;
-    width: 3rem;
+    height: 1.8rem;
+    width: 100%;
     object-fit: cover;
     cursor: pointer;
 `;
@@ -53,18 +54,34 @@ export const PlayPauseIcon = styled.img`
 export const SoundWaveContainer = styled.div`
     position: relative; 
     display: flex;
+    align-items: center;
 `;
 
 export const UnderDiv = styled.div`
+    display: flex;
+    align-items: center;
 `;
 
 export const TopDiv = styled.div`
     position: absolute;
+    display: flex;
+    align-items: center;
 `;
 
 export const UnderWaveImage = styled.img`
-    height: 4.9rem;
+    height: 3rem;
     width: 100%;
+`;
+
+export const AudioTimer = styled.time`
+    color: #3D3D3D;
+    width: 3.1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.6875rem; 
 `;
 
 type ImgProps = {
@@ -72,7 +89,7 @@ type ImgProps = {
 };
 
 export const TopWaveImage = styled.img<ImgProps>`
-    height: 4.9rem;
+    height: 3rem;
     width: 100%;
     filter: brightness(0.2); 
     transition: all 0.2s linear;
