@@ -6,7 +6,7 @@ export default function Footer() {
 		<S.Wrapper>
 			<S.LeftDiv>
 				<S.Section logoSection={true}>
-					<S.Icons url='/logo.svg'/>
+					<S.Icons url='/logo.svg' logo={true}/>
 					<S.DefaultText>
 					Copyright &copy; 2023, Pipoca Ágil. Todos os direitos reservados.
 					</S.DefaultText>
