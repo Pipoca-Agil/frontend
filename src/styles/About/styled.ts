@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const Title = styled.h2`
     font-size: 4.2rem;
     color: #B33B3B;
-    font-family: 'Cherry Bomb One', cursive;
+    font-family: 'Maven Pro', sans-serif;
 `;
 
 export const Description = styled.p`

@@ -11,11 +11,11 @@ import RegisterProvider from './context/registerProvider';
 import ModalProvider from './context/ModalProvider';
 import MostListenedEpisodesTest from './pages/MostListenedEpisodesTest';
 import About from './pages/About';
-import ListenOnPlatforms from './pages/ListenOnPlatforms';
 import LogoCarouselSlides from './components/carousel/logos/LogoCarouselSlides';
 import GuestsCarousel from './components/carousel/guests/GuestsCarousel';
 import Aside from './components/aside/Index';
 import AudioMessage from './pages/AudioMessage';
+import Footer from './components/Footer';
 
 function App() {
 	return (
@@ -31,14 +31,14 @@ function App() {
 							<Route path='*' element={<NotFound/>}/>
 							<Route path='/register' element= {<Register/>}/>
 							<Route path='/login' element= {<Login/>}/>
-							<Route path='/mostListenedTest' element= {<MostListenedEpisodesTest/>}/>
+							<Route path='/mostListenedEpisodes' element= {<MostListenedEpisodesTest/>}/>
 							<Route path='/about' element={<About/>}/>
-							<Route path='/listenOnPlatforms' element={<ListenOnPlatforms/>}/>
 							<Route path='/footerCarousel' element={<LogoCarouselSlides/>}/>
 							<Route path='/Carousel' element={<GuestsCarousel/>}/>
 							<Route path='/Aside' element={<Aside/>}/>
 							<Route path='/audiomessage' element={<AudioMessage/>} />
 						</Routes>
+						<Footer/>
 					</BrowserRouter>
 				</ModalProvider>
 			</RegisterProvider>
