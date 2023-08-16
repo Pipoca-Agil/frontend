@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
+
 import React, {useState, useRef, useEffect} from 'react';
 import * as S from '../../styles/AudioMessage/styled';
 import SoundWaves from '../../assets/sound-wave.svg';
 import audioFile from '../../assets/sounds/teste.mp3';
-import FaceImage from '../../assets/face-audio-message.svg';
+import FaceImage from '../../assets/ibson-audio-message.svg';
 import Pause from '../../assets/icons/pause.svg';
 import Play from '../../assets/icons/play.svg';
 
@@ -12,6 +12,7 @@ export default function AudioMessage() {
 	const audioRef = useRef<HTMLAudioElement>(null);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [progress, setProgress] = useState(0);
+	const [currentTimeAudio, setCurrentTimeAudio] = useState(0);
 
 	const togglePlay = () => {
 		setIsPlaying(!isPlaying);
@@ -37,18 +38,25 @@ export default function AudioMessage() {
 			if (percentage === 100) {
 				setProgress(0);
 				setIsPlaying(false);
+				setCurrentTimeAudio(0);
 				return;
 			}
 
 			setProgress(percentage);
+			setCurrentTimeAudio(currentTime);
 		}
+	};
+
+	const formatTime = (timeInSeconds: number): string => {
+		const minutes = Math.floor(timeInSeconds / 60);
+		const seconds = Math.floor(timeInSeconds % 60);
+		return `${minutes}:${seconds.toString().padStart(2, '0')}`;
 	};
 
 	return (
 		<S.Wrapper>
-			<S.Title>• UM RECADO PRA VOCÊ</S.Title>
 			<S.AudioMessage>
-				<S.FaceImage src={FaceImage} />
+				<S.Title>O Ibson tem um recado para você</S.Title>
 				<S.CardWrapper>
 					<audio ref={audioRef} onTimeUpdate={handleTimeUpdate}>
 						<source src={audioFile} type='audio/mpeg' />
@@ -70,8 +78,10 @@ export default function AudioMessage() {
 							/>
 						</S.TopDiv>
 					</S.SoundWaveContainer>
+					<S.AudioTimer>{formatTime(currentTimeAudio)}</S.AudioTimer>
 				</S.CardWrapper>
 			</S.AudioMessage>
+			<S.FaceImage src={FaceImage} />
 		</S.Wrapper>
 	);
 }
