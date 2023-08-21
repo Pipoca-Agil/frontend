@@ -9,8 +9,6 @@ import './App.css';
 import Login from './pages/Login';
 import RegisterProvider from './context/registerProvider';
 import ModalProvider from './context/ModalProvider';
-import MostListenedEpisodesTest from './pages/MostListenedEpisodesTest';
-import About from './pages/About';
 import LogoCarouselSlides from './components/carousel/logos/LogoCarouselSlides';
 import GuestsCarousel from './components/carousel/guests/GuestsCarousel';
 import Aside from './components/aside/Index';
@@ -31,8 +29,6 @@ function App() {
 							<Route path='*' element={<NotFound/>}/>
 							<Route path='/register' element= {<Register/>}/>
 							<Route path='/login' element= {<Login/>}/>
-							<Route path='/mostListenedEpisodes' element= {<MostListenedEpisodesTest/>}/>
-							<Route path='/about' element={<About/>}/>
 							<Route path='/footerCarousel' element={<LogoCarouselSlides/>}/>
 							<Route path='/Carousel' element={<GuestsCarousel/>}/>
 							<Route path='/Aside' element={<Aside/>}/>

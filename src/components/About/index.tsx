@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import EpisodeCard, {type IEpisodeCard} from '../components/EpisodeCard';
-import * as S from '../styles/About/styled';
+import EpisodeCard, {type IEpisodeCard} from '../EpisodeCard';
+import * as S from '../../styles/About/styled';
 import React from 'react';
 
 const aboutVideo: IEpisodeCard = {

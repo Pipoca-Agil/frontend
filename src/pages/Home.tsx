@@ -1,13 +1,15 @@
 import React from 'react';
-import imgHome from '../assets/Time Vermelho 2.png';
-import {ImgHome, HomeContainer} from '../styles/Home';
+import { HomeContainer } from '../styles/Home';
+import PrincipalHeadline from '../components/PrincipalHeadline/index'
+import MostListenedEpisodes from '../components/MostListenedEpisodes'
+import About from '../components/About'
 
 const HomePage: React.FC = () => {
 	return (
 		<HomeContainer>
-
-			<ImgHome src={imgHome} alt='default-homepage-img'/>
-
+			<PrincipalHeadline />
+			<MostListenedEpisodes />
+			<About />
 		</HomeContainer>
 	);
 };
