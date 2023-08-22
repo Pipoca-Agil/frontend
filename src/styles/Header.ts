@@ -18,65 +18,57 @@ export const Wrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-    width: 10rem;
-    height: 50%;
-    /* margin: 1rem; */
+    width: 9rem;
+    height: 100%;
 `;
 
 export const Navigation = styled.nav`
     display: flex;
-    flex-wrap: wrap;
     width: 50%;
     justify-content: center;
-    gap: 10%;
+    align-items: center;
+    gap: 8%;
 `;
 
 export const NavLink = styled(Link)`
     text-align: center;
     text-decoration: none;
-    font-family: Inter;
+    font-family: Maven Pro;
     font-weight: 600;   
-     font-size: 2rem;  
+    font-size: 2rem;  
     color: #2D2D2D;
 `;
 
 export const AuthButtons = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 0 1rem;
-    
-    gap: 10px;
+    margin: 0 1rem;  
 `;
 
-type ButtonProps = {
-	buttonType: string;
-};
-
-export const Button = styled(Link)<ButtonProps>`
-    ${props =>
-		props.buttonType === 'type1'
-    && css`
-      background-color: transparent;
-      color: #B33B3B;
-      border: 2px solid #B33B3B;
-    `};
-    ${props =>
-		props.buttonType === 'type2'
-    && css`
-      background-color: #B33B3B;
-      color: #FBFBFB;
-      border: none;
-    `};
-    border-radius: 2.4rem;
-    padding: 1rem 3rem;
- 
-    text-decoration: none;
-    /* margin: 10px 0; */
-    font-size: 2rem;
-    font-weight: 500;
-    font-family: 'Inter';
+export const AuthText = styled.p`
+    color: #B33B3B;
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
     cursor: pointer;
-    &:last-child {
-    /* margin-left: 2.4rem; */
-  }
+    margin-bottom: 0.4rem;
+`;
+
+export const Button = styled(Link)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    background-color: #B33B3B;
+    color: #F3F7F8;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.7rem; 
 `;
