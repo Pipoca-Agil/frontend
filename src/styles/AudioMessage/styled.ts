@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h3`
     color: #B33B3B;
-    font-family: Inter;
+    font-family: Maven Pro;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
