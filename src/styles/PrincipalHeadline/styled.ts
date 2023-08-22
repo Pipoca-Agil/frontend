@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    padding-block: 6rem;
+    padding-block: 10rem;
     font-family: 'Inter';
     color: #2D2D2D;
 `;
