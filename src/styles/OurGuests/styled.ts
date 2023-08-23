@@ -26,8 +26,10 @@ export const Carousel = styled.div`
 
 export const GuestImage = styled.img<{url: string, isActive: boolean}>`
     content: ${props => `url(${props.url})`};
-
+    width: 34.1rem;
+    height: 55.1rem;
     transition: all .4s ease-in-out;
+    align-self: baseline;
 
     ${props => props.isActive? 
     css`
