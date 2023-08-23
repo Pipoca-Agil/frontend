@@ -3,7 +3,7 @@
 import React, {useState, useRef, useEffect} from 'react';
 import * as S from '../../styles/AudioMessage/styled';
 import SoundWaves from '../../assets/audioMessage/sound-wave.svg';
-import audioFile from '../../assets/sounds/teste.mp3';
+import audioFile from '../../assets/sounds/audiomessage.mp3';
 import FaceImage from '../../assets/audioMessage/ibson-audio-message.svg';
 import Pause from '../../assets/icons/pause.svg';
 import Play from '../../assets/icons/play.svg';
