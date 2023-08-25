@@ -1,0 +1,34 @@
+import styled, {css} from "styled-components";
+
+export const Wrapper = styled.section`
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #B33B3B;
+`
+
+export const Title = styled.h2`
+    font-family: Maven Pro;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    color: #EFEFEF;
+`
+
+export const Carousel = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+`
+
+export const Logo = styled.img<{url: string, onTransition: boolean}>`
+    height: 7rem;
+    content: ${props => `url(${props.url})`};
+    transition: all .4s ease-in-out;
+
+    ${props => props.onTransition && css`opacity: 0;`}
+`
