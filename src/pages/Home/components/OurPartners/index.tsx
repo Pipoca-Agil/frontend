@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as S from './styled'
 
-const logos = ['/carousel/logo1.png', '/carousel/logo2.png', '/carousel/logo3.png', '/carousel/logo4.png', '/carousel/logo5.png', '/carousel/logo6.png', '/carousel/logo7.png']
+const logos = ['/carousel/logo1.svg', '/carousel/logo2.svg', '/carousel/logo3.svg', '/carousel/logo4.svg', '/carousel/logo5.svg', '/carousel/logo6.svg', '/carousel/logo7.svg']
 
 
 export default function OurPartners() {
