@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import React from 'react';
 import * as S from '../../styles/EpisodeCard';
+import Play from '../../assets/icons/play-red.svg'
 
 export interface IEpisodeCard {
 	thumb: string;
@@ -20,9 +21,7 @@ export default function EpisodeCard(episode: IEpisodeCard) {
 				<S.EpisodeTitle>{episode.title}</S.EpisodeTitle>
 				<S.EpisodeDescription>{episode.description}</S.EpisodeDescription>
 			</S.InformationWrapper>
-			<S.PlayButton>
-				<S.PlayImg/>
-			</S.PlayButton>
+			<S.PlayImg src={Play}/>
 		</S.Card>
 	);
 }

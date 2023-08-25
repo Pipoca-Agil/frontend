@@ -3,60 +3,56 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
     display: flex;
-    padding: 1.8rem 3.3rem 2.1rem 3.3rem;
-    width: 92.4rem;
-    height: 18.8rem;
-    gap: 10.4rem;
+    padding: 1.2rem 2rem;
+    height: 11.75rem;
     align-items: center;
     justify-content: center;
-    border-radius: 2.4rem;
-    border: .4rem solid #A6A6A6;
+    border-radius: 1.5rem;
+    border: 2px solid #A6A6A6;
 `;
 
 export const VideoThumbnail = styled.img<{url: string}>`
-    width: 22.4rem;
-    height: 14.9rem;
-    border-radius: 1.4rem;
+    height: 9.3rem;
+    border-radius: 0.9rem;
     content: ${props => `url(${props.url})`};
 `;
 
+export const InformationWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0 2rem;
+`; 
+
 export const EpisodeNumber = styled.p`
     color: #B33B3B;
-    font-family: Inter;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-family: Maven Pro;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
 `;
 
 export const EpisodeTitle = styled.h3`
-    color: #2D2D2D;
-    font-family: Inter;
-    font-size: 2.4rem;
-    font-weight: 800;
-    
+    color: #455F6B;
+    font-family: Maven Pro;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    flex-wrap: nowrap;
+    width: 22.3rem;
 `;
 
 export const EpisodeDescription = styled.p`
-    color: #000;
+    color: #455F6B;
     font-family: Inter;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    font-style: normal;
     font-weight: 400;
-`;
-
-export const InformationWrapper = styled.div`
-    width: 35.8rem;
-    display: flex;
-    flex-direction: column;
-    gap: .9rem;
-`;
-
-export const PlayButton = styled.button`
-    border: none;
-    background-position: center;
-    background-color: transparent;
-    width: 5.8rem;
-    height: 5.8rem;
-`;
+    flex-wrap: nowrap;    
+`;   
 
 export const PlayImg = styled.img`
-    content: url('/play.png');
+    width: 3.6rem;
+    cursor: pointer;
 `;
