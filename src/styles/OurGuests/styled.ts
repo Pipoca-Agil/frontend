@@ -3,31 +3,32 @@ import styled, { css } from "styled-components";
 export const Section = styled.section`
     display: flex;
     flex-direction: column;
-    padding: 10.5rem 7.6rem 16rem 6.9rem;
+    padding: 6.56rem 4.87rem 10rem 2.55rem;
     gap: 2rem;
 `;
 
 export const Title = styled.h2`
     color: #B33B3B;
     font-family: Maven Pro;
-    font-size: 4.8rem;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 6rem; 
+    line-height: 3.75; 
     align-self: center;
 `;
 
 export const Carousel = styled.div`
     display: flex;
-    width: 180.6rem;
+    width: 112.6rem;
     justify-content: space-between;
     align-items: center;
+    align-self: center;
 `;
 
 export const GuestImage = styled.img<{url: string, isActive: boolean}>`
     content: ${props => `url(${props.url})`};
-    width: 34.1rem;
-    height: 55.1rem;
+    width: 21.3125rem;
+    height: 31.9375rem;
     transition: all .4s ease-in-out;
     align-self: baseline;
 
@@ -49,8 +50,8 @@ export const LeftArrow = styled.button`
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
-    width: 10rem;
-    height: 10rem;
+    width: 6.25rem;
+    height: 6.25rem;
 `;
 
 export const RightArrow = styled.button`
@@ -61,21 +62,21 @@ export const RightArrow = styled.button`
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
-    width: 10rem;
-    height: 10rem;
+    width: 6.25rem;
+    height: 6.25rem;
 `;
 
 export const EffectPhrase = styled.h4<{isActive: boolean}>`
     color: var(--letter, #455F6B);
     text-align: center;
     font-family: Maven Pro;
-    font-size: 5.6rem;
+    font-size: 3.5rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 6.16rem;
+    line-height: 3.85rem;
     position: absolute;
     margin-left: 10rem;
-    width: 90rem;
+    width: 56rem;
     z-index: 2;
 
     transition: all .4s ease-in-out;
@@ -91,19 +92,19 @@ export const EffectPhrase = styled.h4<{isActive: boolean}>`
 
 export const MainInfo = styled.div`
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
 `
 
 export const EpisodeGeneralInfo = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 14rem;
+    padding-top: 7rem;
 `
 
 export const EpisodeLightInformation = styled.div`
     display: flex;
-    gap: 18.7rem;
+    gap: 11.7rem;
 `
 
 export const BottomInformationDiv = styled.div`
@@ -117,10 +118,9 @@ export const BottomInformationDiv = styled.div`
 export const EpisodeTitle = styled.p`
     color: var(--secondary-cta, #B33B3B);
     font-family: Inter;
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 800;
-    width: 90rem;
 `
 
 export const EpisodeInformation = styled.p`
@@ -129,11 +129,13 @@ export const EpisodeInformation = styled.p`
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 2.8rem;
+    line-height: 1rem;
 `
 
 export const LeftQuota = styled.img<{isActive: boolean}>`
     padding-bottom: 6rem;
+    width: 13.5rem;
+    height: 17.95356rem;
     content: url('/carousel/quota.svg');
     transition: all .4s ease-in-out;
 
@@ -148,7 +150,9 @@ export const LeftQuota = styled.img<{isActive: boolean}>`
 `;
 
 export const RightQuota = styled.img<{isActive: boolean}>`
-    padding-bottom: 7rem;
+    padding-bottom: 6rem;
+    width: 13.5rem;
+    height: 17.95356rem;
     content: url('/carousel/quota.svg');
     transition: all .4s ease-in-out;
 
@@ -166,7 +170,7 @@ export const QuotasDiv = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 94.4rem;
+    width: 67.4rem;
 `
 
 export const SelectionButtons = styled.div`
@@ -178,8 +182,8 @@ export const SelectionButtons = styled.div`
 `;
 
 export const SelectionButton = styled.button<{isActive: boolean}>`
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     border: none;
     background-color: ${props => props.isActive? 'var(--secondary-cta, #B33B3B);' : 'var(--chardon-200, #F4D4D4);;'};
