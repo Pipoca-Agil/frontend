@@ -17,7 +17,7 @@ export default function Header() {
 				<S.NavLink to='/'>Contato</S.NavLink>
 			</S.Navigation>
 			<S.AuthButtons>
-				<S.AuthText>Já é assintante?</S.AuthText>
+				<S.AuthText>Área do Assinante</S.AuthText>
 				<S.Button to='/login'>Entrar</S.Button>
 			</S.AuthButtons>
 		</S.Header>

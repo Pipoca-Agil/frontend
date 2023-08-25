@@ -18,13 +18,16 @@ export default function MostListenedEpisodes() {
 	return (
 		<>
 			<S.Wrapper>
-				<S.Title>EPISÓDIOS MAIS OUVIDOS</S.Title>
+				<S.Title>Episódios mais ouvidos</S.Title>
+				<S.CardsWrapper>
 				{episodes.map((episode, index) => (
 					<EpisodeCard {...episode} key={index}/>
 				))}
-				<S.SeePlaylistDiv>
-					<S.SeePlaylistButton>Ver Playlist</S.SeePlaylistButton>
-				</S.SeePlaylistDiv>
+				</S.CardsWrapper>
+				<S.SeeAllEpisodesDiv>
+					<S.SeeAllEpisodes to='/'>Ver todos os episódios
+					</S.SeeAllEpisodes>
+				</S.SeeAllEpisodesDiv>
 			</S.Wrapper>
 		</>
 	);
