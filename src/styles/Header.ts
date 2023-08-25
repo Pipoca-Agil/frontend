@@ -6,15 +6,12 @@ export const Header = styled.header`
     display: flex;
     padding: 2rem  1rem;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 1320px;
     width: 100%;
     height: 10rem;
     margin: 0 auto;
     align-items: center;
-`;
-
-export const Wrapper = styled.div`
-    display: flex;
 `;
 
 export const Logo = styled.img`
@@ -24,7 +21,7 @@ export const Logo = styled.img`
 
 export const Navigation = styled.nav`
     display: flex;
-    width: 50%;
+    width: 58%;
     justify-content: center;
     align-items: center;
     gap: 8%;
@@ -37,6 +34,10 @@ export const NavLink = styled(Link)`
     font-weight: 600;   
     font-size: 2rem;  
     color: #2D2D2D;
+    transition: color 0.3s ease-out;
+    &:hover {
+    color: #B33B3B;
+  }
 `;
 
 export const AuthButtons = styled.div`
@@ -62,8 +63,8 @@ export const Button = styled(Link)`
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    width: 18rem;
-    height: 2.5rem;
+    width: 17.875rem;
+    height: 2.6rem;
     border-radius: 1.25rem;
     background-color: #B33B3B;
     color: #F3F7F8;
