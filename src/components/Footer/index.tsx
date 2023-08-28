@@ -1,5 +1,8 @@
 import * as S from '../../styles/Footer/styled';
 import React from 'react';
+import YoutubeLogo from '../../assets/icons/youtube-red-icon.svg'
+import InstagramLogo from '../../assets/icons/instagram-red-icon.svg'
+import FacebookLogo from '../../assets/icons/facebook-red-icon.svg'
 
 export default function Footer() {
 	return (
@@ -14,9 +17,9 @@ export default function Footer() {
 				<S.Section logoSection={false}>
 					<S.SectionTitle>Nos acompanhe nas redes sociais</S.SectionTitle>
 					<S.IconsDiv>
-						<S.Icons url={'/icons/youtube.svg'}/>
-						<S.Icons url={'/icons/instagram.svg'}/>
-						<S.Icons url={'/icons/facebook.svg'}/>
+						<S.Icons url={YoutubeLogo} href="https://www.youtube.com/@PipocaAgil" target="_blank"/>
+						<S.Icons url={InstagramLogo}  href="https://www.instagram.com/pipocaagil/" target="_blank"/>
+						<S.Icons url={FacebookLogo}  href="https://www.facebook.com/pipocaagil/" target="_blank"/>
 					</S.IconsDiv>
 				</S.Section>
 			</S.LeftDiv>
