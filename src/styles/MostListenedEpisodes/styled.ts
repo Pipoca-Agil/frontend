@@ -1,18 +1,21 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    max-width: 1320px;
-    margin: 0 auto;
-    padding-block: 3rem;
+    overflow: hidden;
+    padding: 3rem 0rem;
 `;
 
 
 export const Title = styled.h2`
+    padding: 0 1rem;
+    max-width: 1320px;
+    margin: 0 auto;
     font-family: 'Maven Pro', sans-serif;
     font-size: 3rem;
     color: #B33B3B;
@@ -21,26 +24,33 @@ export const Title = styled.h2`
     width: 100%;
 `;
 
-export const CardsWrapper = styled.div`
+export const Carousel = styled(motion.div)`
+    cursor: grab;
+    overflow: hidden;
+    width: 2630px;
+`;
+
+export const CardsWrapper = styled(motion.div)`
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
+    overflow: hidden;
+    padding: 0 1.5rem;
 `;
 
 export const SeeAllEpisodesDiv = styled.div`
-    width: 92.4rem;
+    max-width: 1320px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 0 1rem;
 `;
 
 export const SeeAllEpisodes = styled(Link)`
-    display: flex;
     border: none;
     color: #B33B3B;
     font-family: 'Inter';
     font-size: 1.5rem;
     font-weight: 600;
-    position: absolute;
-    right: 1%;
 `;
