@@ -3,8 +3,10 @@ import styled, { css } from "styled-components";
 export const Section = styled.section`
     display: flex;
     flex-direction: column;
-    padding: 6.56rem 4.87rem 10rem 2.55rem;
-    gap: 2rem;
+    padding: 7rem 1rem;
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
 `;
 
 export const Title = styled.h2`
@@ -13,13 +15,14 @@ export const Title = styled.h2`
     font-size: 3rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 3.75; 
+    line-height: 1.2; 
     align-self: center;
+    margin-bottom: 4rem;
 `;
 
 export const Carousel = styled.div`
     display: flex;
-    width: 112.6rem;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     align-self: center;
@@ -50,7 +53,7 @@ export const LeftArrow = styled.button`
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
-    width: 6.25rem;
+    width: 3.25rem;
     height: 6.25rem;
 `;
 
@@ -62,7 +65,7 @@ export const RightArrow = styled.button`
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
-    width: 6.25rem;
+    width: 3.25rem;
     height: 6.25rem;
 `;
 
@@ -104,15 +107,13 @@ export const EpisodeGeneralInfo = styled.div`
 
 export const EpisodeLightInformation = styled.div`
     display: flex;
-    gap: 11.7rem;
+    gap: 17rem;
 `
 
 export const BottomInformationDiv = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
-    padding-top: 9rem;
-    padding-left: 4rem;
 `
 
 export const EpisodeTitle = styled.p`
@@ -126,7 +127,7 @@ export const EpisodeTitle = styled.p`
 export const EpisodeInformation = styled.p`
     color: var(--chardon-400, #DD8C8C);
     font-family: Inter;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1rem;
@@ -179,6 +180,7 @@ export const SelectionButtons = styled.div`
     align-items: center;
     align-self: center;
     gap: 1rem;
+    margin-top: 1rem;
 `;
 
 export const SelectionButton = styled.button<{isActive: boolean}>`
