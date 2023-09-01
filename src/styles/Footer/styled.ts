@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5rem 2rem 5rem 2rem;
+    padding: 5rem 1rem;
 `;
 
 export const Section = styled.div<{logoSection: boolean}>`

@@ -20,9 +20,11 @@ export const Title = styled.h2`
 
 export const Carousel = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 1rem;
     width: 100%;
+    max-width: 1320px;
 `
 
 export const Logo = styled.img<{url: string, onTransition: boolean}>`
