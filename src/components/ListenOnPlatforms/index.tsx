@@ -14,14 +14,14 @@ export default function ListenOnPlatforms() {
 				<S.PlatformIcon src={ApplePodcast}/>
 				<S.PlatformName>Apple Podcast</S.PlatformName>
 			</S.Platform>
-				<S.Platform href="https://open.spotify.com/show/5J1scP1l7m7kXK6v5RZS7J" target="_blank">
-					<S.PlatformIcon src={Spotify}/>
-					<S.PlatformName>Spotify</S.PlatformName>
+			<S.Platform href="https://open.spotify.com/show/5J1scP1l7m7kXK6v5RZS7J" target="_blank">
+				<S.PlatformIcon src={Spotify}/>
+				<S.PlatformName>Spotify</S.PlatformName>
 			</S.Platform>
-			    <S.Platform href="https://www.youtube.com/@PipocaAgil" target="_blank">
-					<S.PlatformIcon src={YouTube}/>
-					<S.PlatformName>YouTube</S.PlatformName>
-				</S.Platform>
+			<S.Platform href="https://www.youtube.com/@PipocaAgil" target="_blank">
+				<S.PlatformIcon src={YouTube}/>
+				<S.PlatformName>YouTube</S.PlatformName>
+			</S.Platform>
 		</S.ListenOnPlatforms>
     )
 }
