@@ -33,7 +33,7 @@ export const NavLink = styled(Link)`
     font-family: Maven Pro;
     font-weight: 600;   
     font-size: 2rem;  
-    color: #2D2D2D;
+    color: #455F6B;
     transition: color 0.3s ease-out;
     &:hover {
     color: #B33B3B;

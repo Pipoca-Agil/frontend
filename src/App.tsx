@@ -5,7 +5,6 @@ import NotFound from './pages/NotFound';
 import Register from './pages/Register';
 import Header from './components/Header/Header';
 import {GlobalStyle} from './styles/Global';
-import './App.css';
 import Login from './pages/Login';
 import RegisterProvider from './context/registerProvider';
 import ModalProvider from './context/ModalProvider';
