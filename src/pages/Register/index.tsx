@@ -15,46 +15,39 @@ interface FormData {
 
 export default function Register() {
   const [step, setStep] = useState<number>(1);
-  const [firstStepData, setFirstStepData] = useState<FormData | null>(null);
-  const [secondStepData, setSecondStepData] = useState<FormData | null>(null);
+  const [formData, setFormData] = useState<FormData | null>(null);
 
-  function nextPage() {
-    setStep(step + 1);
-    console.log(step);
-  }
+  const nextPage = () => {
+    setStep((prevStep) => prevStep + 1);
+  };
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     if (step === 1) {
-      setFirstStepData(data);
+      setFormData(data);
       nextPage();
-      joinObjects(data);
-      return;
-    }
-
-    setSecondStepData(data);
-    joinObjects(data);
-  };
-
-  function joinObjects(data: FormData) {
-    if (step === 2 && firstStepData !== null) {
-      // Junta os dois objetos
-      const formData: FormData = {
-        ...firstStepData,
+    } else if (step === 2 && formData !== null) {
+      const combinedData: FormData = {
+        ...formData,
         ...data,
       };
-      console.log(formData);
-      postDataFunction(formData);
+      postDataFunction(combinedData);
     }
-  }
+  };
 
   const postDataFunction = async (formData: FormData) => {
-    const postData = await postRegister(formData);
+    try {
+      const response = await postRegister(formData);
+      // Lide com a resposta aqui
+    } catch (error) {
+      // Lide com erros aqui
+      console.error("Erro ao enviar os dados:", error);
+    }
   };
 
   return (
     <S.Container>
       <S.SideImageWraper>
-        <S.SideImage src={WomanRegister} alt="Woman Register"></S.SideImage>
+        <S.SideImage src={WomanRegister} alt="Woman Register" />
       </S.SideImageWraper>
       <S.FormWraper>
         {step === 1 ? (
