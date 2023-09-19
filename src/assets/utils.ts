@@ -1,19 +1,19 @@
 export const inicialRegisterData = {
-	name: '',
-	lastName: '',
-	email: '',
-	password: '',
-	checkPassword: '',
+  name: "",
+  lastName: "",
+  email: "",
+  password: "",
+  checkPassword: "",
 };
-export const apiUrl = 'https://backend-production-a1f0.up.railway.app';
+export const apiUrl = "http://localhost:3001";
 
 export const modalInicial = {
-	visible: false,
+  visible: false,
 };
 export const isRegisterNew = {
-	newRegister: undefined,
+  newRegister: undefined,
 };
 export const inicialLoginState = {
-	email: '',
-	password: '',
+  email: "",
+  password: "",
 };
