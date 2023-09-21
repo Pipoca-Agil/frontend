@@ -35,7 +35,10 @@ export default function FirstStepRegister({ onSubmit }: any) {
           {...register("name", {
             required: true,
             minLength: 3,
-            pattern: /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/,
+            validate: {
+              noNumbers: (value) => !/\d/.test(value), // Valida se não há números
+              noSpecialChars: (value) => /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/.test(value), // Valida se não há caracteres especiais
+            },
           })}
           isError={!!errors.name} // Define a propriedade isError com base na presença de erros
         ></Input>
@@ -45,10 +48,16 @@ export default function FirstStepRegister({ onSubmit }: any) {
             Campo necessário
           </S.ErrorMessage>
         )}
-        {errors?.name?.type === "pattern" && (
+        {errors?.name?.type === "noSpecialChars" && (
           <S.ErrorMessage>
             <S.CircleIcon src={ErrorCircle} />
             Não pode conter caracteres especiais
+          </S.ErrorMessage>
+        )}
+        {errors?.name?.type === "noNumbers" && (
+          <S.ErrorMessage>
+            <S.CircleIcon src={ErrorCircle} />
+            Não pode conter números
           </S.ErrorMessage>
         )}
         {errors?.name?.type === "minLength" && (
@@ -66,7 +75,10 @@ export default function FirstStepRegister({ onSubmit }: any) {
           {...register("surname", {
             required: true,
             minLength: 3,
-            pattern: /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/,
+            validate: {
+              noNumbers: (value) => !/\d/.test(value), // Valida se não há números
+              noSpecialChars: (value) => /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/.test(value), // Valida se não há caracteres especiais
+            },
           })}
           isError={!!errors.surname}
         ></Input>
@@ -77,10 +89,16 @@ export default function FirstStepRegister({ onSubmit }: any) {
           </S.ErrorMessage>
         )}
 
-        {errors?.surname?.type === "pattern" && (
+        {errors?.surname?.type === "noSpecialChars" && (
           <S.ErrorMessage>
             <S.CircleIcon src={ErrorCircle} />
             Não pode conter caracteres especiais
+          </S.ErrorMessage>
+        )}
+        {errors?.surname?.type === "noNumbers" && (
+          <S.ErrorMessage>
+            <S.CircleIcon src={ErrorCircle} />
+            Não pode conter números
           </S.ErrorMessage>
         )}
 
