@@ -25,3 +25,18 @@ export const Input = styled.input<{ isError: boolean }>`
   font-style: normal;
   font-weight: 400;
 `;
+
+export const InputWrapper = styled.div`
+  position: relative;
+`;
+
+export const ButtonIcon = styled.button`
+  cursor: pointer;
+`;
+
+export const EyeIcon = styled.img`
+  cursor: pointer;
+  position: absolute;
+  right: 9%;
+  top: 20%;
+`;
