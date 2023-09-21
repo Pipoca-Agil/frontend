@@ -12,6 +12,7 @@ export const Label = styled.label`
 
 export const Input = styled.input<{ isError: boolean }>`
   padding: 0.5rem 1.5rem;
+  padding-right: 5rem;
   display: flex;
   width: 100%;
   height: 4rem;
@@ -24,4 +25,19 @@ export const Input = styled.input<{ isError: boolean }>`
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
+`;
+
+export const InputWrapper = styled.div`
+  position: relative;
+`;
+
+export const ButtonIcon = styled.button`
+  cursor: pointer;
+`;
+
+export const EyeIcon = styled.img`
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  top: 20%;
 `;

@@ -128,9 +128,9 @@ export default function SecondStepRegister({ onSubmit }: any) {
       <S.FormGroup>
         <Input
           label="Senha"
-          type="password"
           value={password}
           onChange={handleChange}
+          showPasswordButton={true}
           isError={passwordRequirements.some(
             (req) => req.icon === ErrorCircle || passwordError
           )}
@@ -140,9 +140,9 @@ export default function SecondStepRegister({ onSubmit }: any) {
       <S.FormGroup>
         <Input
           label="Confirmar Senha"
-          type="password"
           value={confirmPassword}
           onChange={handleConfirmPasswordChange}
+          showPasswordButton={true}
           isError={confirmPasswordError !== null}
         ></Input>
         {confirmPasswordError && (
