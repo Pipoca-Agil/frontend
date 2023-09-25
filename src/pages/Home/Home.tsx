@@ -6,6 +6,8 @@ import OurGuests, { IGuestCarousel } from '../../components/OurGuests/index'
 import GetGuests from '../../api/GetGuests'
 import IntroSection from '../../components/IntroSection';
 import OurPartners from './components/OurPartners'
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer';
 
 const mockGuests = GetGuests()
 
@@ -15,11 +17,13 @@ const HomePage: React.FC = () => {
 
 	return (
 		<HomeContainer>
+			<Header />
 			<IntroSection />
 			<MostListenedEpisodes />
 			<About />
 			<OurGuests guests={guests}/>
 			<OurPartners />
+			<Footer />
 		</HomeContainer>
 	);
 };

@@ -20,7 +20,6 @@ function App() {
 			<RegisterProvider>
 				<ModalProvider>
 					<BrowserRouter>
-						<Header />
 						<Routes>
 							<Route path='/' element={<HomePage />} />
 							<Route path='/home' element={<HomePage />} />
@@ -30,7 +29,6 @@ function App() {
 							<Route path='/Aside' element={<Aside/>}/>
 							<Route path='/audiomessage' element={<AudioMessage/>} />
 						</Routes>
-						<Footer/>
 					</BrowserRouter>
 				</ModalProvider>
 			</RegisterProvider>
