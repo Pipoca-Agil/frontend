@@ -35,11 +35,18 @@ export const SubTitle = styled.p`
   width: 370px;
   height: 28px;
   top: 350px;
-  left: -130px;
+  left: 126px;
   color: #455F6B;
   font-family: "Inter";
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
-  padding-top: 5px;
+`
+
+export const FormStyle = styled.section`
+  display: flex;
+  flex-direction: column;
+  max-width: 400px
+  justify-content: center;
+  align-items: center;
 `
