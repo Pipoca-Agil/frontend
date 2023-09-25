@@ -9,18 +9,19 @@ type LoginData = {
 }
 
 export default function Login() {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-
-  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(event.target.value);
+  // Estado tipado com LoginData
+  const [formData, setFormData] = useState<LoginData>({
+    email: '',
+    password: '',
+  });
+ 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   }
-
-  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(event.target.value);
-  }
-
-  
 
   return (
     <>
@@ -37,9 +38,11 @@ export default function Login() {
             <LableStyle>
                 Login
             <InputComponent 
+              placeholder='email@email.com'
               type='text'
-              value={email}
-              onChange={handleEmailChange}
+              name='email'
+              value={formData.email}
+              onChange={handleInputChange}
               />
             </LableStyle>
             </FormGroup>
@@ -47,9 +50,11 @@ export default function Login() {
             <LableStyle>
                 Password
             <InputComponent 
+              placeholder='senha'
               type='password'
-              value={password}
-              onChange={handlePasswordChange}
+              name='password'
+              value={formData.password}
+              onChange={handleInputChange}
               />
             </LableStyle>
             </FormGroup>

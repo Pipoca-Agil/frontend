@@ -56,11 +56,16 @@ export const FormStyle = styled.section`
 
 export const InputComponent = styled.input`
 width: 400px;
+display: flex;
 height: 40px;
 top: 434px;
 left: 141px;
 border-radius: 30px;
 border: 2px solid #BDBDBD;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+padding: 0.5rem 1.5rem;
 `
 
 export const ImageWrapper = styled.div`
