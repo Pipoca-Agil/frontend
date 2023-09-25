@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle } from './style'
+import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 
 export default function Login() {
+
   return (
     <>
     <LogoImage>
@@ -14,9 +15,13 @@ export default function Login() {
       <FormStyle>
         <Title>Área do assinante</Title>
         <SubTitle>Tenha acesso a conteúdos inovadores</SubTitle>
-
+          <form>
+            
+          </form>
       </FormStyle>
-      <img src= {ImagemLogin} alt= 'Imagem Ibson podcast pipipoca ágil' />
+      <ImageWrapper>
+        <Image src={ImagemLogin} alt="Ibson podcast pipoca ágil" />
+      </ImageWrapper>
     </StyledLoginPage>
   </>
   )

@@ -1,12 +1,8 @@
 import styled from "styled-components";
-import "@fontsource/maven-pro";
 
 export const StyledLoginPage = styled.main`
-  width: 100%;
-  max-width: 100%;
   display: flex;
-  justify-content: space-between;
-
+  height: 100vh;
 `
 
 export const LogoImage = styled.div`
@@ -18,35 +14,40 @@ export const LogoImage = styled.div`
 `
 
 export const Title = styled.h4`
-  position: relative;
-  font-family: "Maven Pro";
-  font-weigth: 700;
-  font-size: 32px;
-  line-height: 35.2px;
-  color: #B33B3B;
-  width: 275px;
-  height: 36px;
-  top: 308px;
-  left: 146px;
+  color: #b33b3b;
+  font-family: Maven Pro;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.52rem; /* 110% */
+  margin-bottom: 1.2rem;
 `
 
 export const SubTitle = styled.p`
-  position: relative;
-  width: 370px;
-  height: 28px;
-  top: 350px;
-  left: 126px;
-  color: #455F6B;
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
+color: var(--Letter, #455f6b);
+font-family: Inter;
+font-size: 2rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.75rem; /* 140% */
 `
 
 export const FormStyle = styled.section`
-  display: flex;
-  flex-direction: column;
-  max-width: 400px
-  justify-content: center;
-  align-items: center;
+  padding: 4rem 0;
+  margin: auto;
+  max-width: 410px;
+  width: 100%;
+`
+
+export const InputComponent = styled.input`
+  
+`
+export const ImageWrapper = styled.div`
+  width: 50vw;
+  height: 100%;
+`
+
+export const Image = styled.img`
+  width: 50vw;
+  background-position: bottom bottom;
 `
