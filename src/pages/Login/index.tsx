@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes } from './style'
+import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2 } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
+import { Link } from 'react-router-dom';
+import './style.css'
 
 type LoginData = {
   email: string,
@@ -21,6 +23,10 @@ export default function Login() {
       ...formData,
       [name]: value,
     });
+  }
+
+  const styleColor = {
+    color: "#B33B3B",
   }
 
   return (
@@ -65,12 +71,17 @@ export default function Login() {
               <SpanText>Mantenha-me Conectado</SpanText>
               <LinkDetalhes>Detalhes</LinkDetalhes>
             </CheckBoxWapper>
-          </form>
+        <CadastreseDiv>
+        <CadastreseText>Ainda não é assinante?</CadastreseText>
+        <CadastreseText2><Link style={styleColor} to={"/register"} >Cadastre-se</Link>e conheça as vantagens</CadastreseText2>
+        </CadastreseDiv>
+      </form>
       </FormStyle>
     </StyledLoginPage>
       <ImageWrapper>
         <Image src={ImagemLogin} alt="Ibson podcast pipoca ágil" />
       </ImageWrapper>
+
   </Body>
   )
 };

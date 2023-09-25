@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Body = styled.body`
-  background-color: white;
   display: flex;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 `
 
 export const StyledLoginPage = styled.main`
@@ -49,16 +48,13 @@ line-height: 2.8rem;
 `
 
 export const FormStyle = styled.section`
+  position: relative;
   padding: 4rem 0;
-  margin: auto;
   max-width: 410px;
   width: 100%;
+  left: 50%;
+  top: 25%;
 
-  .formContainer {
-    display: flex;
-    flex-direction: column;
-    gap-between: 10px
-  }
 `
 
 export const InputComponent = styled.input`
@@ -81,10 +77,11 @@ export const ImageWrapper = styled.div`
 `
 
 export const Image = styled.img`
-  position: fixed;
-  margin-left:15%;
+  position: absolute;
+  margin-left:20%;
   width: 50vw;
   background-position: bottom bottom;
+  transform: scale(0.9);
 `
 export const FormGroup = styled.div`
   margin-top: 2.4rem;
@@ -157,4 +154,31 @@ position: relative;
 top: 45px;
 left: 25px;
 text-decoration: subline;
+`
+
+export const CadastreseDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 68px;
+`
+
+export const CadastreseText = styled.p`
+font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: center;
+color: #455F6B;
+`
+
+export const CadastreseText2 = styled.p`
+font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: center;
+color: #455F6B;
 `
