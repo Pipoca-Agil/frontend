@@ -81,7 +81,7 @@ export const AudioTimer = styled.time`
     font-family: Inter;
     font-style: normal;
     font-weight: 600;
-    line-height: 1.6875rem; 
+   
 `;
 
 type ImgProps = {

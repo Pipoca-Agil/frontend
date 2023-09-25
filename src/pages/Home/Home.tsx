@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { HomeContainer } from '../../styles/Home';
 import MostListenedEpisodes from '../../components/MostListenedEpisodes'
@@ -9,11 +10,12 @@ import OurPartners from './components/OurPartners'
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer';
 
-const mockGuests = GetGuests()
 
+
+const mockGuests = GetGuests();
 
 const HomePage: React.FC = () => {
-	const [guests, ] = React.useState<IGuestCarousel[]>(mockGuests)
+  const [guests] = React.useState<IGuestCarousel[]>(mockGuests);
 
 	return (
 		<HomeContainer>

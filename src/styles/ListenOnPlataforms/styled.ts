@@ -2,11 +2,13 @@
 import styled from 'styled-components';
 
 export const ListenOnPlatforms = styled.div`
-    padding-left: 2rem;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
 `;
 
 export const Title = styled.h3`
-    margin-top: 3.9rem;
+    
     color: #B33B3B;
     font-family: Maven Pro;
     font-size: 2rem;
@@ -17,9 +19,9 @@ export const Title = styled.h3`
 
 export const Platform = styled.a`
     text-decoration: none;
-    cursor: pointer;
     display: flex;
     margin-top: 1.5rem;
+    cursor: unset;
 `;
 
 export const PlatformIcon = styled.img`
@@ -27,15 +29,17 @@ export const PlatformIcon = styled.img`
     height: 3.1rem;
     margin-right: 1rem;
     object-fit: contain;
+    cursor: pointer;
 `;
 
 export const PlatformName = styled.p`
-    margin: auto 0;
+    display: flex;
+    cursor: pointer;
     line-height: 1.6875rem;
     color: #525252;
     font-family: Inter;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 600;
-    justify-content: center;
+    align-items: center;
 `;
