@@ -133,10 +133,24 @@ export const SpanText = styled.span`
 color: var(--Letter, #455f6b);
 position: relative;
 font-family: Inter;
-font-size: 2rem;
+font-size: 14px;
 font-style: normal;
 font-weight: 400;
 line-height: 1.75rem; /* 140% */
 top: 45px;
 left: 15px
+`
+
+export const LinkDetalhes = styled.p`
+font-family: Inter;
+font-size: 14px;
+font-weight: 400;
+line-height: 27px;
+letter-spacing: 0em;
+text-align: left;
+color: #B33B3B;
+position: relative;
+top: 45px;
+left: 25px;
+text-decoration: subline;
 `

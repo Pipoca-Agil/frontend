@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText } from './style'
+import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 
@@ -63,6 +63,7 @@ export default function Login() {
             <CheckBoxWapper>
               <CheckBox />
               <SpanText>Mantenha-me Conectado</SpanText>
+              <LinkDetalhes>Detalhes</LinkDetalhes>
             </CheckBoxWapper>
           </form>
       </FormStyle>
