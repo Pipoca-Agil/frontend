@@ -95,6 +95,10 @@ export const PasswordSpan = styled.span`
 `
 
 export const Button = styled.button`
+  position: relative;
+  margin-top: 50px;
+  top 625px;
+  left: 45px;
   cursor: pointer;
   width: 31.2rem;
   height: 4rem;
@@ -113,3 +117,26 @@ export const Button = styled.button`
   line-height: 2.7rem; /* 135% */
   text-transform: capitalize;
 `;
+
+export const CheckBoxWapper = styled.div`
+  display: flex;
+  align-items:center;
+`
+
+export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
+  position: relative;
+  width: 16px;
+  height: 16px;
+  top: 44px;
+`
+export const SpanText = styled.span`
+color: var(--Letter, #455f6b);
+position: relative;
+font-family: Inter;
+font-size: 2rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.75rem; /* 140% */
+top: 45px;
+left: 15px
+`
