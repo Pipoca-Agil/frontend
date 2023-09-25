@@ -32,16 +32,37 @@ font-weight: 400;
 line-height: 1.75rem; /* 140% */
 `
 
+export const LableStyle = styled.label`
+color: var(--Letter, #455f6b);
+font-family: Inter;
+font-size: 2rem;
+font-style: normal;
+font-weight: 400;
+line-height: 2.8rem;
+`
+
 export const FormStyle = styled.section`
   padding: 4rem 0;
   margin: auto;
   max-width: 410px;
   width: 100%;
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    gap-between: 10px
+  }
 `
 
 export const InputComponent = styled.input`
-  
+width: 400px;
+height: 40px;
+top: 434px;
+left: 141px;
+border-radius: 30px;
+border: 2px solid #BDBDBD;
 `
+
 export const ImageWrapper = styled.div`
   width: 50vw;
   height: 100%;
@@ -51,3 +72,6 @@ export const Image = styled.img`
   width: 50vw;
   background-position: bottom bottom;
 `
+export const FormGroup = styled.div`
+  margin-top: 2.4rem;
+`;
