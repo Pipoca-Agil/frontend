@@ -67,10 +67,10 @@ export default function Login() {
             </CheckBoxWapper>
           </form>
       </FormStyle>
+    </StyledLoginPage>
       <ImageWrapper>
         <Image src={ImagemLogin} alt="Ibson podcast pipoca ágil" />
       </ImageWrapper>
-    </StyledLoginPage>
   </Body>
   )
 };

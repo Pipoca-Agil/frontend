@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Body = styled.body`
   background-color: white;
-  
+  display: flex;
+  height: 100vh;
+  width: 100%;
 `
 
 export const StyledLoginPage = styled.main`
@@ -79,6 +81,8 @@ export const ImageWrapper = styled.div`
 `
 
 export const Image = styled.img`
+  position: fixed;
+  margin-left:15%;
   width: 50vw;
   background-position: bottom bottom;
 `
