@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup } from './style'
+import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 
@@ -24,7 +24,7 @@ export default function Login() {
   }
 
   return (
-    <>
+    <Body>
     <LogoImage>
       <img src={LogoPipocaAgil} alt='Logo podcast Pipoca Ágil'
       />
@@ -57,13 +57,15 @@ export default function Login() {
               onChange={handleInputChange}
               />
             </LableStyle>
+            <PasswordSpan>Esqueci minha senha</PasswordSpan>
             </FormGroup>
+            <Button>Continuar</Button>
           </form>
       </FormStyle>
       <ImageWrapper>
         <Image src={ImagemLogin} alt="Ibson podcast pipoca ágil" />
       </ImageWrapper>
     </StyledLoginPage>
-  </>
+  </Body>
   )
 };

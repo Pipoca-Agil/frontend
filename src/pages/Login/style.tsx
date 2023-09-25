@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Body = styled.body`
+  background-color: white;
+  
+`
+
 export const StyledLoginPage = styled.main`
   display: flex;
   height: 100vh;
@@ -79,4 +84,32 @@ export const Image = styled.img`
 `
 export const FormGroup = styled.div`
   margin-top: 2.4rem;
+`;
+
+export const PasswordSpan = styled.span`
+  font-family: "Inter";
+  font-size: 14px;
+  line-height: 2.7rem;
+  font-weight: 400;
+  color:  #B33B3B;
+`
+
+export const Button = styled.button`
+  cursor: pointer;
+  width: 31.2rem;
+  height: 4rem;
+  border-radius: 2rem;
+  background: var(--white-300, #bdbdbd);
+
+  box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.25);
+
+  color: var(--Letter, #455f6b);
+  text-align: center;
+  /* Button/Button */
+  font-family: Inter;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.7rem; /* 135% */
+  text-transform: capitalize;
 `;
