@@ -3,7 +3,6 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import HomePage from './pages/Home/Home';
 import NotFound from './pages/NotFound';
 import Register from './pages/Register';
-import Header from './components/Header/Header';
 import {GlobalStyle} from './styles/Global';
 import './App.css';
 import Login from './pages/Login';
@@ -11,7 +10,6 @@ import RegisterProvider from './context/registerProvider';
 import ModalProvider from './context/ModalProvider';
 import Aside from './components/aside/Index';
 import AudioMessage from './pages/AudioMessage';
-import Footer from './components/Footer';
 
 function App() {
 	return (
