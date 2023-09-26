@@ -52,7 +52,7 @@ export const FormStyle = styled.section`
   max-width: 410px;
   width: 100%;
   left: 30%;
-  top: 25%;
+  top: 20%;
   max-height: 60%;
 
 `
