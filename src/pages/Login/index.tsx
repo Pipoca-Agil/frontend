@@ -61,7 +61,8 @@ export default function Login() {
             <LableStyle>
                 Senha
             <PassowrdWrapper>
-            <InputComponent 
+            <InputComponent
+              className='passWordInput' 
               placeholder='****************'
               type={showPassword ? 'text' : 'password'}
               name='password'

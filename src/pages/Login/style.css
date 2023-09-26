@@ -4,3 +4,13 @@
 * {
   background-color: white;
 }
+
+body {
+  overflow-x: hidden;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Isso ocultará a barra de rolagem no Google Chrome e navegadores baseados em WebKit */
+}

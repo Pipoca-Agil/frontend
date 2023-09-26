@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const Body = styled.body`
   display: flex;
-  height: 100vh;
-  width: 100vw;
 `
 
 export const StyledLoginPage = styled.main`
   display: flex;
   height: 100vh;
+  justify-content: space-around;
 `
 
 export const LogoImage = styled.div`
@@ -49,11 +48,12 @@ line-height: 2.8rem;
 
 export const FormStyle = styled.section`
   position: relative;
-  padding: 4rem 0;
+  padding: 1rem 0;
   max-width: 410px;
   width: 100%;
-  left: 50%;
+  left: 30%;
   top: 25%;
+  max-height: 60%;
 
 `
 
@@ -72,16 +72,16 @@ padding: 0.5rem 1.5rem;
 `
 
 export const ImageWrapper = styled.div`
-  width: 50vw;
-  height: 100%;
+width: 50vw;
+height: 100%;
 `
 
 export const Image = styled.img`
-  position: absolute;
-  margin-left:20%;
+  position: fixed;
+  background: transparent;
   width: 50vw;
-  background-position: bottom bottom;
-  transform: scale(0.9);
+  right:0px;
+  top: 30px;
 `
 export const FormGroup = styled.div`
   margin-top: 2.4rem;
@@ -188,9 +188,9 @@ export const PassowrdWrapper = styled.div`
 `
 
 export const Icon = styled.i`
-  position: relative;
-  top: 10px;
-  right: 35px;
-  background-color: transparent;
-  color: #989898
+  position: absolute;
+  top: 228px;
+  right: 24px;
+  color: #989898;
+  cursor: pointer;
 `
