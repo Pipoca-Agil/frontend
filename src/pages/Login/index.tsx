@@ -54,9 +54,9 @@ export default function Login() {
             </FormGroup>
             <FormGroup>
             <LableStyle>
-                Password
+                Senha
             <InputComponent 
-              placeholder='senha'
+              placeholder='****************'
               type='password'
               name='password'
               value={formData.password}
@@ -73,7 +73,7 @@ export default function Login() {
             </CheckBoxWapper>
         <CadastreseDiv>
         <CadastreseText>Ainda não é assinante?</CadastreseText>
-        <CadastreseText2><Link style={styleColor} to={"/register"} >Cadastre-se</Link>e conheça as vantagens</CadastreseText2>
+        <CadastreseText2><Link style={styleColor} to={"/register"} >Cadastre-se</Link> e conheça as vantagens</CadastreseText2>
         </CadastreseDiv>
       </form>
       </FormStyle>
