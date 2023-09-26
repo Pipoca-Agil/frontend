@@ -182,3 +182,15 @@ letter-spacing: 0em;
 text-align: center;
 color: #455F6B;
 `
+
+export const PassowrdWrapper = styled.div`
+  display: flex;
+`
+
+export const Icon = styled.i`
+  position: relative;
+  top: 10px;
+  right: 35px;
+  background-color: transparent;
+  color: #989898
+`

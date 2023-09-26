@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2 } from './style'
+import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, Icon } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import { Link } from 'react-router-dom';
@@ -16,6 +16,7 @@ export default function Login() {
     email: '',
     password: '',
   });
+  const [showPassword, setShowPassword] = useState(false);
  
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -24,6 +25,10 @@ export default function Login() {
       [name]: value,
     });
   }
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const styleColor = {
     color: "#B33B3B",
@@ -55,13 +60,19 @@ export default function Login() {
             <FormGroup>
             <LableStyle>
                 Senha
+            <PassowrdWrapper>
             <InputComponent 
               placeholder='****************'
-              type='password'
+              type={showPassword ? 'text' : 'password'}
               name='password'
               value={formData.password}
               onChange={handleInputChange}
               />
+                <Icon
+                  className={`fa ${showPassword ? 'fa-eye-slash' : 'fa-eye'}`}
+                  onClick={togglePasswordVisibility}
+                ></Icon>
+            </PassowrdWrapper>    
             </LableStyle>
             <PasswordSpan>Esqueci minha senha</PasswordSpan>
             </FormGroup>
