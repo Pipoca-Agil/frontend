@@ -1,4 +1,24 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+import 'font-awesome/css/font-awesome.css';
+
+export const GlobalStyles = createGlobalStyle`
+  * {
+    background-color: white;
+  }
+
+  body {
+    overflow-x: hidden;
+    max-height: 100vh;
+    max-width: 100vw;
+  }
+
+  /* Estilize a barra de rolagem no Chrome e navegadores baseados em WebKit */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
 
 export const Body = styled.body`
   display: flex;
