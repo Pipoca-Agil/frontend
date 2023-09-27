@@ -3,7 +3,6 @@ import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, I
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import { Link } from 'react-router-dom';
-import './style.css'
 
 type LoginData = {
   email: string,
