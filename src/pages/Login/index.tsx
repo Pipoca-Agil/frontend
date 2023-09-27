@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, Icon } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import { Link } from 'react-router-dom';
+
 
 type LoginData = {
   email: string,
@@ -16,6 +17,10 @@ export default function Login() {
     password: '',
   });
   const [showPassword, setShowPassword] = useState(false);
+  const [isPasswordValid, setIsPasswordValid] = useState
+  (false);
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
  
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -35,36 +40,40 @@ export default function Login() {
 
   const emailValidation = (email: string): boolean => {
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return regex.test(email);
+    const isValid = regex.test(email);
+    setIsEmailValid(isValid);
+    return isValid;
   }
 
   const validatePassword = (password: string): boolean => {
     // Validação de senha: entre 8 e 12 caracteres, letras, números e caracteres especiais
     const regex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@#$%^&+=!])[A-Za-z\d@#$%^&+=!]{8,12}$/;
-    return regex.test(password);
+    const isValid = regex.test(password);
+    setIsPasswordValid(isValid);
+    return isValid;
   };
+
+  useEffect(() => {
+    setIsFormValid(isEmailValid && isPasswordValid);
+  }, [isEmailValid, isPasswordValid]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    // Validar o email e a senha antes de prosseguir
-    if (!emailValidation(formData.email)) {
-      alert('Por favor, insira um email válido.');
-      return;
-    }
-
-    if (!validatePassword(formData.password)) {
-      alert(
-        'Por favor, insira uma senha válida. A senha deve ter entre 8 e 12 caracteres, incluindo letras, números e caracteres especiais.'
-      );
-      return;
-    }
-
-    if (!validatePassword(formData.password) && !emailValidation(formData.email)) {
-      alert(
-        'Email e senhas inválidos'
-      );
-      return;
+  
+    switch (true) {
+      case !emailValidation(formData.email):
+        alert('Por favor, insira um email válido.');
+        break;
+      case !validatePassword(formData.password):
+        alert(
+          'Por favor, insira uma senha válida. A senha deve ter entre 8 e 12 caracteres, incluindo letras, números e caracteres especiais.'
+        );
+        break;
+      case !emailValidation(formData.email) && !validatePassword(formData.password):
+        alert('Email e senha inválidos.');
+        break;
+      default:
+        break;
     }
   };
 
@@ -111,7 +120,14 @@ export default function Login() {
             </LableStyle>
             <PasswordSpan>Esqueci minha senha</PasswordSpan>
             </FormGroup>
-            <Button>Continuar</Button>
+            <Button
+            
+            style={{
+              backgroundColor: isFormValid ? '#B33B3B' : '#bdbdbd',
+              color: isFormValid ? 'white' : '#455f6b'
+            }}
+            >Continuar
+            </Button>
             <CheckBoxWapper>
               <CheckBox />
               <SpanText>Mantenha-me Conectado</SpanText>
