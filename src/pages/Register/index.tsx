@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./styled";
-import WomanRegister from "../../assets/photos/woman-register.svg";
+import IbsonFirstStep from "../../assets/photos/ibson-register.svg";
+import IbsonSecondStep from "../../assets/photos/ibson-register-2.svg";
 import { SubmitHandler } from "react-hook-form";
 import FirstStepRegister from "./FirstStepRegister";
 import SecondStepRegister from "./SecondStepRegister";
@@ -47,7 +48,10 @@ export default function Register() {
   return (
     <S.Container>
       <S.SideImageWraper>
-        <S.SideImage src={WomanRegister} alt="Woman Register" />
+        <S.SideImage
+          src={step === 1 ? IbsonFirstStep : IbsonSecondStep}
+          alt="Ibson"
+        />
       </S.SideImageWraper>
       <S.FormWraper>
         {step === 1 ? (
