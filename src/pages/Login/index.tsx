@@ -20,7 +20,14 @@ export default function Login() {
   const [isPasswordValid, setIsPasswordValid] = useState
   (false);
   const [isEmailValid, setIsEmailValid] = useState(false);
-  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@#$%^&+=!])[A-Za-z\d@#$%^&+=!]{8,12}$/;
+
+    setIsEmailValid(emailRegex.test(formData.email));
+    setIsPasswordValid(passwordRegex.test(formData.password));
+  }, [formData.email, formData.password]);
  
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -38,43 +45,21 @@ export default function Login() {
     color: "#B33B3B",
   }
 
-  const emailValidation = (email: string): boolean => {
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const isValid = regex.test(email);
-    setIsEmailValid(isValid);
-    return isValid;
-  }
-
-  const validatePassword = (password: string): boolean => {
-    // Validação de senha: entre 8 e 12 caracteres, letras, números e caracteres especiais
-    const regex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@#$%^&+=!])[A-Za-z\d@#$%^&+=!]{8,12}$/;
-    const isValid = regex.test(password);
-    setIsPasswordValid(isValid);
-    return isValid;
-  };
-
-  useEffect(() => {
-    setIsFormValid(isEmailValid && isPasswordValid);
-  }, [isEmailValid, isPasswordValid]);
-
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-  
-    switch (true) {
-      case !emailValidation(formData.email):
-        alert('Por favor, insira um email válido.');
-        break;
-      case !validatePassword(formData.password):
-        alert(
-          'Por favor, insira uma senha válida. A senha deve ter entre 8 e 12 caracteres, incluindo letras, números e caracteres especiais.'
-        );
-        break;
-      case !emailValidation(formData.email) && !validatePassword(formData.password):
-        alert('Email e senha inválidos.');
-        break;
-      default:
-        break;
+
+    if (!isEmailValid) {
+      alert('Por favor, insira um email válido.');
+      return;
     }
+
+    if (!isPasswordValid) {
+      alert(
+        'Por favor, insira uma senha válida. A senha deve ter entre 8 e 12 caracteres, incluindo letras, números e caracteres especiais.'
+      );
+      return;
+    }
+
   };
 
   return (
@@ -121,11 +106,6 @@ export default function Login() {
             <PasswordSpan>Esqueci minha senha</PasswordSpan>
             </FormGroup>
             <Button
-            
-            style={{
-              backgroundColor: isFormValid ? '#B33B3B' : '#bdbdbd',
-              color: isFormValid ? 'white' : '#455f6b'
-            }}
             >Continuar
             </Button>
             <CheckBoxWapper>
