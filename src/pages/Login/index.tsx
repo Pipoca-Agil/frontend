@@ -33,10 +33,40 @@ export default function Login() {
     color: "#B33B3B",
   }
 
-  const emailValidation = (email: string) => {
+  const emailValidation = (email: string): boolean => {
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return regex.test(email);
   }
+
+  const validatePassword = (password: string): boolean => {
+    // Validação de senha: entre 8 e 12 caracteres, letras, números e caracteres especiais
+    const regex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@#$%^&+=!])[A-Za-z\d@#$%^&+=!]{8,12}$/;
+    return regex.test(password);
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    // Validar o email e a senha antes de prosseguir
+    if (!emailValidation(formData.email)) {
+      alert('Por favor, insira um email válido.');
+      return;
+    }
+
+    if (!validatePassword(formData.password)) {
+      alert(
+        'Por favor, insira uma senha válida. A senha deve ter entre 8 e 12 caracteres, incluindo letras, números e caracteres especiais.'
+      );
+      return;
+    }
+
+    if (!validatePassword(formData.password) && !emailValidation(formData.email)) {
+      alert(
+        'Email e senhas inválidos'
+      );
+      return;
+    }
+  };
 
   return (
     <Body>
@@ -48,7 +78,7 @@ export default function Login() {
       <FormStyle>
         <Title>Área do assinante</Title>
         <SubTitle>Tenha acesso a conteúdos inovadores</SubTitle>
-          <form>
+          <form onSubmit={handleSubmit}>
             <FormGroup>
             <LableStyle>
                 Login
