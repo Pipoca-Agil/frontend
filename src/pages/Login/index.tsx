@@ -65,8 +65,10 @@ export default function Login() {
   return (
     <Body>
     <LogoImage>
+      <Link to='/'>
       <img src={LogoPipocaAgil} alt='Logo podcast Pipoca Ágil'
       />
+      </Link>
     </LogoImage>
     <StyledLoginPage>
       <FormStyle>
