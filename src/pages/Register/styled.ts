@@ -1,38 +1,57 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import IbsonTablet from "../../assets/photos/ibson-registe-tablet-2.svg";
 
 export const Container = styled.section`
   display: flex;
   height: 100vh;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 export const SideImageWraper = styled.div`
   width: 50vw;
   height: 100%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: 287px;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
-export const SideImage = styled.img`
+export const SideImage = styled.img<{ secondStepImage: boolean }>`
   position: fixed;
   width: 50vw;
   background-position: bottom bottom;
+  object-fit: contain;
+  object-position: center; /* Defina a posição para o centro */
+
+  @media (max-width: 1024px) {
+    position: static;
+    width: 100%;
+    min-height: 287px;
+    height: 100%;
+    object-fit: cover;
+    content: ${(props) => (props.secondStepImage ? `url(${IbsonTablet})` : "")};
+    object-position: 50% 24%;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const FormWraper = styled.div`
+  z-index: 1;
   padding: 4rem 0;
   margin: auto;
   max-width: 410px;
   width: 100%;
-`;
-
-export const Steps = styled.p`
-  color: var(--white-950, #292929);
-  /* Button/Button */
-  font-family: Inter;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 2.7rem; /* 135% */
-  text-transform: capitalize;
 `;
 
 export const Title = styled.h1`

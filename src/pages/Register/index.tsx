@@ -49,6 +49,7 @@ export default function Register() {
     <S.Container>
       <S.SideImageWraper>
         <S.SideImage
+          secondStepImage={step === 1 ? false : true}
           src={step === 1 ? IbsonFirstStep : IbsonSecondStep}
           alt="Ibson"
         />
