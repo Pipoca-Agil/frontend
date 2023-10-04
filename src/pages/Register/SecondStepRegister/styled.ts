@@ -14,6 +14,9 @@ export const Steps = styled.p`
   font-weight: 700;
   line-height: 2.7rem; /* 135% */
   text-transform: capitalize;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Title = styled.h1`
@@ -34,6 +37,9 @@ export const Subtitle = styled.h2`
   font-style: normal;
   font-weight: 400;
   line-height: 1.75rem; /* 140% */
+  @media (max-width: 600px) {
+    margin-bottom: 3.9rem;
+  }
 `;
 
 export const FormGroup = styled.div`
@@ -65,6 +71,9 @@ export const Input = styled.input<{ isError: boolean }>`
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
+  &::first-child {
+    margin-top: 0;
+  }
 `;
 
 export const ErrorGroup = styled.div`
@@ -80,6 +89,26 @@ export const PasswordRequirement = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 2.8rem;
+
+  @media (max-width: 600px) {
+    margin-top: 3.1rem;
+  }
+`;
+
+export const CircleIcon = styled.img``;
+
+export const RequirementsWrapper = styled.div`
+  position: relative;
+  display: flex; /* Use flexbox para alinhar horizontalmente */
+  align-items: center;
+`;
+
+export const CircleIconRequirement = styled.img`
+  @media (max-width: 600px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 `;
 
 export const Requirements = styled.p`
@@ -91,6 +120,10 @@ export const Requirements = styled.p`
   font-style: normal;
   font-weight: 400;
   margin-bottom: 1rem;
+  @media (max-width: 600px) {
+    padding-left: 3.4rem;
+    margin-top: 0.4rem;
+  }
 `;
 
 export const ErrorMessage = styled.p`
@@ -109,6 +142,9 @@ export const ButtonsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 6rem;
+  @media (max-width: 600px) {
+    margin-top: 2.4rem;
+  }
 `;
 
 export const Button = styled.button`
@@ -129,6 +165,15 @@ export const Button = styled.button`
   font-weight: 700;
   line-height: 2.7rem; /* 135% */
   text-transform: capitalize;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 6rem;
+    padding: 1.5rem 2rem;
+    border-radius: 3.5rem;
+    background-color: #b33b3b;
+    color: #ffffff;
+  }
 `;
 
 export const HaveLogin = styled.p`
@@ -151,5 +196,3 @@ export const LoginLink = styled(Link)`
   font-weight: 600;
   line-height: 2.7rem;
 `;
-
-export const CircleIcon = styled.img``;

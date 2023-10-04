@@ -31,6 +31,7 @@ export default function FirstStepRegister({ onSubmit }: any) {
       <S.FormGroup>
         <Input
           label="Nome"
+          placeholder="Nome"
           type="text"
           {...register("name", {
             required: true,
@@ -71,6 +72,7 @@ export default function FirstStepRegister({ onSubmit }: any) {
       <S.FormGroup>
         <Input
           label="Sobrenome"
+          placeholder="Sobrenome"
           type="text"
           {...register("surname", {
             required: true,
@@ -113,6 +115,7 @@ export default function FirstStepRegister({ onSubmit }: any) {
       <S.FormGroup>
         <Input
           label="E-mail"
+          placeholder="E-mail"
           type="email"
           {...register("email", {
             required: true,

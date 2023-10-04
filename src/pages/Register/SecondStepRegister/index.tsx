@@ -115,7 +115,7 @@ export default function SecondStepRegister({ onSubmit }: any) {
     { icon: icons[PasswordIconKeys.Number], text: "Pelo menos um número" },
     {
       icon: icons[PasswordIconKeys.SpecialCharacters],
-      text: "Caracteres especiais (*/_¨-,.[]^%$#@&)",
+      text: "Caracteres especiais (*/_¨-,.[]^% $#@&)",
     },
   ];
 
@@ -128,6 +128,7 @@ export default function SecondStepRegister({ onSubmit }: any) {
       <S.FormGroup>
         <Input
           label="Senha"
+          placeholder="Senha"
           value={password}
           onChange={handleChange}
           showPasswordButton={true}
@@ -135,11 +136,17 @@ export default function SecondStepRegister({ onSubmit }: any) {
             (req) => req.icon === ErrorCircle || passwordError
           )}
         ></Input>
-        {passwordError && <S.ErrorMessage>{passwordError}</S.ErrorMessage>}
+        {passwordError && (
+          <S.ErrorMessage>
+            <S.CircleIcon src={ErrorCircle} />
+            {passwordError}
+          </S.ErrorMessage>
+        )}
       </S.FormGroup>
       <S.FormGroup>
         <Input
           label="Confirmar Senha"
+          placeholder="Confirmar Senha"
           value={confirmPassword}
           onChange={handleConfirmPasswordChange}
           showPasswordButton={true}
@@ -156,9 +163,12 @@ export default function SecondStepRegister({ onSubmit }: any) {
       <S.ErrorGroup>
         <S.PasswordRequirement>Sua senha precisa ter:</S.PasswordRequirement>
         {passwordRequirements.map((req, index) => (
-          <S.Requirements key={index}>
-            <S.CircleIcon src={req.icon} /> {req.text}
-          </S.Requirements>
+          <S.RequirementsWrapper key={index}>
+            <S.Requirements>
+              <S.CircleIconRequirement src={req.icon} />
+              {req.text}
+            </S.Requirements>
+          </S.RequirementsWrapper>
         ))}
       </S.ErrorGroup>
 
