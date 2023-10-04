@@ -14,6 +14,9 @@ export const Steps = styled.p`
   font-weight: 700;
   line-height: 2.7rem; /* 135% */
   text-transform: capitalize;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Title = styled.h1`
@@ -34,6 +37,10 @@ export const Subtitle = styled.h2`
   font-style: normal;
   font-weight: 400;
   line-height: 1.75rem; /* 140% */
+
+  @media (max-width: 600px) {
+    margin-bottom: 3.9rem;
+  }
 `;
 
 export const FormGroup = styled.div`
@@ -59,12 +66,16 @@ export const Input = styled.input<{ isError: boolean }>`
   align-items: center;
   flex-shrink: 0;
   border-radius: 3rem;
-  border: 2px solid ${(props) => (props.isError ? "#b33b3b" : "#bdbdbd")}; /* Estilo condicional da borda */
+  border: 2px solid ${(props) => (props.isError ? "#b33b3b" : "#bdbdbd")};
 
   font-family: Inter;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
+
+  &::first-child {
+    margin-top: 0;
+  }
 `;
 
 export const ErrorMessage = styled.p`
@@ -93,7 +104,6 @@ export const Button = styled.button`
   height: 4rem;
   border-radius: 2rem;
   background: var(--white-300, #bdbdbd);
-
   box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.25);
 
   color: var(--Letter, #455f6b);
@@ -105,6 +115,15 @@ export const Button = styled.button`
   font-weight: 700;
   line-height: 2.7rem; /* 135% */
   text-transform: capitalize;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 6rem;
+    padding: 1.5rem 2rem;
+    border-radius: 3.5rem;
+    background-color: #b33b3b;
+    color: #ffffff;
+  }
 `;
 
 export const HaveLogin = styled.p`

@@ -8,6 +8,11 @@ export const Container = styled.section`
   @media (max-width: 1024px) {
     flex-direction: column;
   }
+
+  @media (max-width: 600px) {
+    padding: 0 2rem;
+    text-align: center;
+  }
 `;
 
 export const SideImageWraper = styled.div`
@@ -52,6 +57,10 @@ export const FormWraper = styled.div`
   margin: auto;
   max-width: 410px;
   width: 100%;
+
+  @media (max-width: 600px) {
+    margin: auto;
+  }
 `;
 
 export const Title = styled.h1`
