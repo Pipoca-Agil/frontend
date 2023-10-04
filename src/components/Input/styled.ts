@@ -8,6 +8,9 @@ export const Label = styled.label`
   font-style: normal;
   font-weight: 400;
   line-height: 4rem;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Input = styled.input<{ isError: boolean }>`
@@ -20,11 +23,31 @@ export const Input = styled.input<{ isError: boolean }>`
   align-items: center;
   flex-shrink: 0;
   border-radius: 3rem;
-  border: 2px solid ${(props) => (props.isError ? "#b33b3b" : "#bdbdbd")}; /* Estilo condicional da borda */
+  border: 2px solid ${(props) => (props.isError ? "#b33b3b" : "#bdbdbd")};
   font-family: Inter;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
+  &::placeholder {
+    color: transparent;
+  }
+
+  @media (max-width: 600px) {
+    &::placeholder {
+      color: #626262;
+    }
+
+    border-radius: 3.5rem;
+    border: 1px solid var(--Letter, #455f6b);
+    padding: 2rem 3.5rem 2rem 2rem;
+    gap: 1rem;
+    height: 6rem;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
 `;
 
 export const InputWrapper = styled.div`
@@ -40,4 +63,8 @@ export const EyeIcon = styled.img`
   position: absolute;
   right: 5%;
   top: 20%;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
