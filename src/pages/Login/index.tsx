@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, Icon } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import { Link } from 'react-router-dom';
+
 
 type LoginData = {
   email: string,
@@ -16,6 +17,17 @@ export default function Login() {
     password: '',
   });
   const [showPassword, setShowPassword] = useState(false);
+  const [isPasswordValid, setIsPasswordValid] = useState
+  (false);
+  const [isEmailValid, setIsEmailValid] = useState(false);
+
+  useEffect(() => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@#$%^&+=!])[A-Za-z\d@#$%^&+=!]{8,12}$/;
+
+    setIsEmailValid(emailRegex.test(formData.email));
+    setIsPasswordValid(passwordRegex.test(formData.password));
+  }, [formData.email, formData.password]);
  
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -33,17 +45,36 @@ export default function Login() {
     color: "#B33B3B",
   }
 
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (!isEmailValid) {
+      alert('Por favor, insira um email válido.');
+      return;
+    }
+
+    if (!isPasswordValid) {
+      alert(
+        'Por favor, insira uma senha válida. A senha deve ter entre 8 e 12 caracteres, incluindo letras, números e caracteres especiais.'
+      );
+      return;
+    }
+
+  };
+
   return (
     <Body>
     <LogoImage>
+      <Link to='/'>
       <img src={LogoPipocaAgil} alt='Logo podcast Pipoca Ágil'
       />
+      </Link>
     </LogoImage>
     <StyledLoginPage>
       <FormStyle>
         <Title>Área do assinante</Title>
         <SubTitle>Tenha acesso a conteúdos inovadores</SubTitle>
-          <form>
+          <form onSubmit={handleSubmit}>
             <FormGroup>
             <LableStyle>
                 Login
@@ -76,7 +107,9 @@ export default function Login() {
             </LableStyle>
             <PasswordSpan>Esqueci minha senha</PasswordSpan>
             </FormGroup>
-            <Button>Continuar</Button>
+            <Button
+            >Continuar
+            </Button>
             <CheckBoxWapper>
               <CheckBox />
               <SpanText>Mantenha-me Conectado</SpanText>
