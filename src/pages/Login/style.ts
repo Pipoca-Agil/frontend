@@ -36,6 +36,10 @@ export const LogoImage = styled.div`
   height: 119.88px;
   top: 24px;
   left: 40px;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 
 export const Title = styled.h4`
