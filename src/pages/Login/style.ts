@@ -1,4 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
+import LoginImage from "./Imgs/ImagemLogin.png"
+import VectorImg from "./Imgs/Vector.png"
 
 import 'font-awesome/css/font-awesome.css';
 
@@ -9,8 +11,8 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    max-height: 100vh;
-    max-width: 100vw;
+    max-height: 100%;
+    max-width: 100%;
   }
 
   /* Estilize a barra de rolagem no Chrome e navegadores baseados em WebKit */
@@ -27,7 +29,22 @@ export const Body = styled.body`
 export const StyledLoginPage = styled.main`
   display: flex;
   height: 100vh;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
 `
 
 export const LogoImage = styled.div`
@@ -50,6 +67,7 @@ export const Title = styled.h4`
   font-weight: 700;
   line-height: 3.52rem; /* 110% */
   margin-bottom: 1.2rem;
+
 `
 
 export const SubTitle = styled.p`
@@ -98,6 +116,15 @@ padding: 0.5rem 1.5rem;
 export const ImageWrapper = styled.div`
 width: 50vw;
 height: 100%;
+
+@media (max-width: 1024px) {
+  width: 100%;
+  height: 287px;
+}
+
+@media (max-width: 600px) {
+
+}
 `
 
 export const Image = styled.img`
@@ -106,6 +133,11 @@ export const Image = styled.img`
   width: 50vw;
   right:0px;
   top: 30px;
+  content: ${LoginImage};
+
+  @media (max-width: 600px) {
+    content: ${VectorImg};
+  }
 `
 export const FormGroup = styled.div`
   margin-top: 2.4rem;
