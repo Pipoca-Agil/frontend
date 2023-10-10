@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import TabletImage from "./Imgs/TabletImage.png";
+import MobileImage from "./Imgs/Vector.png"
 
 
 
@@ -97,6 +98,12 @@ export const FormStyle = styled.section`
   left: 30%;
   top: 20%;
   max-height: 60%;
+
+  @media (max-width: 1024px) {
+    top: 5%;
+    left: 60%;
+    max-width: 80%;
+  }
 `
 
 export const InputComponent = styled.input`
@@ -119,12 +126,8 @@ height: 100%;
 
 @media (max-width: 1024px) {
   width: 100%;
-  height: 287px;
 }
 
-@media (max-width: 600px) {
-
-}
 `
 
 export const Image = styled.img`
@@ -142,10 +145,6 @@ export const Image = styled.img`
     width: 100%;
     max-height: 287px;
     object-fit: cover;
-  }
-
-  @media (max-width: 600px) {
-    content: src="./Imgs/"
   }
 
 `
@@ -232,6 +231,13 @@ export const CadastreseDiv = styled.div`
   flex-direction: column;
   position: relative;
   top: 68px;
+
+  @media (max-width: 1024px) {
+    top: 100px;
+    height: 49px;
+    width: 472px;
+    right: 15%;
+  }
 `
 
 export const CadastreseText = styled.p`
