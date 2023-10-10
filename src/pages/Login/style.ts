@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
-import LoginImage from "./Imgs/ImagemLogin.png"
-import VectorImg from "./Imgs/Vector.png"
+import TabletImage from "./Imgs/TabletImage.png";
+
+
 
 import 'font-awesome/css/font-awesome.css';
 
@@ -96,7 +97,6 @@ export const FormStyle = styled.section`
   left: 30%;
   top: 20%;
   max-height: 60%;
-
 `
 
 export const InputComponent = styled.input`
@@ -133,11 +133,21 @@ export const Image = styled.img`
   width: 50vw;
   right:0px;
   top: 30px;
-  content: ${LoginImage};
+
+  @media (max-width: 1024px) {
+    content: url(${TabletImage});
+    position: fixed;
+    top: 0px;
+    margin: 0;
+    width: 100%;
+    max-height: 287px;
+    object-fit: cover;
+  }
 
   @media (max-width: 600px) {
-    content: ${VectorImg};
+    content: src="./Imgs/"
   }
+
 `
 export const FormGroup = styled.div`
   margin-top: 2.4rem;
