@@ -1,4 +1,8 @@
 import styled, { createGlobalStyle } from "styled-components";
+import TabletImage from "./Imgs/TabletImage.png";
+import MobileImage from "./Imgs/Vector.png"
+
+
 
 import 'font-awesome/css/font-awesome.css';
 
@@ -9,8 +13,8 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    max-height: 100vh;
-    max-width: 100vw;
+    max-height: 100%;
+    max-width: 100%;
   }
 
   /* Estilize a barra de rolagem no Chrome e navegadores baseados em WebKit */
@@ -27,7 +31,22 @@ export const Body = styled.body`
 export const StyledLoginPage = styled.main`
   display: flex;
   height: 100vh;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
 `
 
 export const LogoImage = styled.div`
@@ -36,6 +55,10 @@ export const LogoImage = styled.div`
   height: 119.88px;
   top: 24px;
   left: 40px;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 
 export const Title = styled.h4`
@@ -46,6 +69,7 @@ export const Title = styled.h4`
   font-weight: 700;
   line-height: 3.52rem; /* 110% */
   margin-bottom: 1.2rem;
+
 `
 
 export const SubTitle = styled.p`
@@ -75,6 +99,11 @@ export const FormStyle = styled.section`
   top: 20%;
   max-height: 60%;
 
+  @media (max-width: 1024px) {
+    top: 5%;
+    left: 60%;
+    max-width: 80%;
+  }
 `
 
 export const InputComponent = styled.input`
@@ -94,6 +123,11 @@ padding: 0.5rem 1.5rem;
 export const ImageWrapper = styled.div`
 width: 50vw;
 height: 100%;
+
+@media (max-width: 1024px) {
+  width: 100%;
+}
+
 `
 
 export const Image = styled.img`
@@ -102,6 +136,17 @@ export const Image = styled.img`
   width: 50vw;
   right:0px;
   top: 30px;
+
+  @media (max-width: 1024px) {
+    content: url(${TabletImage});
+    position: fixed;
+    top: 0px;
+    margin: 0;
+    width: 100%;
+    max-height: 287px;
+    object-fit: cover;
+  }
+
 `
 export const FormGroup = styled.div`
   margin-top: 2.4rem;
@@ -186,6 +231,13 @@ export const CadastreseDiv = styled.div`
   flex-direction: column;
   position: relative;
   top: 68px;
+
+  @media (max-width: 1024px) {
+    top: 100px;
+    height: 49px;
+    width: 472px;
+    right: 15%;
+  }
 `
 
 export const CadastreseText = styled.p`

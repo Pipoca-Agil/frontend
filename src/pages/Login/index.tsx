@@ -123,7 +123,10 @@ export default function Login() {
       </FormStyle>
     </StyledLoginPage>
       <ImageWrapper>
-        <Image src={ImagemLogin} alt="Ibson podcast pipoca ágil" />
+        <Image
+          src={ImagemLogin}
+          alt="Ibson podcast pipoca ágil"/> 
+        
       </ImageWrapper>
 
   </Body>
