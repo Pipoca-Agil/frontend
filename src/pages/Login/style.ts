@@ -11,6 +11,10 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
     max-height: 100%;
     max-width: 100%;
+
+    @media (max-width: 768px) {
+      overflow-x: hidden;
+    }
   }
 
   /* Estilize a barra de rolagem no Chrome e navegadores baseados em WebKit */
@@ -41,6 +45,7 @@ export const StyledLoginPage = styled.main`
     text-align: center;
     align-items: center;
     justify-content: center;
+    max-width: 768px;
   }
   
 `
@@ -66,6 +71,10 @@ export const Title = styled.h4`
   line-height: 3.52rem; /* 110% */
   margin-bottom: 1.2rem;
 
+  @media (max-width: 768px) {
+    margin-bottom: 50px;
+  }
+
 `
 
 export const SubTitle = styled.p`
@@ -75,6 +84,10 @@ font-size: 2rem;
 font-style: normal;
 font-weight: 400;
 line-height: 1.75rem; /* 140% */
+
+@media (max-width: 768px) {
+  margin-bottom: 50px;
+}
 `
 
 export const LableStyle = styled.label`
@@ -106,7 +119,13 @@ export const FormStyle = styled.section`
   }
 
   @media (max-width: 768px) {
-    
+    position: absolute;
+    background-color: transparent;
+    height: 400px;
+    width: 357px;
+    left: 0%;
+    top: 15%;
+    margin: 0 auto;
   }
 `
 
@@ -122,6 +141,14 @@ justify-content: center;
 align-items: center;
 flex-shrink: 0;
 padding: 0.5rem 1.5rem;
+
+@media (max-width: 768px) {
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  
+}
 `
 
 export const ImageWrapper = styled.div`
@@ -153,16 +180,18 @@ export const Image = styled.img`
 
   @media (max-width: 768px) {
     content: url(${MobileImage});
-    position: fixed;
+    position: absolute;
     max-height: 100%;
     max-width: 100%;
-    right: -250px;
-    top: -250px;
+    right: 0px;
+    top: -150px;
   }
 
 `
 export const FormGroup = styled.div`
   margin-top: 2.4rem;
+  position: relative;
+  left: 10%;
 `;
 
 export const PasswordSpan = styled.span`
@@ -171,6 +200,12 @@ export const PasswordSpan = styled.span`
   line-height: 2.7rem;
   font-weight: 400;
   color:  #B33B3B;
+
+  @media (max-width: 768px) {
+    position: relative;
+    left: 25%;
+    padding-top: 15px;
+  }
 `
 
 export const Button = styled.button`
@@ -249,7 +284,7 @@ export const CadastreseDiv = styled.div`
     top: 100px;
     height: 49px;
     width: 472px;
-    right: 8%;
+    right: 15%;
   }
 `
 
