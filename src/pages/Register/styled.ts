@@ -24,7 +24,7 @@ export const SideImageWraper = styled.div`
     height: 287px;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 760px) and (max-height: 860px) {
     display: none;
   }
 `;
@@ -46,7 +46,7 @@ export const SideImage = styled.img<{ secondStepImage: boolean }>`
     object-position: 50% 24%;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 760px) and (max-height: 860px) {
     display: none;
   }
 `;
