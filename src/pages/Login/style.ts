@@ -11,10 +11,6 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
     max-height: 100%;
     max-width: 100%;
-
-    @media (max-width: 760px) {
-      overflow-x: hidden;
-    }
   }
 
   /* Estilize a barra de rolagem no Chrome e navegadores baseados em WebKit */
@@ -181,8 +177,7 @@ right: 0px;
     position: absolute;
     max-height: 100%;
     max-width: 100%;
-    right: -25px;
-    top: -150px;
+    top: -250px;
     z-index: 1;
   }
 
@@ -272,7 +267,7 @@ export const CadastreseDiv = styled.div`
 
   @media (max-width: 1024px) {
     height: 49px;
-    width: 472px;
+    width: 372px;
   }
 `
 
