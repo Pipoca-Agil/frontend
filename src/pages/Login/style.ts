@@ -73,6 +73,8 @@ export const Title = styled.h4`
 
   @media (max-width: 768px) {
     margin-bottom: 50px;
+    position: relative;
+    left: 10%;
   }
 
 `
@@ -87,6 +89,8 @@ line-height: 1.75rem; /* 140% */
 
 @media (max-width: 768px) {
   margin-bottom: 50px;
+  position: relative;
+  left: 10%;
 }
 `
 
@@ -234,6 +238,11 @@ export const Button = styled.button`
   &:hover {
     background-color: #b33b3b;
     color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    position: relative;
+    left: 10%;
   }
 `;
 
