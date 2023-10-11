@@ -218,6 +218,13 @@ font-style: normal;
 font-weight: 700;
 line-height: 2.7rem; /* 135% */
 text-transform: capitalize;
+
+&:hover {
+  background-color: #b33b3b;
+  cursor: pointer;
+  color: #fff;
+}
+
 `;
 
 export const CheckBoxWapper = styled.div`
