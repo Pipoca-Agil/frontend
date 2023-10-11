@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     max-height: 100%;
     max-width: 100%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 760px) {
       overflow-x: hidden;
     }
   }
@@ -25,7 +25,17 @@ export const GlobalStyles = createGlobalStyle`
 
 
 export const Body = styled.body`
-  display: flex;
+display: flex;
+height: 100vh;
+@media (max-width: 1024px) {
+  flex-direction: column;
+
+}
+
+@media (max-width: 760px) {
+  padding: 0 2rem;
+  text-align: center;
+}
 `
 
 export const StyledLoginPage = styled.main`
@@ -38,14 +48,15 @@ export const StyledLoginPage = styled.main`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    order: 1;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 760px) {
     padding: 0 2rem;
     text-align: center;
     align-items: center;
     justify-content: center;
-    max-width: 768px;
+    max-width: 760px;
   }
   
 `
@@ -54,8 +65,8 @@ export const LogoImage = styled.div`
   position: relative;
   width: 134px;
   height: 119.88px;
-  top: 24px;
-  left: 40px;
+  padding: 10px;
+  transform: scale(0.8);
 
   @media (max-width: 1024px) {
     display: none;
@@ -71,10 +82,8 @@ export const Title = styled.h4`
   line-height: 3.52rem; /* 110% */
   margin-bottom: 1.2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 760px) {
     margin-bottom: 50px;
-    position: relative;
-    left: 10%;
   }
 
 `
@@ -87,10 +96,8 @@ font-style: normal;
 font-weight: 400;
 line-height: 1.75rem; /* 140% */
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   margin-bottom: 50px;
-  position: relative;
-  left: 10%;
 }
 `
 
@@ -108,29 +115,16 @@ line-height: 2.8rem;
 `
 
 export const FormStyle = styled.section`
-  position: absolute;
-  padding: 1rem 0;
-  max-width: 410px;
-  width: 100%;
-  left: 30%;
-  top: 20%;
-  max-height: 60%;
+z-index: 1;
+padding: 4rem 0;
+margin: auto;
+max-width: 410px;
+width: 100%;
 
-  @media ( max-width: 1024px) {
-    top: 45%;
-    left: 60%;
-    max-width: 80%;
-  }
 
-  @media (max-width: 768px) {
-    position: absolute;
-    background-color: transparent;
-    height: 400px;
-    width: 357px;
-    left: 0%;
-    top: 15%;
-    margin: 0 auto;
-  }
+@media (max-width: 760px) {
+  margin: auto;
+}
 `
 
 export const InputComponent = styled.input`
@@ -161,41 +155,40 @@ height: 100%;
 
 @media (max-width: 1024px) {
   width: 100%;
+  height: 287px;
 }
 
 `
 
 export const Image = styled.img`
-  position: fixed;
-  background: transparent;
-  width: 50vw;
-  right:0px;
-  top: 30px;
+position: fixed;
+width: 50vw;
+object-fit: contain;
+right: 0px;
 
-  @media (max-width: 1024px) {
-    content: url(${TabletImage});
-    position: fixed;
-    top: 0px;
-    margin: 0;
-    width: 100%;
-    max-height: 287px;
-    object-fit: cover;
-  }
+@media (max-width: 1024px) {
+  content: url(${TabletImage});
+  position: static;
+  width: 100%;
+  min-height: 287px;
+  height: 100%;
+  object-fit: cover;
+  order: 0;
+}
 
   @media (max-width: 768px) {
     content: url(${MobileImage});
     position: absolute;
     max-height: 100%;
     max-width: 100%;
-    right: 0px;
+    right: -25px;
     top: -150px;
+    z-index: 1;
   }
 
 `
 export const FormGroup = styled.div`
   margin-top: 2.4rem;
-  position: relative;
-  left: 10%;
 `;
 
 export const PasswordSpan = styled.span`
@@ -213,37 +206,23 @@ export const PasswordSpan = styled.span`
 `
 
 export const Button = styled.button`
-  position: relative;
-  margin-top: 50px;
-  top 625px;
-  left: 45px;
-  cursor: pointer;
-  width: 31.2rem;
-  height: 4rem;
-  border-radius: 2rem;
-  background: var(--white-300, #bdbdbd);
+cursor: pointer;
+width: 31.2rem;
+height: 4rem;
+border-radius: 2rem;
+background: var(--white-300, #bdbdbd);
 
-  box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.25);
 
-  color: var(--Letter, #455f6b);
-  text-align: center;
-  /* Button/Button */
-  font-family: Inter;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 2.7rem; /* 135% */
-  text-transform: capitalize;
-
-  &:hover {
-    background-color: #b33b3b;
-    color: #fff;
-  }
-
-  @media (max-width: 768px) {
-    position: relative;
-    left: 10%;
-  }
+color: var(--Letter, #455f6b);
+text-align: center;
+/* Button/Button */
+font-family: Inter;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: 2.7rem; /* 135% */
+text-transform: capitalize;
 `;
 
 export const CheckBoxWapper = styled.div`
@@ -288,23 +267,24 @@ export const CadastreseDiv = styled.div`
   flex-direction: column;
   position: relative;
   top: 68px;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 1024px) {
-    top: 100px;
     height: 49px;
     width: 472px;
-    right: 15%;
   }
 `
 
 export const CadastreseText = styled.p`
+color: var(--white-950, #455F6B);
+/* Paragraph/P2 */
 font-family: Inter;
-font-size: 20px;
+font-size: 2rem;
+font-style: normal;
 font-weight: 400;
-line-height: 28px;
-letter-spacing: 0em;
-text-align: center;
-color: #455F6B;
+line-height: 2.8rem; /* 140% */
+margin-top: 4rem;
 `
 
 export const CadastreseText2 = styled.p`
@@ -328,3 +308,10 @@ export const HiddenLabel = styled.label`
 export const HiddenChackboxWapper = styled.div `
   display: none;
 `
+
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+`;

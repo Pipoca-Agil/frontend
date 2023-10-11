@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, HiddenLabel, HiddenChackboxWapper } from './style'
+import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, HiddenLabel, HiddenChackboxWapper, ButtonsWrapper } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import { Link } from 'react-router-dom';
@@ -137,6 +137,8 @@ export default function Login() {
             </PassowrdWrapper>    
             <PasswordSpan>Esqueci minha senha</PasswordSpan>
             </FormGroup>
+            <ButtonsWrapper>
+
             <Button
             >Continuar
             </Button>
@@ -158,6 +160,7 @@ export default function Login() {
         <CadastreseText>Ainda não é assinante?</CadastreseText>
         <CadastreseText2><Link style={styleColor} to={"/register"} >Cadastre-se</Link> e conheça as vantagens</CadastreseText2>
         </CadastreseDiv>
+            </ButtonsWrapper>
       </form>
       </FormStyle>
     </StyledLoginPage>
@@ -167,7 +170,6 @@ export default function Login() {
           alt="Ibson podcast pipoca ágil"/> 
         
       </ImageWrapper>
-
   </Body>
   )
 };
