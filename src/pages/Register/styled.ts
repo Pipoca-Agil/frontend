@@ -24,7 +24,7 @@ export const SideImageWraper = styled.div`
     height: 287px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 680px) {
     display: none;
   }
 `;
