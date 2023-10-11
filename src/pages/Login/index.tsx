@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, Icon } from './style'
+import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, HiddenLabel } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import { Link } from 'react-router-dom';
@@ -16,10 +16,10 @@ export default function Login() {
     email: '',
     password: '',
   });
-  const [showPassword, setShowPassword] = useState(false);
   const [isPasswordValid, setIsPasswordValid] = useState
   (false);
   const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -36,10 +36,6 @@ export default function Login() {
       [name]: value,
     });
   }
-
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
 
   const styleColor = {
     color: "#B33B3B",
@@ -61,6 +57,16 @@ export default function Login() {
     }
 
   };
+
+   const handleMobile = () => {
+      const windowWidth = window.innerWidth;
+
+      if(windowWidth <= 768) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+   }
 
   return (
     <Body>
@@ -94,15 +100,11 @@ export default function Login() {
             <InputComponent
               className='passWordInput' 
               placeholder='****************'
-              type={showPassword ? 'text' : 'password'}
+              type= 'password'
               name='password'
               value={formData.password}
               onChange={handleInputChange}
               />
-                <Icon
-                  className={`fa ${showPassword ? 'fa-eye-slash' : 'fa-eye'}`}
-                  onClick={togglePasswordVisibility}
-                ></Icon>
             </PassowrdWrapper>    
             </LableStyle>
             <PasswordSpan>Esqueci minha senha</PasswordSpan>

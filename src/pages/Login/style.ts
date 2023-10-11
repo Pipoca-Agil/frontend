@@ -2,10 +2,6 @@ import styled, { createGlobalStyle } from "styled-components";
 import TabletImage from "./Imgs/TabletImage.png";
 import MobileImage from "./Imgs/Vector.png"
 
-
-
-import 'font-awesome/css/font-awesome.css';
-
 export const GlobalStyles = createGlobalStyle`
   * {
     background-color: white;
@@ -40,7 +36,7 @@ export const StyledLoginPage = styled.main`
     justify-content: center;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     padding: 0 2rem;
     text-align: center;
     align-items: center;
@@ -88,10 +84,14 @@ font-size: 2rem;
 font-style: normal;
 font-weight: 400;
 line-height: 2.8rem;
+
+@media (max-width: 768px) {
+  display: none;
+}
 `
 
 export const FormStyle = styled.section`
-  position: relative;
+  position: absolute;
   padding: 1rem 0;
   max-width: 410px;
   width: 100%;
@@ -99,10 +99,14 @@ export const FormStyle = styled.section`
   top: 20%;
   max-height: 60%;
 
-  @media (max-width: 1024px) {
-    top: 5%;
+  @media ( max-width: 1024px) {
+    top: 45%;
     left: 60%;
     max-width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    
   }
 `
 
@@ -145,6 +149,15 @@ export const Image = styled.img`
     width: 100%;
     max-height: 287px;
     object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    content: url(${MobileImage});
+    position: fixed;
+    max-height: 100%;
+    max-width: 100%;
+    right: -250px;
+    top: -250px;
   }
 
 `
@@ -236,7 +249,7 @@ export const CadastreseDiv = styled.div`
     top: 100px;
     height: 49px;
     width: 472px;
-    right: 15%;
+    right: 8%;
   }
 `
 
@@ -264,10 +277,6 @@ export const PassowrdWrapper = styled.div`
   display: flex;
 `
 
-export const Icon = styled.i`
-  position: absolute;
-  top: 228px;
-  right: 24px;
-  color: #989898;
-  cursor: pointer;
-`
+export const HiddenLabel = styled.label`
+  display: none; /* Isso oculta a etiqueta */
+`;
