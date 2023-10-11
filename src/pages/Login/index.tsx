@@ -29,6 +29,18 @@ export default function Login() {
     setIsPasswordValid(passwordRegex.test(formData.password));
   }, [formData.email, formData.password]);
  
+  useEffect(() => {
+    handleMobile(); // Executa a função quando o componente é montado
+  
+    // Adiciona um ouvinte de redimensionamento da janela para atualizar quando a tela for redimensionada
+    window.addEventListener("resize", handleMobile);
+  
+    // Remove o ouvinte quando o componente é desmontado
+    return () => {
+      window.removeEventListener("resize", handleMobile);
+    };
+  }, []);
+  
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormData({
