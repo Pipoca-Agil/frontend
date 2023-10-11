@@ -36,17 +36,6 @@ export const Input = styled.input<{ isError: boolean }>`
     &::placeholder {
       color: #626262;
     }
-
-    border-radius: 3.5rem;
-    border: 1px solid var(--Letter, #455f6b);
-    padding: 2rem 3.5rem 2rem 2rem;
-    gap: 1rem;
-    height: 6rem;
-    font-family: Poppins;
-    font-size: 1.6rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
   }
 `;
 

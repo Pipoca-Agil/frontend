@@ -14,9 +14,6 @@ export const Steps = styled.p`
   font-weight: 700;
   line-height: 2.7rem; /* 135% */
   text-transform: capitalize;
-  @media (max-width: 600px) {
-    display: none;
-  }
 `;
 
 export const Title = styled.h1`
@@ -105,10 +102,8 @@ export const Button = styled.button`
   border-radius: 2rem;
   background: var(--white-300, #bdbdbd);
   box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.25);
-
   color: var(--Letter, #455f6b);
   text-align: center;
-  /* Button/Button */
   font-family: Inter;
   font-size: 2rem;
   font-style: normal;
@@ -116,13 +111,13 @@ export const Button = styled.button`
   line-height: 2.7rem; /* 135% */
   text-transform: capitalize;
 
+  &:hover {
+    background-color: #b33b3b;
+    color: #f3f7f8;
+  }
+
   @media (max-width: 600px) {
     width: 100%;
-    height: 6rem;
-    padding: 1.5rem 2rem;
-    border-radius: 3.5rem;
-    background-color: #b33b3b;
-    color: #ffffff;
   }
 `;
 
