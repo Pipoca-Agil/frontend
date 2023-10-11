@@ -82,8 +82,17 @@ export default function Login() {
         <SubTitle>Tenha acesso a conteúdos inovadores</SubTitle>
           <form onSubmit={handleSubmit}>
             <FormGroup>
-            <LableStyle>
+              {
+                isMobile ? (
+                  <HiddenLabel>
+                    Login
+                  </HiddenLabel>
+                ) : (
+                  <LableStyle>
                 Login
+                </LableStyle>
+                )
+              }
             <InputComponent 
               placeholder='email@email.com'
               type='text'
@@ -91,11 +100,19 @@ export default function Login() {
               value={formData.email}
               onChange={handleInputChange}
               />
-            </LableStyle>
             </FormGroup>
             <FormGroup>
-            <LableStyle>
-                Senha
+            {
+                isMobile ? (
+                  <HiddenLabel>
+                    Login
+                  </HiddenLabel>
+                ) : (
+                  <LableStyle>
+                Login
+                </LableStyle>
+                )
+              }
             <PassowrdWrapper>
             <InputComponent
               className='passWordInput' 
@@ -106,7 +123,6 @@ export default function Login() {
               onChange={handleInputChange}
               />
             </PassowrdWrapper>    
-            </LableStyle>
             <PasswordSpan>Esqueci minha senha</PasswordSpan>
             </FormGroup>
             <Button
