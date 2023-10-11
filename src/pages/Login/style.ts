@@ -2,10 +2,6 @@ import styled, { createGlobalStyle } from "styled-components";
 import TabletImage from "./Imgs/TabletImage.png";
 import MobileImage from "./Imgs/Vector.png"
 
-
-
-import 'font-awesome/css/font-awesome.css';
-
 export const GlobalStyles = createGlobalStyle`
   * {
     background-color: white;
@@ -15,6 +11,10 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
     max-height: 100%;
     max-width: 100%;
+
+    @media (max-width: 768px) {
+      overflow-x: hidden;
+    }
   }
 
   /* Estilize a barra de rolagem no Chrome e navegadores baseados em WebKit */
@@ -40,11 +40,12 @@ export const StyledLoginPage = styled.main`
     justify-content: center;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     padding: 0 2rem;
     text-align: center;
     align-items: center;
     justify-content: center;
+    max-width: 768px;
   }
   
 `
@@ -70,6 +71,12 @@ export const Title = styled.h4`
   line-height: 3.52rem; /* 110% */
   margin-bottom: 1.2rem;
 
+  @media (max-width: 768px) {
+    margin-bottom: 50px;
+    position: relative;
+    left: 10%;
+  }
+
 `
 
 export const SubTitle = styled.p`
@@ -79,6 +86,12 @@ font-size: 2rem;
 font-style: normal;
 font-weight: 400;
 line-height: 1.75rem; /* 140% */
+
+@media (max-width: 768px) {
+  margin-bottom: 50px;
+  position: relative;
+  left: 10%;
+}
 `
 
 export const LableStyle = styled.label`
@@ -88,10 +101,14 @@ font-size: 2rem;
 font-style: normal;
 font-weight: 400;
 line-height: 2.8rem;
+
+@media (max-width: 768px) {
+  display: none;
+}
 `
 
 export const FormStyle = styled.section`
-  position: relative;
+  position: absolute;
   padding: 1rem 0;
   max-width: 410px;
   width: 100%;
@@ -99,10 +116,20 @@ export const FormStyle = styled.section`
   top: 20%;
   max-height: 60%;
 
-  @media (max-width: 1024px) {
-    top: 5%;
+  @media ( max-width: 1024px) {
+    top: 45%;
     left: 60%;
     max-width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    background-color: transparent;
+    height: 400px;
+    width: 357px;
+    left: 0%;
+    top: 15%;
+    margin: 0 auto;
   }
 `
 
@@ -118,6 +145,14 @@ justify-content: center;
 align-items: center;
 flex-shrink: 0;
 padding: 0.5rem 1.5rem;
+
+@media (max-width: 768px) {
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  
+}
 `
 
 export const ImageWrapper = styled.div`
@@ -147,9 +182,20 @@ export const Image = styled.img`
     object-fit: cover;
   }
 
+  @media (max-width: 768px) {
+    content: url(${MobileImage});
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+    right: 0px;
+    top: -150px;
+  }
+
 `
 export const FormGroup = styled.div`
   margin-top: 2.4rem;
+  position: relative;
+  left: 10%;
 `;
 
 export const PasswordSpan = styled.span`
@@ -158,6 +204,12 @@ export const PasswordSpan = styled.span`
   line-height: 2.7rem;
   font-weight: 400;
   color:  #B33B3B;
+
+  @media (max-width: 768px) {
+    position: relative;
+    left: 25%;
+    padding-top: 15px;
+  }
 `
 
 export const Button = styled.button`
@@ -186,6 +238,11 @@ export const Button = styled.button`
   &:hover {
     background-color: #b33b3b;
     color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    position: relative;
+    left: 10%;
   }
 `;
 
@@ -264,10 +321,10 @@ export const PassowrdWrapper = styled.div`
   display: flex;
 `
 
-export const Icon = styled.i`
-  position: absolute;
-  top: 228px;
-  right: 24px;
-  color: #989898;
-  cursor: pointer;
+export const HiddenLabel = styled.label`
+  display: none; /* Isso oculta a etiqueta */
+`;
+
+export const HiddenChackboxWapper = styled.div `
+  display: none;
 `
