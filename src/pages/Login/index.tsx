@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, HiddenLabel } from './style'
+import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, HiddenLabel, HiddenChackboxWapper } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import { Link } from 'react-router-dom';
@@ -140,11 +140,20 @@ export default function Login() {
             <Button
             >Continuar
             </Button>
-            <CheckBoxWapper>
+            {
+              isMobile ? (
+                <HiddenChackboxWapper>
+                  <SpanText>Mantenha-me Conectado</SpanText>
+                <LinkDetalhes>Detalhes</LinkDetalhes>
+                </HiddenChackboxWapper>
+              ) : (
+                <CheckBoxWapper>
               <CheckBox />
               <SpanText>Mantenha-me Conectado</SpanText>
               <LinkDetalhes>Detalhes</LinkDetalhes>
             </CheckBoxWapper>
+              )
+            }  
         <CadastreseDiv>
         <CadastreseText>Ainda não é assinante?</CadastreseText>
         <CadastreseText2><Link style={styleColor} to={"/register"} >Cadastre-se</Link> e conheça as vantagens</CadastreseText2>

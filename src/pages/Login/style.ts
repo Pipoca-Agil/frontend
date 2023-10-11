@@ -315,3 +315,7 @@ export const PassowrdWrapper = styled.div`
 export const HiddenLabel = styled.label`
   display: none; /* Isso oculta a etiqueta */
 `;
+
+export const HiddenChackboxWapper = styled.div `
+  display: none;
+`
