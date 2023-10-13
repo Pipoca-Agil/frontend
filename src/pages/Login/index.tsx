@@ -117,11 +117,11 @@ export default function Login() {
             {
                 isMobile ? (
                   <HiddenLabel>
-                    Login
+                    Senha
                   </HiddenLabel>
                 ) : (
                   <LableStyle>
-                Login
+                    Senha
                 </LableStyle>
                 )
               }
