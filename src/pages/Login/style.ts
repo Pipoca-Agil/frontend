@@ -54,6 +54,7 @@ export const StyledLoginPage = styled.main`
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin: auto;
   }
   
 `
@@ -114,21 +115,12 @@ line-height: 2.8rem;
 export const FormStyle = styled.section`
 z-index: 1;
 padding: 4rem 0;
-/* margin: auto; */
+margin: auto;
 max-width: 410px;
 width: 100%;
 
-
 @media (max-width: 760px) {
-  position: relative;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  bottom: 10%;
-  z-index: 1;
+  margin: auto;
 }
 `
 
@@ -175,7 +167,7 @@ object-fit: cover;
 right: 0px;
 bottom: 0px;
 
-@media (min-width: 600px) and (max-width: 1024px)  {
+@media (min-width: 530px) and (max-width: 1024px)  {
   content: url(${TabletImage});
   position: static;
   width: 100%;
@@ -185,7 +177,7 @@ bottom: 0px;
   order: 0;
 }
 
-  @media (max-width: 600px) {
+  @media (max-width: 530px) {
     content: url(${MobileImage});
     position: fixed;
     width: 100vw;
@@ -199,7 +191,6 @@ bottom: 0px;
 `
 export const FormGroup = styled.div`
   margin-top: 2.4rem;
-  height: 15%;
 `;
 
 export const PasswordSpan = styled.span`
