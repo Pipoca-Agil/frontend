@@ -54,6 +54,7 @@ export const StyledLoginPage = styled.main`
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin: auto;
   }
   
 `
