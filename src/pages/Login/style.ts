@@ -119,7 +119,10 @@ width: 100%;
 
 
 @media (max-width: 760px) {
+  position: relative;
+  top: -50px;
   margin: auto;
+  z-index: 1;
 }
 `
 
@@ -141,6 +144,7 @@ padding: 0.5rem 1.5rem;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  background-color: transparent;
   
 }
 `
@@ -178,7 +182,6 @@ right: 0px;
     max-height: 100%;
     max-width: 100%;
     top: -250px;
-    z-index: 1;
   }
 
 `
