@@ -126,7 +126,8 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
- /*  bottom: 15%; */
+  margin-top: 10px;
+  bottom: 10%;
   z-index: 1;
 }
 `
