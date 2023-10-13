@@ -23,13 +23,15 @@ export const GlobalStyles = createGlobalStyle`
 export const Body = styled.body`
 display: flex;
 height: 100vh;
+justify-content: space-between;
 @media (max-width: 1024px) {
   flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
 
 }
 
 @media (max-width: 760px) {
-  padding: 0 2rem;
   text-align: center;
 }
 `
@@ -52,7 +54,6 @@ export const StyledLoginPage = styled.main`
     text-align: center;
     align-items: center;
     justify-content: center;
-    max-width: 760px;
   }
   
 `
@@ -113,15 +114,19 @@ line-height: 2.8rem;
 export const FormStyle = styled.section`
 z-index: 1;
 padding: 4rem 0;
-margin: auto;
+/* margin: auto; */
 max-width: 410px;
 width: 100%;
 
 
 @media (max-width: 760px) {
   position: relative;
-  top: -50px;
-  margin: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ /*  bottom: 15%; */
   z-index: 1;
 }
 `
@@ -152,6 +157,8 @@ padding: 0.5rem 1.5rem;
 export const ImageWrapper = styled.div`
 width: 50vw;
 height: 100%;
+right: 0px;
+top: 0px;
 
 @media (max-width: 1024px) {
   width: 100%;
@@ -163,10 +170,11 @@ height: 100%;
 export const Image = styled.img`
 position: fixed;
 width: 50vw;
-object-fit: contain;
+object-fit: cover;
 right: 0px;
+bottom: 0px;
 
-@media (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px)  {
   content: url(${TabletImage});
   position: static;
   width: 100%;
@@ -176,17 +184,21 @@ right: 0px;
   order: 0;
 }
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     content: url(${MobileImage});
-    position: absolute;
+    position: fixed;
+    width: 100vw;
+    height: 80vh;
     max-height: 100%;
     max-width: 100%;
-    top: -250px;
+    top: 0px;
+    right: 0px;
   }
 
 `
 export const FormGroup = styled.div`
   margin-top: 2.4rem;
+  height: 15%;
 `;
 
 export const PasswordSpan = styled.span`
