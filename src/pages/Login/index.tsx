@@ -72,8 +72,8 @@ export default function Login() {
 
    const handleMobile = () => {
       const windowWidth = window.innerWidth;
-
-      if(windowWidth <= 768) {
+    
+      if(windowWidth <= 926) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
