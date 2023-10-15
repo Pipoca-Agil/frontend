@@ -52,8 +52,4 @@ export const EyeIcon = styled.img`
   position: absolute;
   right: 5%;
   top: 20%;
-
-  @media (max-width: 600px) {
-    display: none;
-  }
 `;
