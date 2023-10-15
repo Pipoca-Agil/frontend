@@ -9,13 +9,6 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    max-height: 100%;
-    max-width: 100%;
-  }
-
-  /* Estilize a barra de rolagem no Chrome e navegadores baseados em WebKit */
-  ::-webkit-scrollbar {
-    display: none;
   }
 `;
 
@@ -31,7 +24,7 @@ justify-content: space-between;
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 926px) and (max-height: 926px) {
   text-align: center;
 }
 `
@@ -49,14 +42,11 @@ export const StyledLoginPage = styled.main`
     order: 1;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 926px) and (max-height: 926px) {
     padding: 0 2rem;
-    position: relative;
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: auto;
-    top: -20%;
   }
   
 `
@@ -82,7 +72,7 @@ export const Title = styled.h4`
   line-height: 3.52rem; /* 110% */
   margin-bottom: 1.2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 926px) and (max-height: 926px) {
     margin-bottom: 50px;
   }
 
@@ -96,7 +86,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 1.75rem; /* 140% */
 
-@media (max-width: 768px) {
+@media (max-width: 926px) and (max-height: 926px) {
   margin-bottom: 50px;
 }
 `
@@ -109,7 +99,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 2.8rem;
 
-@media (max-width: 768px) {
+@media (max-width: 926px) and (max-height: 926px) {
   display: none;
 }
 `
@@ -121,8 +111,10 @@ margin: auto;
 max-width: 410px;
 width: 100%;
 
-@media (max-width: 768px) {
-  margin: auto;
+@media (max-width: 926px) and (max-height: 926px) {
+  height: 50%;
+  top: 15%;
+  position: absolute;
 }
 `
 
@@ -139,11 +131,10 @@ align-items: center;
 flex-shrink: 0;
 padding: 0.5rem 1.5rem;
 
-@media (max-width: 768px) {
-  width: 90%;
+@media (max-width: 926px) and (max-height: 926px) {
+  width: 100%;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
   background-color: transparent;
   
 }
@@ -153,13 +144,12 @@ export const ImageWrapper = styled.div`
 width: 50vw;
 height: 100%;
 right: 0px;
-top: 0px;
 
 @media (max-width: 1024px) {
   width: 100%;
   height: 287px;
+  margin-bottom: 20px;
 }
-
 `
 
 export const Image = styled.img`
@@ -169,7 +159,7 @@ object-fit: cover;
 right: 0px;
 bottom: 0px;
 
-@media (min-width: 769px) and (max-width: 1024px)  {
+@media (min-width: 926px) and (max-width: 1024px)  {
   content: url(${TabletImage});
   position: static;
   width: 100%;
@@ -179,16 +169,15 @@ bottom: 0px;
   order: 0;
 }
 
-  @media (max-width: 768px) {
+@media (max-width: 926px) and (max-height: 926px) {
     content: url(${MobileImage});
     position: absolute;
-    object-fit: cover;
-    width: 100vw;
-    height: 100%;
-    max-height: 100%;
-    max-width: 100%;
-    top: -150px;
+    object-fit: fill;
+    width: 80%;
+    height: 70%;
+    top: 0px;
     right: 0px;
+    object-position: 50% 0%;
   }
 
 `
@@ -203,7 +192,7 @@ export const PasswordSpan = styled.span`
   font-weight: 400;
   color:  #B33B3B;
 
-  @media (max-width: 768px) {
+  @media (max-width: 926px) and (max-height: 926px) {
     position: relative;
     left: 25%;
     padding-top: 15px;
@@ -275,12 +264,9 @@ text-decoration: subline;
 `
 
 export const CadastreseDiv = styled.div`
-  display: flex;
-  flex-direction: column;
   position: relative;
-  top: 68px;
-  align-items: center;
-  justify-content: center;
+  top: 58px;
+  margin-bottom: 2rem;
 
   @media (max-width: 1024px) {
     height: 49px;
@@ -296,7 +282,7 @@ font-size: 2rem;
 font-style: normal;
 font-weight: 400;
 line-height: 2.8rem; /* 140% */
-margin-top: 4rem;
+margin-top: 2rem;
 `
 
 export const CadastreseText2 = styled.p`
