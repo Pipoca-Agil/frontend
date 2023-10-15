@@ -31,7 +31,7 @@ justify-content: space-between;
 
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   text-align: center;
 }
 `
@@ -49,12 +49,14 @@ export const StyledLoginPage = styled.main`
     order: 1;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     padding: 0 2rem;
+    position: relative;
     text-align: center;
     align-items: center;
     justify-content: center;
     margin: auto;
+    top: -20%;
   }
   
 `
@@ -80,7 +82,7 @@ export const Title = styled.h4`
   line-height: 3.52rem; /* 110% */
   margin-bottom: 1.2rem;
 
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     margin-bottom: 50px;
   }
 
@@ -94,7 +96,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 1.75rem; /* 140% */
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   margin-bottom: 50px;
 }
 `
@@ -119,7 +121,7 @@ margin: auto;
 max-width: 410px;
 width: 100%;
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   margin: auto;
 }
 `
@@ -167,7 +169,7 @@ object-fit: cover;
 right: 0px;
 bottom: 0px;
 
-@media (min-width: 530px) and (max-width: 1024px)  {
+@media (min-width: 769px) and (max-width: 1024px)  {
   content: url(${TabletImage});
   position: static;
   width: 100%;
@@ -177,14 +179,15 @@ bottom: 0px;
   order: 0;
 }
 
-  @media (max-width: 530px) {
+  @media (max-width: 768px) {
     content: url(${MobileImage});
-    position: fixed;
+    position: absolute;
+    object-fit: cover;
     width: 100vw;
-    height: 80vh;
+    height: 100%;
     max-height: 100%;
     max-width: 100%;
-    top: 0px;
+    top: -150px;
     right: 0px;
   }
 
