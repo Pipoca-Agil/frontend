@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import TabletImage from "./Imgs/TabletImage.png";
 import MobileImage from "./Imgs/Vector.png"
+import EyeImage from "./Imgs/ph_eye-light.png";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -11,7 +12,6 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
   }
 `;
-
 
 export const Body = styled.body`
 display: flex;
@@ -130,6 +130,7 @@ justify-content: center;
 align-items: center;
 flex-shrink: 0;
 padding: 0.5rem 1.5rem;
+background-color: transparent;
 
 @media (max-width: 926px) and (max-height: 926px) {
   width: 100%;
@@ -299,6 +300,8 @@ color: #455F6B;
 
 export const PassowrdWrapper = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 `
 
 export const HiddenLabel = styled.label`
@@ -323,4 +326,15 @@ top: 1rem;
 font-size: 1.2rem;
 text-align: center;
 font-weight: bold;
+`;
+
+export const EyeIcon = styled.image`
+content: url(${EyeImage});
+position: absolute;
+margin-left: 350px;
+cursor: pointer;
+
+@media (max-width: 926px) and (max-height: 926px) {
+  margin-left: 270px;
+}
 `;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, HiddenLabel, HiddenChackboxWapper, ButtonsWrapper, ErrorMessage } from './style'
+import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, HiddenLabel, HiddenChackboxWapper, ButtonsWrapper, ErrorMessage, EyeIcon } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import { Link } from 'react-router-dom';
@@ -22,6 +22,7 @@ export default function Login() {
   const [isMobile, setIsMobile] = useState(false);
   const [error, setError] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -78,6 +79,10 @@ export default function Login() {
       }
    }
 
+   const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <Body>
     <LogoImage>
@@ -125,14 +130,18 @@ export default function Login() {
               }
             <PassowrdWrapper>
             <InputComponent
-              className='passWordInput' 
+              className='passWordInput'
               placeholder='****************'
-              type= 'password'
+              type={showPassword ? 'text' : 'password'}
               name='password'
               value={formData.password}
               onChange={handleInputChange}
               />
-            </PassowrdWrapper>    
+              <EyeIcon
+                onClick={togglePasswordVisibility}
+                className={showPassword ? "eye-icon-open" : "eye-icon-closed"}
+              />
+            </PassowrdWrapper>
             <PasswordSpan>Esqueci minha senha</PasswordSpan>
             <br></br>
             {
