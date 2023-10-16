@@ -136,6 +136,8 @@ padding: 0.5rem 1.5rem;
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  width: 80%;
+  margin: auto;
   
 }
 `
@@ -172,9 +174,9 @@ bottom: 0px;
 @media (max-width: 926px) and (max-height: 926px) {
     content: url(${MobileImage});
     position: absolute;
-    object-fit: fill;
+    object-fit: contain;
     width: 80%;
-    height: 70%;
+    height: 100%;
     top: 0px;
     right: 0px;
     object-position: 50% 0%;
