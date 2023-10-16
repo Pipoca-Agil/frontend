@@ -118,14 +118,14 @@ width: 100%;
 }
 `
 
-export const InputComponent = styled.input`
+export const InputComponent = styled.input<{isError : boolean}>`
 width: 400px;
 display: flex;
 height: 40px;
 top: 434px;
 left: 141px;
 border-radius: 30px;
-border: 2px solid #BDBDBD;
+border: 2px solid ${(props) => (props.isError ? "#b33b3b" : "#bdbdbd")};
 justify-content: center;
 align-items: center;
 flex-shrink: 0;
