@@ -161,7 +161,7 @@ object-fit: cover;
 right: 0px;
 bottom: 0px;
 
-@media (min-width: 926px) and (max-width: 1024px)  {
+@media (max-width: 1024px)  {
   content: url(${TabletImage});
   position: static;
   width: 100%;
