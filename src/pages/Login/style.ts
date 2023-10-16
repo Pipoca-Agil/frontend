@@ -313,3 +313,12 @@ export const ButtonsWrapper = styled.div`
   align-items: center;
   margin-top: 6rem;
 `;
+
+export const ErrorMessage = styled.span`
+color: #b33b3b;
+position: relative;
+top: 1rem;
+font-size: 1.2rem;
+text-align: center;
+font-weight: bold;
+`;

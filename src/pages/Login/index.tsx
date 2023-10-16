@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, HiddenLabel, HiddenChackboxWapper, ButtonsWrapper } from './style'
+import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, HiddenLabel, HiddenChackboxWapper, ButtonsWrapper, ErrorMessage } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import { Link } from 'react-router-dom';
@@ -20,6 +20,8 @@ export default function Login() {
   (false);
   const [isEmailValid, setIsEmailValid] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [error, setError] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -56,18 +58,14 @@ export default function Login() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!isEmailValid) {
-      alert('Por favor, insira um email válido.');
-      return;
-    }
+    setSubmitted(true);
 
-    if (!isPasswordValid) {
-      alert(
-        'Por favor, insira uma senha válida. A senha deve ter entre 8 e 12 caracteres, incluindo letras, números e caracteres especiais.'
-      );
+    if (!isEmailValid || !isPasswordValid) {
+      setError('Ocorreu um problema ao fazer login, Verificar seu e-mail ou senha, ou crie uma conta');
       return;
+    } else {
+      setError('');
     }
-
   };
 
    const handleMobile = () => {
@@ -136,6 +134,14 @@ export default function Login() {
               />
             </PassowrdWrapper>    
             <PasswordSpan>Esqueci minha senha</PasswordSpan>
+            <br></br>
+            {
+              submitted && error  && (
+                <ErrorMessage>
+                  {error}
+                </ErrorMessage>
+              )
+            }
             </FormGroup>
             <ButtonsWrapper>
 
