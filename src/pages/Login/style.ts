@@ -348,6 +348,6 @@ margin-left: 350px;
 cursor: pointer;
 
 @media (max-width: 926px) and (max-height: 926px) {
-  margin-left: 270px;
+  margin-left: 65%;
 }
 `;
