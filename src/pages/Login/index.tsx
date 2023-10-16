@@ -24,6 +24,7 @@ export default function Login() {
   const [error, setError] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [errorInput, setErrorInput] = useState(false);
 
   useEffect(() => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -64,9 +65,11 @@ export default function Login() {
 
     if (!isEmailValid || !isPasswordValid) {
       setError('Ocorreu um problema ao fazer login, Verificar seu e-mail ou senha, ou crie uma conta');
+      setErrorInput(true);
       return;
     } else {
       setError('');
+      setErrorInput(false);
     }
   };
 
@@ -115,6 +118,7 @@ export default function Login() {
               name='email'
               value={formData.email}
               onChange={handleInputChange}
+              isError = {errorInput}
               />
             </FormGroup>
             <FormGroup>
@@ -137,6 +141,7 @@ export default function Login() {
               name='password'
               value={formData.password}
               onChange={handleInputChange}
+              isError = {errorInput}
               />
               <EyeIcon
                 onClick={togglePasswordVisibility}
