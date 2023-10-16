@@ -194,6 +194,8 @@ export const PasswordSpan = styled.span`
   line-height: 2.7rem;
   font-weight: 400;
   color:  #B33B3B;
+  position: relative;
+  top: 15px;
 
   @media (max-width: 926px) and (max-height: 926px) {
     position: relative;
@@ -321,12 +323,22 @@ export const ButtonsWrapper = styled.div`
 `;
 
 export const ErrorMessage = styled.span`
+display: flex;
+align-items: center;
 color: #b33b3b;
-position: relative;
-top: 1rem;
-font-size: 1.2rem;
-text-align: center;
-font-weight: bold;
+font-family: Inter;
+font-size: 1.3rem;
+font-style: normal;
+font-weight: 400;
+margin-top: 0.5rem;
+text-align: left;
+width: 80%;
+gap: 0.5rem;
+
+@media (max-width: 926px) and (max-height: 926px){
+  margin: auto;
+}
+
 `;
 
 export const EyeIcon = styled.image`
