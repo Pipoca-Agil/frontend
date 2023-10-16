@@ -274,6 +274,7 @@ export const CadastreseDiv = styled.div`
   @media (max-width: 1024px) {
     height: 49px;
     width: 372px;
+    text-align: center;
   }
 `
 
