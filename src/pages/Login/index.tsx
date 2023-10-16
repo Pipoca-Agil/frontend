@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, HiddenLabel, HiddenChackboxWapper, ButtonsWrapper, ErrorMessage, EyeIcon } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
+import ErrorIcon from './Imgs/password_requirements_check.png'
 import { Link } from 'react-router-dom';
 
 
@@ -142,15 +143,17 @@ export default function Login() {
                 className={showPassword ? "eye-icon-open" : "eye-icon-closed"}
               />
             </PassowrdWrapper>
-            <PasswordSpan>Esqueci minha senha</PasswordSpan>
             <br></br>
             {
               submitted && error  && (
                 <ErrorMessage>
+                  <img src={ErrorIcon} alt='Icone de erro'/>
                   {error}
                 </ErrorMessage>
               )
             }
+            <br></br>
+            <PasswordSpan>Esqueci minha senha</PasswordSpan>
             </FormGroup>
             <ButtonsWrapper>
 
