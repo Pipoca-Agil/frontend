@@ -2,6 +2,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import TabletImage from "./Imgs/TabletImage.png";
 import MobileImage from "./Imgs/Vector.png"
 import EyeImage from "./Imgs/ph_eye-light.png";
+import { Link } from "react-router-dom";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -236,6 +237,7 @@ text-transform: capitalize;
 export const CheckBoxWapper = styled.div`
   display: flex;
   align-items:center;
+  margin-bottom: 4rem;
 `
 
 export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
@@ -271,18 +273,6 @@ text-decoration: subline;
 `
 
 export const CadastreseDiv = styled.div`
-  position: relative;
-  top: 58px;
-  margin-bottom: 2rem;
-
-  @media (max-width: 1024px) {
-    height: 49px;
-    width: 372px;
-    text-align: center;
-  }
-`
-
-export const CadastreseText = styled.p`
 color: var(--white-950, #455F6B);
 /* Paragraph/P2 */
 font-family: Inter;
@@ -290,17 +280,9 @@ font-size: 2rem;
 font-style: normal;
 font-weight: 400;
 line-height: 2.8rem; /* 140% */
-margin-top: 2rem;
-`
-
-export const CadastreseText2 = styled.p`
-font-family: Inter;
-font-size: 20px;
-font-weight: 400;
-line-height: 28px;
-letter-spacing: 0em;
+margin-top: 4rem;
+margin-bottom: 4rem;
 text-align: center;
-color: #455F6B;
 `
 
 export const PassowrdWrapper = styled.div`
@@ -352,4 +334,14 @@ cursor: pointer;
 @media (max-width: 926px) and (max-height: 926px) {
   margin-left: 65%;
 }
+`;
+
+export const LinkLogin = styled(Link)`
+color: var(--Secondary---CTA, #b33b3b);
+/* Link/Hyperlink */
+font-family: Inter;
+font-size: 2rem;
+font-style: normal;
+font-weight: 600;
+line-height: 2.7rem;
 `;
