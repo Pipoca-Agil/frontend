@@ -88,6 +88,8 @@ line-height: 1.75rem; /* 140% */
 
 @media (max-width: 926px) and (max-height: 926px) {
   margin-bottom: 50px;
+  margin: auto;
+  width: 85%;
 }
 `
 
