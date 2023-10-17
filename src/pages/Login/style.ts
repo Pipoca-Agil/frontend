@@ -20,8 +20,6 @@ height: 100vh;
 justify-content: space-between;
 @media (max-width: 1024px) {
   flex-direction: column;
-  align-items: space-between;
-  justify-content: center;
 
 }
 
@@ -112,6 +110,12 @@ padding: 4rem 0;
 margin: auto;
 max-width: 410px;
 width: 100%;
+padding-top: 24%;
+
+@media (max-width: 1024px) {
+  padding-top: 8%;
+
+}
 
 @media (max-width: 926px) and (max-height: 926px) {
   height: 50%;
@@ -151,12 +155,12 @@ right: 0px;
 
 @media (max-width: 1024px) {
   width: 100%;
-  height: 287px;
+  height: 100%;
 }
 `
 
 export const Image = styled.img`
-position: fixed;
+position: absolute;
 width: 50vw;
 object-fit: cover;
 right: 0px;
@@ -164,13 +168,11 @@ bottom: 0px;
 
 @media (max-width: 1024px)  {
   content: url(${TabletImage});
-  position: relative;
+  position: static;
   width: 100%;
   min-height: 287px;
   height: 100%;
   object-fit: cover;
-  order: 0;
-  object-position: 50% -100%;
 }
 
 @media (max-width: 926px) and (max-height: 926px) {
