@@ -53,10 +53,6 @@ export default function Login() {
     });
   }
 
-  const styleColor = {
-    color: "#B33B3B",
-  }
-
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 

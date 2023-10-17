@@ -31,7 +31,7 @@ justify-content: space-between;
 `
 
 export const StyledLoginPage = styled.main`
-  display: flex;
+/*   display: flex; */
   height: 100vh;
   align-items: center;
   justify-content: center;
@@ -44,10 +44,9 @@ export const StyledLoginPage = styled.main`
   }
 
   @media (max-width: 926px) and (max-height: 926px) {
+      display: flex;
     padding: 0 2rem;
     text-align: center;
-    align-items: center;
-    justify-content: center;
   }
   
 `
@@ -123,7 +122,6 @@ width: 100%;
 
 export const InputComponent = styled.input<{isError : boolean}>`
 width: 400px;
-display: flex;
 height: 40px;
 top: 434px;
 left: 141px;
@@ -154,7 +152,6 @@ right: 0px;
 @media (max-width: 1024px) {
   width: 100%;
   height: 287px;
-  margin-bottom: 20px;
 }
 `
 
@@ -167,12 +164,13 @@ bottom: 0px;
 
 @media (max-width: 1024px)  {
   content: url(${TabletImage});
-  position: static;
+  position: relative;
   width: 100%;
   min-height: 287px;
   height: 100%;
   object-fit: cover;
   order: 0;
+  object-position: 50% -100%;
 }
 
 @media (max-width: 926px) and (max-height: 926px) {
