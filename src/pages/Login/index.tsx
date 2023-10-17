@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, CadastreseText,CadastreseText2, PassowrdWrapper, HiddenLabel, HiddenChackboxWapper, ButtonsWrapper, ErrorMessage, EyeIcon } from './style'
+import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, Image, InputComponent, LableStyle, FormGroup, PasswordSpan, Body, Button, CheckBoxWapper, CheckBox, SpanText, LinkDetalhes, CadastreseDiv, PassowrdWrapper, HiddenLabel, HiddenChackboxWapper, ButtonsWrapper, ErrorMessage, EyeIcon, LinkLogin } from './style'
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import ErrorIcon from './Imgs/password_requirements_check.png'
 import { Link } from 'react-router-dom';
-
 
 type LoginData = {
   email: string,
@@ -52,10 +51,6 @@ export default function Login() {
       ...formData,
       [name]: value,
     });
-  }
-
-  const styleColor = {
-    color: "#B33B3B",
   }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -180,8 +175,9 @@ export default function Login() {
               )
             }  
         <CadastreseDiv>
-        <CadastreseText>Ainda não é assinante?</CadastreseText>
-        <CadastreseText2><Link style={styleColor} to={"/register"} >Cadastre-se</Link> e conheça as vantagens</CadastreseText2>
+        Ainda não é assinante?
+        <br></br>
+        <LinkLogin to="/register" >Cadastre-se</LinkLogin> e conheça as vantagens
         </CadastreseDiv>
             </ButtonsWrapper>
       </form>
