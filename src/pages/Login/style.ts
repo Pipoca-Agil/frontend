@@ -113,7 +113,7 @@ width: 100%;
 padding-top: 24%;
 
 @media (max-width: 1024px) {
-  padding-top: 8%;
+  padding-top: 2%;
 
 }
 
@@ -155,7 +155,7 @@ right: 0px;
 
 @media (max-width: 1024px) {
   width: 100%;
-  height: 100%;
+  height: 50%;
 }
 `
 
@@ -171,8 +171,7 @@ bottom: 0px;
   position: static;
   width: 100%;
   min-height: 287px;
-  height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 @media (max-width: 926px) and (max-height: 926px) {
