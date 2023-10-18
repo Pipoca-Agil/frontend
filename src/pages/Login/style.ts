@@ -17,7 +17,7 @@ export const Body = styled.body`
 display: flex;
 height: 100vh;
 width: 100vw;
-justify-content: space-between;
+justify-content: space-around;
 overflow-x: hidden;
 @media (max-width: 1024px) {
   flex-direction: column;
@@ -117,8 +117,9 @@ export const FormStyle = styled.section`
   margin: auto;
   max-width: 410px;
   width: 100%;
-   top: 25%;
+   top: 28%;
    position: relative;
+   left: 6%;
 }
 
 @media (max-width: 1024px) {
@@ -128,6 +129,7 @@ export const FormStyle = styled.section`
   width: 100%;
   position: static;
   z-index: 1;
+  
 
 }
 
@@ -174,15 +176,15 @@ width: 50%;
 export const Image = styled.img`
 @media (min-width: 1025px) {
   position: fixed;
-  width: 55vw;
+  width: 50vw;
   bottom: 0px;
   right: 0px;
-  height: 97.5vh;
+  height: 99vh;
 }
 
 @media (max-width: 1024px)  {
   content: url(${TabletImage});
-  position: initial;
+  position: relatve;
   width: 100%;
   min-height: 287px;
   object-fit: contain;
