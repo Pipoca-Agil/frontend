@@ -4,6 +4,8 @@ import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import ErrorIcon from './Imgs/password_requirements_check.png'
 import { Link } from 'react-router-dom';
+import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 
 type LoginData = {
   email: string,
@@ -138,12 +140,20 @@ export default function Login() {
               onChange={handleInputChange}
               isError = {errorInput}
               />
-              <EyeIcon
-                onClick={togglePasswordVisibility}
-                className={showPassword ? "eye-icon-open" : "eye-icon-closed"}
-              />
+                {showPassword ? (
+                  <EyeIcon>
+                    <VisibilityOffOutlinedIcon
+                    style={ {fontSize: 'large'} }
+                    onClick={togglePasswordVisibility} />
+                  </EyeIcon>
+                   ) : (
+                    <EyeIcon>
+                      <RemoveRedEyeOutlinedIcon
+                      style={ {fontSize: 'large'} }
+                      onClick={togglePasswordVisibility} />
+                    </EyeIcon>
+                  )}
             </PassowrdWrapper>
-            <br></br>
             {
               submitted && error  && (
                 <ErrorMessage>
@@ -152,7 +162,6 @@ export default function Login() {
                 </ErrorMessage>
               )
             }
-            <br></br>
             <PasswordSpan>Esqueci minha senha</PasswordSpan>
             </FormGroup>
             <ButtonsWrapper>
@@ -173,7 +182,8 @@ export default function Login() {
               <LinkDetalhes>Detalhes</LinkDetalhes>
             </CheckBoxWapper>
               )
-            }  
+            } 
+            <br/>
         <CadastreseDiv>
         Ainda não é assinante?
         <br></br>

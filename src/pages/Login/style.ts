@@ -1,7 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import TabletImage from "./Imgs/TabletImage.png";
 import MobileImage from "./Imgs/Vector.png"
-import EyeImage from "./Imgs/ph_eye-light.png";
 import { Link } from "react-router-dom";
 
 export const GlobalStyles = createGlobalStyle`
@@ -17,10 +16,13 @@ export const GlobalStyles = createGlobalStyle`
 export const Body = styled.body`
 display: flex;
 height: 100vh;
+width: 100vw;
 justify-content: space-between;
+overflow-x: hidden;
 @media (max-width: 1024px) {
   flex-direction: column;
-
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media (max-width: 926px) and (max-height: 926px) {
@@ -29,10 +31,12 @@ justify-content: space-between;
 `
 
 export const StyledLoginPage = styled.main`
-/*   display: flex; */
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 1025px) {
+  height: 100%;
+  position: relative;
+  width: 100vw;
+}
+  
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -42,9 +46,12 @@ export const StyledLoginPage = styled.main`
   }
 
   @media (max-width: 926px) and (max-height: 926px) {
-      display: flex;
+    display: flex;
     padding: 0 2rem;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
   }
   
 `
@@ -105,15 +112,22 @@ line-height: 2.8rem;
 `
 
 export const FormStyle = styled.section`
-z-index: 1;
-padding: 4rem 0;
-margin: auto;
-max-width: 410px;
-width: 100%;
-padding-top: 24%;
+@media (min-width: 1025px) {
+  z-index: 1;
+  margin: auto;
+  max-width: 410px;
+  width: 100%;
+   top: 25%;
+   position: relative;
+}
 
 @media (max-width: 1024px) {
   padding-top: 2%;
+  margin: auto;
+  max-width: 410px;
+  width: 100%;
+  position: static;
+  z-index: 1;
 
 }
 
@@ -121,6 +135,7 @@ padding-top: 24%;
   height: 50%;
   top: 15%;
   position: absolute;
+  z-index: 1;
 }
 `
 
@@ -138,7 +153,6 @@ padding: 0.5rem 1.5rem;
 background-color: transparent;
 
 @media (max-width: 926px) and (max-height: 926px) {
-  width: 100%;
   justify-content: center;
   align-items: center;
   background-color: transparent;
@@ -149,9 +163,7 @@ background-color: transparent;
 `
 
 export const ImageWrapper = styled.div`
-width: 50vw;
-height: 100%;
-right: 0px;
+width: 50%;
 
 @media (max-width: 1024px) {
   width: 100%;
@@ -160,15 +172,17 @@ right: 0px;
 `
 
 export const Image = styled.img`
-position: absolute;
-width: 50vw;
-object-fit: cover;
-right: 0px;
-bottom: 0px;
+@media (min-width: 1025px) {
+  position: fixed;
+  width: 55vw;
+  bottom: 0px;
+  right: 0px;
+  height: 97.5vh;
+}
 
 @media (max-width: 1024px)  {
   content: url(${TabletImage});
-  position: static;
+  position: initial;
   width: 100%;
   min-height: 287px;
   object-fit: contain;
@@ -236,7 +250,10 @@ text-transform: capitalize;
 export const CheckBoxWapper = styled.div`
   display: flex;
   align-items:center;
-  margin-bottom: 4rem;
+  justify-content: center;
+  left: -20%;
+  margin-bottom: 6rem;
+  position: relative;
 `
 
 export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
@@ -279,15 +296,24 @@ font-size: 2rem;
 font-style: normal;
 font-weight: 400;
 line-height: 2.8rem; /* 140% */
-margin-top: 4rem;
-margin-bottom: 4rem;
 text-align: center;
+margin-bottom: 2rem;
+
+@media (max-width: 1024) {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+@media (max-width: 926px) and (max-height: 926px){
+  margin-bottom: 4rem;
+}
 `
 
 export const PassowrdWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 `
 
 export const HiddenLabel = styled.label`
@@ -302,7 +328,7 @@ export const ButtonsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 6rem;
+  margin-top: 4rem;
 `;
 
 export const ErrorMessage = styled.span`
@@ -325,13 +351,23 @@ gap: 0.5rem;
 `;
 
 export const EyeIcon = styled.image`
-content: url(${EyeImage});
+color:  #989898;
 position: absolute;
-margin-left: 350px;
 cursor: pointer;
+right: 5%;
+padding: 0.5em;
+
+@media (max-width: 1024px) {
+  right: 8%;
+  position: relative;
+  padding: 0.5em;
+}
+
 
 @media (max-width: 926px) and (max-height: 926px) {
-  margin-left: 65%;
+  right: 15%;
+  position: absolute;
+  padding: 0.5em;
 }
 `;
 
