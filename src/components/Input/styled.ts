@@ -48,6 +48,8 @@ export const ButtonIcon = styled.button`
 `;
 
 export const EyeIcon = styled.img`
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   position: absolute;
   right: 5%;
