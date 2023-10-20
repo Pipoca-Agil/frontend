@@ -1,6 +1,7 @@
 import React, { LegacyRef, forwardRef, useState } from "react";
 import * as S from "./styled";
 import Eye from "../../assets/icons/eye.svg";
+import BlockEye from "../../assets/icons/block-eye.svg";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -32,7 +33,7 @@ function Input(
         {showPasswordButton && (
           <S.EyeIcon
             onClick={togglePasswordVisibility}
-            src={passwordVisible ? Eye : Eye}
+            src={passwordVisible ? BlockEye : Eye}
             alt="Mostrar Senha"
           />
         )}
