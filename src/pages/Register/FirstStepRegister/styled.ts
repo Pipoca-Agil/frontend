@@ -110,6 +110,7 @@ export const Button = styled.button`
   font-weight: 700;
   line-height: 2.7rem; /* 135% */
   text-transform: capitalize;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: #b33b3b;
