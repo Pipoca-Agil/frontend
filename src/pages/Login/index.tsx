@@ -133,7 +133,7 @@ export default function Login() {
             <PassowrdWrapper>
             <InputComponent
               className='passWordInput'
-              placeholder='****************'
+              placeholder='Senha'
               type={showPassword ? 'text' : 'password'}
               name='password'
               value={formData.password}

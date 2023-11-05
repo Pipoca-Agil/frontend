@@ -30,11 +30,13 @@ export const Carousel = styled.div`
 
 export const GuestImage = styled.img<{url: string, isActive: boolean}>`
     content: ${props => `url(${props.url})`};
-    width: 21.3125rem;
-    height: 31.9375rem;
+    width: 344px;
+    height: 446px;
     transition: all .4s ease-in-out;
     align-self: baseline;
-
+    /* border-radius: 50%; */
+    object-fit: cover;
+    /* box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.36); */
     ${props => props.isActive? 
     css`
         opacity: 100;
@@ -78,8 +80,8 @@ export const EffectPhrase = styled.h4<{isActive: boolean}>`
     font-weight: 700;
     line-height: 3.85rem;
     position: absolute;
-    margin-left: 10rem;
-    width: 56rem;
+    margin-left: 6rem;
+    width: 63.5rem;
     z-index: 2;
 
     transition: all .4s ease-in-out;
@@ -101,19 +103,25 @@ export const MainInfo = styled.div`
 export const EpisodeGeneralInfo = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     padding-top: 7rem;
+    margin-left: 0px;
+    position: relative;
 `
 
 export const EpisodeLightInformation = styled.div`
     display: flex;
     gap: 17rem;
+    
 `
 
 export const BottomInformationDiv = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
 `
 
 export const EpisodeTitle = styled.p`
@@ -130,16 +138,16 @@ export const EpisodeInformation = styled.p`
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1rem;
+    line-height: 2rem;
 `
 
 export const LeftQuota = styled.img<{isActive: boolean}>`
-    padding-bottom: 6rem;
-    width: 13.5rem;
-    height: 17.95356rem;
+    padding-bottom: 10rem;
+    width: 20.5rem;
+    height: 20.5rem;
     content: url('/carousel/quota.svg');
     transition: all .4s ease-in-out;
-
+    
     ${props => props.isActive? 
     css`
         transform: rotate(0deg);
@@ -151,12 +159,15 @@ export const LeftQuota = styled.img<{isActive: boolean}>`
 `;
 
 export const RightQuota = styled.img<{isActive: boolean}>`
-    padding-bottom: 6rem;
-    width: 13.5rem;
-    height: 17.95356rem;
+    padding-bottom: 10rem;
+    width: 20.5rem;
+    height: 20.5rem;
     content: url('/carousel/quota.svg');
     transition: all .4s ease-in-out;
 
+    position: absolute;
+    bottom: 0;
+    right: -30px;
     ${props => props.isActive? 
     css`
         transform: rotate(180deg);
@@ -172,6 +183,8 @@ export const QuotasDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 67.4rem;
+    margin-top: 50px;
+    position: relative;
 `
 
 export const SelectionButtons = styled.div`
