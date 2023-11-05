@@ -27,7 +27,8 @@ export const Title = styled.h2`
 export const Carousel = styled(motion.div)`
     cursor: grab;
     overflow: hidden;
-    width: 2630px;
+    width: 3900px;
+ 
 `;
 
 export const CardsWrapper = styled(motion.div)`

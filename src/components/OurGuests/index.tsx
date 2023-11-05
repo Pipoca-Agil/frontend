@@ -49,7 +49,7 @@ export default function OurGuests({guests} : {guests: IGuestCarousel[]}){
             <S.Carousel>
                 <S.LeftArrow onClick={showPreviousGuest}/>
                 <S.MainInfo>
-                    <S.GuestImage url={guests[currentGuest].guestPhoto} isActive={inTransition}/>
+                    <S.GuestImage url={guests[currentGuest].guestPhoto} isActive={inTransition}/> 
                     <S.EpisodeGeneralInfo>
                         <S.QuotasDiv>
                             <S.LeftQuota isActive={inTransition}/>
