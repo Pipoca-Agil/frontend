@@ -19,7 +19,7 @@ export const getMostListenedEpisodes = async () => {
 		},
 		{
 			thumb: '/guests/banner_334.svg',
-			title: 'Cheguei no meu primeiro time e...',
+			title: 'Cheguei no meu primeiro time e ago...',
 			number: 'EPISÓDIO #334',
 			description: '"Descrição episódio."',
 			videoUrl: 'https://open.spotify.com/episode/6V5nnNM84lvTPjB2ZWsIiK?si=bE1qR1OeSyqaZjnqq8LmWQ',
@@ -33,7 +33,7 @@ export const getMostListenedEpisodes = async () => {
 		},
 		{
 			thumb: '/guests/banner_397.svg',
-			title: 'ENCONTRO ÁGIL - História de U...',
+			title: 'ENCONTRO ÁGIL - História de Usuár...',
 			number: 'EPISÓDIO #397',
 			description: '"Descrição episódio."',
 			videoUrl: 'https://open.spotify.com/episode/5wkmU7GqFlJjQbr3NNU1PY?si=KbRw1pVIRXeUALQBYz93eg',
