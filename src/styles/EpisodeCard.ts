@@ -111,7 +111,7 @@ export const linkPlayer = styled.div`
     align-items:center;
     border-radius: 20px;
     padding: 0.2rem 1.7rem;
-    margin-left: 5px;
+    margin-left: 15px;
     cursor: pointer;
     
 `;
