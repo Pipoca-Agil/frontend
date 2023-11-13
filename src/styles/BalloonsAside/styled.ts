@@ -7,8 +7,8 @@ export const BalloonsWrapper = styled.div`
     width: 50rem;
     
     @media (max-width: 926px) and (max-height: 926px) {
-        margin: auto;
-        width: 45rem;
+        max-width: 100%;
+        padding-bottom: 10rem;
       }
 `;
 
@@ -18,9 +18,10 @@ export const LeftBalloon = styled.img`
     
     @media (max-width: 926px) and (max-height: 926px) {
         position: relative;
-        left: 50%;
-        margin-left: 10%;
+        left: 55%;
         bottom: 105px;
+        width: 13.96rem;
+        padding: 1.5rem;
       }
 `;
 
@@ -33,8 +34,10 @@ export const CenterBalloon = styled.img`
     bottom: 30%;
 
     @media (max-width: 926px) and (max-height: 926px) {
-        position: absolute;
-        left: 10%;
+        position: relative;
+        width: 17.2rem;
+        left: -30%;
+        padding: 1.5rem;
       }
 `;
 
