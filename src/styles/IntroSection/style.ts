@@ -10,5 +10,6 @@ export const IntroWrapper = styled.section`
 
     @media (max-width: 926px) and (max-height: 926px) {
         flex-direction: column;
+        max-width: 100%;
       }
 `;
