@@ -28,6 +28,10 @@ export const SubTitle = styled.h2`
     font-style: normal;
     font-weight: 700;
     margin-bottom: 2.8rem;
+
+    @media (max-width: 926px) and (max-height: 926px) {
+       font-size: 12px;
+      }
 `;
 
 export const PositionWrapper = styled.div`
