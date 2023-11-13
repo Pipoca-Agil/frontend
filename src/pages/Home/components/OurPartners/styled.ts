@@ -8,6 +8,11 @@ export const Wrapper = styled.section`
     justify-content: center;
     gap: 2rem;
     background-color: #B33B3B;
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        height: 283px;
+        width: 100%;
+    }
 `
 
 export const Title = styled.h2`

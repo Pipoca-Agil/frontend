@@ -9,6 +9,7 @@ import IntroSection from '../../components/IntroSection';
 import OurPartners from './components/OurPartners'
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer';
+import HeaderToggle from '../../components/Header/HeaderToggle'
 
 
 
@@ -17,9 +18,11 @@ const mockGuests = GetGuests();
 const HomePage: React.FC = () => {
   const [guests] = React.useState<IGuestCarousel[]>(mockGuests);
 
+	const isMobile = window.innerWidth <= 1025;
+
 	return (
 		<HomeContainer>
-			<Header />
+			{isMobile ? <HeaderToggle /> : <Header />}
 			<IntroSection />
 			<MostListenedEpisodes />
 			<About />
