@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Button = styled(Link)`
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@ export const Button = styled(Link)`
     font-size: 1.3rem;
     font-weight: 700;
     line-height: 1.7rem; 
-    margin-left: 18rem;
+    left: 65%;
     box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.25);
 `;
 
