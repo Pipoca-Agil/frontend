@@ -22,6 +22,11 @@ export const Title = styled.h2`
     font-style: normal;
     font-weight: 700;
     width: 100%;
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        margin-top: 30px;
+        text-align: center;
+      }
 `;
 
 export const Carousel = styled(motion.div)`
@@ -46,6 +51,7 @@ export const SeeAllEpisodesDiv = styled.div`
     width: 100%;
     justify-content: flex-end;
     padding: 0 1rem;
+
 `;
 
 export const SeeAllEpisodes = styled(Link)`
@@ -54,4 +60,10 @@ export const SeeAllEpisodes = styled(Link)`
     font-family: 'Inter';
     font-size: 1.5rem;
     font-weight: 600;
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 2.0rem;
+      }
 `;
