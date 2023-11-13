@@ -7,6 +7,10 @@ export const Section = styled.section`
     max-width: 1320px;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: 1025px) {
+        display: none;
+    }
 `;
 
 export const Title = styled.h2`
