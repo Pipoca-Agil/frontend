@@ -35,8 +35,8 @@ export const ImageLogo = styled.img`
 `;
 
 export const ImageButton = styled.button`
-  background-color: #FAEDED
-  position: absolute;
+  background-color: #FAEDED;
+  position: relatve;
   margin-left: 1rem;
 `; 
 
