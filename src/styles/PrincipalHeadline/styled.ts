@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
     padding-block: 10rem;
     font-family: 'Inter';
     color: #2D2D2D;
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        padding-block: 5rem;
+      }
 `;
 
 export const Title = styled.h1`
