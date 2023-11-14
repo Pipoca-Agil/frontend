@@ -10,6 +10,7 @@ export default function ListenOnPlatforms() {
 			<S.Title>
 				Ouça nas plataformas
 			</S.Title>
+			<S.PlataformLogosDiv>
 			<S.Platform href="https://podcasts.apple.com/us/podcast/pipoca-%C3%A1gil/id1490753920" target="_blank">
 				<S.PlatformIcon src={ApplePodcast}/>
 				<S.PlatformName>Apple Podcast</S.PlatformName>
@@ -22,6 +23,7 @@ export default function ListenOnPlatforms() {
 				<S.PlatformIcon src={YouTube}/>
 				<S.PlatformName>YouTube</S.PlatformName>
 			</S.Platform>
+			</S.PlataformLogosDiv>
 		</S.ListenOnPlatforms>
     )
 }
