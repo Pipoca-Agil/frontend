@@ -50,7 +50,7 @@ export const SubTitle = styled.h2`
       }
 
       
-      @media (min-width: 926px) and (max-width: 1025px) {
+      @media (min-width: 927px) and (max-width: 1025px) {
         font-size: 40px;
        }
 `;
