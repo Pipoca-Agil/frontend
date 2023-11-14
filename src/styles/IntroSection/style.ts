@@ -13,4 +13,10 @@ export const IntroWrapper = styled.section`
         max-width: 100%;
         padding-block: 2rem;
       }
+
+      @media (max-width: 1025px) {
+        flex-direction: column;
+        max-width: 100%;
+        padding-block: 1rem;
+      }
 `;

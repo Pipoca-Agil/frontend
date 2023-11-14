@@ -16,6 +16,10 @@ export const Title = styled.h3`
     text-align: left;
     line-height: normal;
     margin-bottom: 1.7rem;
+
+    @media (max-width: 1025px) {
+        font-size: 2.0rem;
+       }
 `;
 
 export const AudioMessage = styled.div`
@@ -35,7 +39,8 @@ export const CardWrapper = styled.div`
     border: 2px solid #B33B3B;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
+
 `;
 
 export const PlayPauseButton = styled.div`
@@ -55,6 +60,8 @@ export const SoundWaveContainer = styled.div`
     position: relative; 
     display: flex;
     align-items: center;
+
+    
 `;
 
 export const UnderDiv = styled.div`

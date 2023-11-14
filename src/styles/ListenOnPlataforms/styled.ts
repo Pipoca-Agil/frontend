@@ -19,6 +19,10 @@ export const Title = styled.h3`
     @media (max-width: 926px) and (max-height: 926px) {
         display: none;
       }
+
+      @media (max-width: 1025px) {
+        display: none;
+       }
 `;
 
 export const Platform = styled.a`
@@ -39,6 +43,12 @@ export const PlatformIcon = styled.img`
         width: 50px;
         height: 50px;
       }
+
+      
+      @media (max-width: 1025px) {
+        width: 62px;
+        height: 62px;
+       }
 `;
 
 export const PlatformName = styled.p`
@@ -55,10 +65,22 @@ export const PlatformName = styled.p`
     @media (max-width: 926px) and (max-height: 926px) {
         display: none;
       }
+
+      
+      @media (max-width: 1025px) {
+        display: none;
+       }
 `;
 
 export const PlataformLogosDiv = styled.div`
 @media (max-width: 926px) and (max-height: 926px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+
+  @media (max-width: 1025px){
     display: flex;
     align-items: center;
     justify-content: space-around;

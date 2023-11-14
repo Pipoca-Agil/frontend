@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
     @media (max-width: 926px) and (max-height: 926px) {
         padding-block: 5rem;
       }
+
+      @media (max-width: 1025px) {
+        padding-block: 5rem;
+      }
 `;
 
 export const Title = styled.h1`
@@ -26,6 +30,10 @@ export const Title = styled.h1`
     @media (max-width: 926px) and (max-height: 926px) {
         font-size: 4.2rem;
       }
+
+      @media (max-width: 1025px) {
+        font-size: 64px;
+       }
 `;
 
 export const SubTitle = styled.h2`
@@ -40,6 +48,11 @@ export const SubTitle = styled.h2`
     @media (max-width: 926px) and (max-height: 926px) {
        font-size: 12px;
       }
+
+      
+    @media (max-width: 1025px) {
+        font-size: 40px;
+       }
 `;
 
 export const PositionWrapper = styled.div`
