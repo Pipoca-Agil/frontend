@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
         padding-block: 5rem;
       }
 
-      @media (max-width: 1025px) {
+      @media (min-width: 926px) and (max-width: 1025px) {
         padding-block: 5rem;
       }
 `;
@@ -31,7 +31,7 @@ export const Title = styled.h1`
         font-size: 4.2rem;
       }
 
-      @media (max-width: 1025px) {
+      @media (min-width: 926px) and (max-width: 1025px) {
         font-size: 64px;
        }
 `;
@@ -50,7 +50,7 @@ export const SubTitle = styled.h2`
       }
 
       
-    @media (max-width: 1025px) {
+      @media (min-width: 926px) and (max-width: 1025px) {
         font-size: 40px;
        }
 `;

@@ -20,7 +20,7 @@ export const Title = styled.h3`
         display: none;
       }
 
-      @media (max-width: 1025px) {
+      @media (min-width: 926px) and (max-width: 1025px) {
         display: none;
        }
 `;
@@ -45,7 +45,7 @@ export const PlatformIcon = styled.img`
       }
 
       
-      @media (max-width: 1025px) {
+      @media (min-width: 926px) and (max-width: 1025px) {
         width: 62px;
         height: 62px;
        }
@@ -67,7 +67,7 @@ export const PlatformName = styled.p`
       }
 
       
-      @media (max-width: 1025px) {
+      @media (min-width: 926px) and (max-width: 1025px) {
         display: none;
        }
 `;
@@ -80,7 +80,7 @@ export const PlataformLogosDiv = styled.div`
   }
 
 
-  @media (max-width: 1025px){
+  @media (min-width: 926px) and (max-width: 1025px){
     display: flex;
     align-items: center;
     justify-content: space-around;

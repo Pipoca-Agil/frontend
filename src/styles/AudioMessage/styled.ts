@@ -16,10 +16,6 @@ export const Title = styled.h3`
     text-align: left;
     line-height: normal;
     margin-bottom: 1.7rem;
-
-    @media (max-width: 1025px) {
-        font-size: 2.0rem;
-       }
 `;
 
 export const AudioMessage = styled.div`

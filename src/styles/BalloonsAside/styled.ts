@@ -10,6 +10,11 @@ export const BalloonsWrapper = styled.div`
         max-width: 100%;
         padding-bottom: 10rem;
       }
+
+      @media (max-width: 1025px){
+        max-width: 100%;
+        padding-bottom: 10rem;
+      }
 `;
 
 export const LeftBalloon = styled.img`
@@ -51,4 +56,6 @@ export const RightBalloon = styled.img`
     @media (max-width: 926px) and (max-height: 926px) {
         display: none;
       }
+
+      
 `;
