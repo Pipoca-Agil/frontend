@@ -7,6 +7,9 @@ export default function About() {
 	return (
 		<S.BackgroundDiv>
 			<S.Wrapper>
+
+				<S.DivWrappers>
+
 				<S.InformationDiv>
 					<S.TitleContainer>
 						<S.Title>
@@ -42,6 +45,7 @@ export default function About() {
 				<S.BalloonDiv>
 					<S.Balloon src={AboutBalloon}/>
 				</S.BalloonDiv>
+				</S.DivWrappers>
 			</S.Wrapper>
 		</S.BackgroundDiv>
 	);
