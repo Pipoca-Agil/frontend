@@ -35,7 +35,8 @@ export const CardWrapper = styled.div`
     border: 2px solid #B33B3B;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
+
 `;
 
 export const PlayPauseButton = styled.div`
@@ -55,6 +56,8 @@ export const SoundWaveContainer = styled.div`
     position: relative; 
     display: flex;
     align-items: center;
+
+    
 `;
 
 export const UnderDiv = styled.div`

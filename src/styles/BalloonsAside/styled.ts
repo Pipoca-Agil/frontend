@@ -23,6 +23,10 @@ export const LeftBalloon = styled.img`
         width: 13.96rem;
         padding: 1.5rem;
       }
+
+      @media (max-width: 1025px) {
+        position: relative;
+      }
 `;
 
 export const CenterBalloon = styled.img`
@@ -39,6 +43,10 @@ export const CenterBalloon = styled.img`
         left: -30%;
         padding: 1.5rem;
       }
+
+      @media (max-width: 1025px) {
+        position: relative;
+      }
 `;
 
 export const RightBalloon = styled.img`
@@ -51,4 +59,11 @@ export const RightBalloon = styled.img`
     @media (max-width: 926px) and (max-height: 926px) {
         display: none;
       }
+
+    @media (max-width: 1025px) {
+      position: relative;
+      bottom: 15%;
+      left: 30%;
+      transform: translateY(-80%);
+    }    
 `;
