@@ -23,17 +23,18 @@ export const Title = styled.h2`
     font-weight: 700;
     width: 100%;
 
+    @media (max-width: 1025px) {
+        margin-top: 20%;
+        margin-left: 5%;
+        text-align: left;
+        font-size: 3.4rem;
+    }
+
     @media (max-width: 926px) and (max-height: 926px) {
         margin-top: 20%;
         text-align: center;
         font-size: 3rem;
       }
-
-      @media (max-width: 1025px) {
-        margin-top: 20%;
-        text-align: center;
-    }
-
 
 `;
 
@@ -69,12 +70,11 @@ export const SeeAllEpisodes = styled(Link)`
     font-weight: 600;
 
     @media (max-width: 1025px) {
-        text-align: center;
-        margin: 0 auto;
-        font-size: 2.0rem;
+        display: none;
     }
     
     @media (max-width: 926px) and (max-height: 926px) {
+        display: block;
         text-align: center;
         margin: 0 auto;
         font-size: 2.0rem;

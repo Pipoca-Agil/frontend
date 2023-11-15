@@ -58,7 +58,13 @@ export const DefaultText = styled.p`
     @media (max-width: 1025px) {
         text-align: center;
         font-size: 2.4rem;
+        width: 382px;
       }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        width: 289.24px;
+        padding: 1rem;
+    }
 `;
 
 export const Links = styled(Link)`
@@ -77,6 +83,12 @@ export const SectionTitle = styled.h6`
     line-height: 26.4px;
 
     @media (max-width: 1025px){
+        text-align: center;
+        font-size: 2.4rem;
+        width: 879px;
+      }
+
+      @media (max-width: 926px) and (max-height: 926px) {
         text-align: center;
         font-size: 2.4rem;
         width: 290px;
@@ -113,4 +125,18 @@ export const Icons = styled.a<{url: string, logo?: boolean}>`
 export const IconsDiv = styled.div`
     display: flex;
     gap: 2rem;
+
+    @media (max-width: 1025px) {
+        width: 199px;
+        align-items: center;
+        justify-content: center
+        position: relative;
+        margin-left: 38%; 
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        display: flex;
+        gap: 2rem;
+        margin-left: 3.5rem; 
+    }
 `;

@@ -15,6 +15,12 @@ export const Wrapper = styled.section`
     max-width: 1320px;
     margin: 0 auto;
 
+    @media (max-width: 1025px) {
+        text-align: center;
+        margin: auto;
+        padding-left: 0rem;
+    }
+
     @media (max-width: 926px) and (max-height: 926px) {
         flex-direction: column;
         padding-bottom: 30px;
@@ -31,8 +37,10 @@ export const InformationDiv = styled.div`
     padding-left: 10rem;
 
     @media (max-width: 1025px) {
-        margin-left: 10%;
-    }
+        align-items: center;
+        margin: auto;
+        padding-left: 0rem;
+      }
 
     @media (max-width: 926px) and (max-height: 926px) {
         align-items: center;
@@ -80,6 +88,14 @@ export const PodcastDescription = styled.p`
     font-family: Inter;
     font-size: 1.6rem;
 
+    @media (max-width: 1025px) {
+        font-size: 2.5rem;
+        text-align: center;
+        width: 734px;
+        max-width: 100%;
+        line-height: 3.36rem;
+    }
+
     @media (max-width: 926px) and (max-height: 926px) {
         font-size: 2.0rem;
         width: 301px;
@@ -122,8 +138,14 @@ export const ItemInformation = styled.p`
     font-family: Inter;
     font-size: 1.6rem;
 
-    @media (max-width: 926px) and (max-height: 926px) {
+    @media (max-width: 1025px) {
+        font-size: 2.5rem;
         text-align: left;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        text-align: center;
+        font-size: 1.6rem;
       }
 `;
 
@@ -134,13 +156,14 @@ export const BalloonDiv = styled.div`
     padding-right: 10rem;
 
     @media (max-width: 1025px) {
-        display: relative;
+        position: relative;
         padding-bottom: 2rem;
-        margin-left: 60%;
+        margin-left: 45%;
     }
 
     @media (max-width: 926px) and (max-height: 926px) {
         padding-right: 0;
+        margin-left: 0%;
       }
 `;
 
