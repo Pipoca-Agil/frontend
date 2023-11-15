@@ -23,11 +23,19 @@ export const Title = styled.h2`
     font-weight: 700;
     width: 100%;
 
+    @media (max-width: 1025px) {
+        margin-top: 20%;
+        margin-left: 5%;
+        text-align: left;
+        font-size: 3.4rem;
+    }
+
     @media (max-width: 926px) and (max-height: 926px) {
         margin-top: 20%;
         text-align: center;
-        font-size: 2rem;
+        font-size: 3rem;
       }
+
 `;
 
 export const Carousel = styled(motion.div)`
@@ -52,7 +60,6 @@ export const SeeAllEpisodesDiv = styled.div`
     width: 100%;
     justify-content: flex-end;
     padding: 0 1rem;
-
 `;
 
 export const SeeAllEpisodes = styled(Link)`
@@ -62,9 +69,14 @@ export const SeeAllEpisodes = styled(Link)`
     font-size: 1.5rem;
     font-weight: 600;
 
+    @media (max-width: 1025px) {
+        display: none;
+    }
+    
     @media (max-width: 926px) and (max-height: 926px) {
+        display: block;
         text-align: center;
         margin: 0 auto;
         font-size: 2.0rem;
-      }
+      } 
 `;

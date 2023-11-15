@@ -9,9 +9,17 @@ export const Wrapper = styled.section`
     gap: 2rem;
     background-color: #B33B3B;
 
+    @media (max-width: 1025px) {
+        height: 477px;
+        max-height: 100%;
+        width: 100%;
+        gap: 10rem;
+    }
+
     @media (max-width: 926px) and (max-height: 926px) {
         height: 283px;
         width: 100%;
+        gap: 2rem;
     }
 `
 
@@ -21,6 +29,22 @@ export const Title = styled.h2`
     font-style: normal;
     font-weight: 700;
     color: #EFEFEF;
+
+    @media (max-width: 1025px) {
+        position: relative;
+        bottom: 10%;
+        font-size: 4rem;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        font-family: Maven Pro;
+        font-size: 3rem;
+        bottom: 0%;
+        font-style: normal;
+        font-weight: 700;
+        color: #EFEFEF;
+    }
+
 `
 
 export const Carousel = styled.div`
@@ -30,6 +54,15 @@ export const Carousel = styled.div`
     padding: 0 1rem;
     width: 100%;
     max-width: 1320px;
+
+    @media (max-width: 1025px) {
+        position: relative;
+        bottom: 10%;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        bottom: 0%;
+    } 
 `
 
 export const Logo = styled.img<{url: string, onTransition: boolean}>`
@@ -38,4 +71,12 @@ export const Logo = styled.img<{url: string, onTransition: boolean}>`
     transition: all .4s ease-in-out;
 
     ${props => props.onTransition && css`opacity: 0;`}
+
+    @media (max-width: 1025px) {
+        height: 9rem;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        height: 6rem;
+    }
 `

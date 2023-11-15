@@ -26,6 +26,14 @@ export const Button = styled(Link)`
     line-height: 1.7rem; 
     left: 65%;
     box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 1025px) {
+      left: 75%;
+    } 
+
+    @media (max-width: 926px) and (max-height: 926px) {
+      left: 65%;
+    }
 `;
 
 export const ImageLogo = styled.img`

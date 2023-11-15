@@ -5,16 +5,27 @@ export const BalloonsWrapper = styled.div`
     display: flex;
     position: relative;
     width: 50rem;
+
+    @media(max-width: 1025px) {
+      margin-top: 5rem;
+    }
     
     @media (max-width: 926px) and (max-height: 926px) {
         max-width: 100%;
         padding-bottom: 10rem;
       }
+
 `;
 
 export const LeftBalloon = styled.img`
     position: absolute;
     width: 15rem;
+
+    @media (max-width: 1025px) {
+      position: relative;
+      left: 60%;
+      padding: 1.5rem;
+    }
     
     @media (max-width: 926px) and (max-height: 926px) {
         position: relative;
@@ -22,10 +33,6 @@ export const LeftBalloon = styled.img`
         bottom: 105px;
         width: 13.96rem;
         padding: 1.5rem;
-      }
-
-      @media (max-width: 1025px) {
-        position: relative;
       }
 `;
 
@@ -37,16 +44,19 @@ export const CenterBalloon = styled.img`
     left: 30%;
     bottom: 30%;
 
+    @media (max-width: 1025px) {
+      left: 30%;
+      bottom: 10%;
+      padding: 1.5rem;
+    }
+
     @media (max-width: 926px) and (max-height: 926px) {
         position: relative;
         width: 17.2rem;
-        left: -30%;
         padding: 1.5rem;
+        left: -30%;
       }
-
-      @media (max-width: 1025px) {
-        position: relative;
-      }
+  
 `;
 
 export const RightBalloon = styled.img`
@@ -56,14 +66,14 @@ export const RightBalloon = styled.img`
     left: 70%;
     bottom: 70%;
 
+    @media (max-width: 1025px) {
+      left: 30%;
+      transform: translateY(10%);
+      padding: 1.5rem;
+    }
+
     @media (max-width: 926px) and (max-height: 926px) {
         display: none;
       }
-
-    @media (max-width: 1025px) {
-      position: relative;
-      bottom: 15%;
-      left: 30%;
-      transform: translateY(-80%);
-    }    
+   
 `;

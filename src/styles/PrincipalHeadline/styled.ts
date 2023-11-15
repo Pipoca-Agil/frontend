@@ -11,10 +11,6 @@ export const Wrapper = styled.div`
     @media (max-width: 926px) and (max-height: 926px) {
         padding-block: 5rem;
       }
-
-      @media (min-width: 926px) and (max-width: 1025px) {
-        padding-block: 5rem;
-      }
 `;
 
 export const Title = styled.h1`
