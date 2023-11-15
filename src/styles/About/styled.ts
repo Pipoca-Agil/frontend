@@ -17,6 +17,7 @@ export const Wrapper = styled.section`
 
     @media (max-width: 926px) and (max-height: 926px) {
         flex-direction: column;
+        padding-bottom: 30px;
       }
 `;
 
@@ -122,9 +123,20 @@ export const BalloonDiv = styled.div`
     justify-content: center;
     align-items: end;
     padding-right: 10rem;
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        padding-right: 0;
+      }
 `;
 
 export const Balloon = styled.img`
     height: 27.4375rem;
     width: 28.8125rem;
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        height: 14.4rem;
+        width: 16.996rem; 
+        margin: auto;
+      }
+
 `;
