@@ -65,6 +65,10 @@ export const Span = styled.span`
     font-size: 3rem;
     font-style: normal;
     font-weight: 700;
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        font-size: 3.2rem;
+      }
 `;
 
 export const PodcastDescription = styled.p`
@@ -123,6 +127,10 @@ export const BalloonDiv = styled.div`
     justify-content: center;
     align-items: end;
     padding-right: 10rem;
+
+    @media (max-width: 1025px) {
+        
+    }
 
     @media (max-width: 926px) and (max-height: 926px) {
         padding-right: 0;
