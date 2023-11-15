@@ -10,11 +10,6 @@ export const BalloonsWrapper = styled.div`
         max-width: 100%;
         padding-bottom: 10rem;
       }
-
-      @media (max-width: 1025px){
-        max-width: 100%;
-        padding-bottom: 10rem;
-      }
 `;
 
 export const LeftBalloon = styled.img`
@@ -27,6 +22,10 @@ export const LeftBalloon = styled.img`
         bottom: 105px;
         width: 13.96rem;
         padding: 1.5rem;
+      }
+
+      @media (max-width: 1025px) {
+        position: relative;
       }
 `;
 
@@ -44,6 +43,10 @@ export const CenterBalloon = styled.img`
         left: -30%;
         padding: 1.5rem;
       }
+
+      @media (max-width: 1025px) {
+        position: relative;
+      }
 `;
 
 export const RightBalloon = styled.img`
@@ -57,5 +60,10 @@ export const RightBalloon = styled.img`
         display: none;
       }
 
-      
+    @media (max-width: 1025px) {
+      position: relative;
+      bottom: 15%;
+      left: 30%;
+      transform: translateY(-80%);
+    }    
 `;
