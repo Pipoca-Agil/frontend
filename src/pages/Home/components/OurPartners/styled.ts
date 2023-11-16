@@ -11,7 +11,6 @@ export const Wrapper = styled.section`
 
     @media (max-width: 1025px) {
         height: 477px;
-        max-height: 100%;
         width: 100%;
         gap: 10rem;
     }
@@ -19,7 +18,8 @@ export const Wrapper = styled.section`
     @media (max-width: 926px) and (max-height: 926px) {
         height: 283px;
         width: 100%;
-        gap: 2rem;
+        gap: 5rem;
+        padding: 0.5rem;
     }
 `
 
@@ -43,6 +43,8 @@ export const Title = styled.h2`
         font-style: normal;
         font-weight: 700;
         color: #EFEFEF;
+        position: relative;
+        bottom: 10%;
     }
 
 `
@@ -61,7 +63,7 @@ export const Carousel = styled.div`
     }
 
     @media (max-width: 926px) and (max-height: 926px) {
-        bottom: 0%;
+        bottom: 10%;
     } 
 `
 
