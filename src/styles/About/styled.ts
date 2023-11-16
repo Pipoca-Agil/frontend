@@ -45,7 +45,7 @@ export const InformationDiv = styled.div`
     @media (max-width: 926px) and (max-height: 926px) {
         align-items: center;
         margin: auto;
-        padding-left: 5rem;
+        padding-left: 0rem;
       }
 `;
 
@@ -93,7 +93,6 @@ export const PodcastDescription = styled.p`
         text-align: center;
         width: 734px;
         max-width: 100%;
-        line-height: 3.36rem;
     }
 
     @media (max-width: 926px) and (max-height: 926px) {
