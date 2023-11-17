@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   height: 96px;
   align-items: center;
   background-color: #FAEDED;
-  padding: 2rem;
 
   
   @media (min-width: 927px) and (max-width: 1025px) {
