@@ -319,6 +319,7 @@ export const RightQuota = styled.img<{isActive: boolean}>`
         width: 50px;
         height: 135px;
         bottom: 5rem;
+        right: -20px;
         content: url('/carousel/quota.svg');
         transition: all .4s ease-in-out;
         
