@@ -21,7 +21,7 @@ export const Button = styled(Link)`
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    width: 11.5rem;
+    width: 10.5rem;
     height: 3.9rem;
     border-radius: 2rem;
     background-color: #B33B3B;
