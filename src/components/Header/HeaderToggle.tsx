@@ -1,19 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import ListImage from './List.png';
-import LogoImage  from '../../pages/Login/Imgs/LogoPipocaAgil.png';
+import LogoImage from '../../pages/Login/Imgs/LogoPipocaAgil.png';
 import * as S from './style';
+
 const HeaderToggle = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
 
   const toggleHeader = () => {
     setDropdownVisible(!isDropdownVisible);
   };
 
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      !buttonRef.current?.contains(event.target as Node) &&
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setDropdownVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <S.Wrapper>
         <div>
-          <S.ImageButton onClick={toggleHeader}>
+          <S.ImageButton ref={buttonRef} onClick={toggleHeader}>
             <img src={ListImage} alt='headertoggle' />
           </S.ImageButton>
         </div>
@@ -24,7 +45,7 @@ const HeaderToggle = () => {
       </S.Wrapper>
 
       {isDropdownVisible && (
-        <S.OptionsWapper>
+        <S.OptionsWapper ref={dropdownRef}>
           <nav>
             <ul>
               <S.ListItens>Projetos</S.ListItens>
@@ -40,4 +61,3 @@ const HeaderToggle = () => {
 };
 
 export default HeaderToggle;
-

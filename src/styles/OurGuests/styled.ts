@@ -273,6 +273,8 @@ export const LeftQuota = styled.img<{isActive: boolean}>`
     padding-bottom: 10rem;
     width: 50px;
     height: 135px;
+    position: relative;
+    bottom: -2rem;
     content: url('/carousel/quota.svg');
     transition: all .4s ease-in-out;
     
@@ -316,6 +318,7 @@ export const RightQuota = styled.img<{isActive: boolean}>`
     @media (max-width: 926px) and (max-height: 926px) {
         width: 50px;
         height: 135px;
+        bottom: 5rem;
         content: url('/carousel/quota.svg');
         transition: all .4s ease-in-out;
         
