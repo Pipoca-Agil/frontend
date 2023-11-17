@@ -28,11 +28,11 @@ export const Button = styled(Link)`
     box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.25);
 
     @media (max-width: 1025px) {
-      left: 75%;
+      left: 80%;
     } 
 
     @media (max-width: 926px) and (max-height: 926px) {
-      left: 65%;
+      left: 60%;
     }
 `;
 
@@ -51,15 +51,28 @@ export const ImageButton = styled.button`
 export const OptionsWapper = styled.div`
   position: static;
   height: 50%;
-  width: 50%;
+  width: 35%;
+  padding: 1rem;
   background-color: white;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 926px) and (max-height: 926px) {
+    width: 55%;
+    padding: 0rem;
+  }
 `;
 
 export const ListItens = styled.p`
   color: #455F6B;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 2.5em;
   padding-left: 1em;
   
+
+  &:hover {
+    color:#B33B3B; /* ou qualquer outra cor desejada no hover */
+    /* Adicione outros estilos desejados para o hover aqui */
+  }
 `;

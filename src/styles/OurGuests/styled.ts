@@ -9,7 +9,13 @@ export const Section = styled.section`
     margin: 0 auto;
 
     @media (max-width: 1025px) {
-        display: none;
+        max-width: 887.55px;
+        width: 100%;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        max-width: 400px;
+        width: 100%;
     }
 `;
 
@@ -30,6 +36,16 @@ export const Carousel = styled.div`
     justify-content: space-between;
     align-items: center;
     align-self: center;
+
+    @media (max-width: 1025px) {
+        height: 285.33px; 
+        max-width: 100%;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        height: 128.68px;
+        max-width: 100%;
+    }
 `;
 
 export const GuestImage = styled.img<{url: string, isActive: boolean}>`
@@ -48,6 +64,17 @@ export const GuestImage = styled.img<{url: string, isActive: boolean}>`
     css`
         opacity: 0;
     ` }
+
+    @media (max-width: 1025px) {
+        width: 169.06px;
+        height: 219.19px;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        width: 76.19px;
+        height: 96.78px;
+    }
+       
 `;
 
 export const LeftArrow = styled.button`
@@ -97,11 +124,39 @@ export const EffectPhrase = styled.h4<{isActive: boolean}>`
     css`
         opacity: 0;
     ` }
+
+    @media (max-width: 1025px) {
+        width: 441.32px;
+        height: 112px;
+        font-size: 23.59px;
+        line-height: auto;
+        margin-left: 2rem;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        width: 198.89px;
+        height: 55px;
+        font-size: 10.63px;
+        line-height: 1rem;
+        margin-left: 2rem;
+    }
 `
 
 export const MainInfo = styled.div`
     display: flex;
     gap: 1rem;
+
+    @media (max-width: 1025px) {
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        justify-content: center;
+        align-items: center;
+        gap: 0rem;
+    }
 `
 
 export const EpisodeGeneralInfo = styled.div`
@@ -111,11 +166,23 @@ export const EpisodeGeneralInfo = styled.div`
     padding-top: 7rem;
     margin-left: 0px;
     position: relative;
+
+    @media (max-width: 1025px) {
+        height: 112px;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        height: 48px;
+    }
 `
 
 export const EpisodeLightInformation = styled.div`
     display: flex;
     gap: 17rem;
+
+    @media (max-width: 1025px) {
+        gap: 3rem;
+    }
     
 `
 
@@ -126,6 +193,22 @@ export const BottomInformationDiv = styled.div`
     position: absolute;
     bottom: 10px;
     left: 80px;
+
+    @media (max-width: 1025px) {
+        bottom: -100%;
+        left: 10px;
+        bottom: -8.5rem;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        bottom: -100%;
+        left: 10px;
+        bottom: -4.5rem;
+        gap: 0.1rem;
+        padding: 0.5rem;
+    }
 `
 
 export const EpisodeTitle = styled.p`
@@ -134,6 +217,10 @@ export const EpisodeTitle = styled.p`
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 800;
+
+    @media  (max-width: 926px) and (max-height: 926px) {
+        font-size: 5.32px;
+    }
 `
 
 export const EpisodeInformation = styled.p`
@@ -143,6 +230,10 @@ export const EpisodeInformation = styled.p`
     font-style: normal;
     font-weight: 400;
     line-height: 2rem;
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        font-size: 4.43px;
+    }
 `
 
 export const LeftQuota = styled.img<{isActive: boolean}>`
@@ -160,6 +251,42 @@ export const LeftQuota = styled.img<{isActive: boolean}>`
     css`
         transform: rotate(360deg);
     `}
+
+    @media (max-width: 1025px) {
+        padding-bottom: 10rem;
+        width: 109px;
+        height: 299px;
+        content: url('/carousel/quota.svg');
+        transition: all .4s ease-in-out;
+        
+        ${props => props.isActive? 
+        css`
+            transform: rotate(0deg);
+        `
+        :
+        css`
+            transform: rotate(360deg);
+        `}
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+    padding-bottom: 10rem;
+    width: 50px;
+    height: 135px;
+    position: relative;
+    bottom: -2rem;
+    content: url('/carousel/quota.svg');
+    transition: all .4s ease-in-out;
+    
+    ${props => props.isActive? 
+    css`
+        transform: rotate(0deg);
+    `
+    :
+    css`
+        transform: rotate(360deg);
+    `}
+    }
 `;
 
 export const RightQuota = styled.img<{isActive: boolean}>`
@@ -180,6 +307,30 @@ export const RightQuota = styled.img<{isActive: boolean}>`
     css`
         transform: rotate(-270deg);
     `}
+
+    @media (max-width: 1025px) {
+        height: 358px;
+        width: 107px;
+        position: relative;
+        bottom: 0.5rem;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        width: 50px;
+        height: 135px;
+        bottom: 5rem;
+        content: url('/carousel/quota.svg');
+        transition: all .4s ease-in-out;
+        
+        ${props => props.isActive? 
+        css`
+            transform: rotate(180deg);
+        `
+        :
+        css`
+            transform: rotate(-270deg);
+        `}
+        }
 `;
 
 export const QuotasDiv = styled.div`
@@ -189,6 +340,22 @@ export const QuotasDiv = styled.div`
     width: 67.4rem;
     margin-top: 50px;
     position: relative;
+
+    @media (max-width: 1025px) {
+        width: 441.32px;
+        height: 112px;
+        margin-top: 0px;
+        bottom: 10rem;
+        max-width: 100%;
+    }
+
+    @media (max-width: 926px) and (max-height: 926px) {
+        width: 198.89px;
+        height: 55px;
+        margin-top: 0px;
+        bottom: 4rem;
+        max-width: 100%;
+    }
 `
 
 export const SelectionButtons = styled.div`
