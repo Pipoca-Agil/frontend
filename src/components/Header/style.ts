@@ -5,7 +5,13 @@ export const Wrapper = styled.div`
   display: flex;
   height: 96px;
   align-items: center;
-  background-color: #FAEDED
+  background-color: #FAEDED;
+  padding: 2rem;
+
+  
+  @media (min-width: 927px) and (max-width: 1025px) {
+    height: 144px;
+  } 
 `;
 
 export const Button = styled(Link)`
@@ -15,7 +21,7 @@ export const Button = styled(Link)`
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    width: 11.6rem;
+    width: 11.5rem;
     height: 3.9rem;
     border-radius: 2rem;
     background-color: #B33B3B;
@@ -23,16 +29,21 @@ export const Button = styled(Link)`
     font-family: Inter;
     font-size: 1.3rem;
     font-weight: 700;
-    line-height: 1.7rem; 
-    left: 65%;
+    line-height: 1.7rem;
     box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.25);
 
     @media (max-width: 1025px) {
       left: 80%;
     } 
 
-    @media (max-width: 926px) and (max-height: 926px) {
-      left: 60%;
+    @media (max-width: 428px) {
+      position: absolute;
+      left: 65%;
+    }
+
+    @media (min-width: 429px) and (max-width: 926px){
+      position: absolute;
+      left: 80%;
     }
 `;
 
