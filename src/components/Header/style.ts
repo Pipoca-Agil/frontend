@@ -38,7 +38,7 @@ export const Button = styled(Link)`
 
     @media (max-width: 428px) {
       position: absolute;
-      left: 65%;
+      left: 58%;
     }
 
     @media (min-width: 429px) and (max-width: 926px){
