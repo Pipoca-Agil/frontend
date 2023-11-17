@@ -21,7 +21,7 @@ export const Button = styled(Link)`
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    width: 10.5rem;
+    width: 8.5rem;
     height: 3.9rem;
     border-radius: 2rem;
     background-color: #B33B3B;
@@ -38,7 +38,7 @@ export const Button = styled(Link)`
 
     @media (max-width: 428px) {
       position: absolute;
-      left: 58%;
+      left: 65%;
     }
 
     @media (min-width: 429px) and (max-width: 926px){
