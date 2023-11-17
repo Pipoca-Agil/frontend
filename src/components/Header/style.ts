@@ -69,8 +69,8 @@ export const OptionsWapper = styled.div`
   box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.25);
 
   @media (max-width: 926px) and (max-height: 926px) {
-    width: 55%;
-    padding: 0rem;
+    width: 25rem;
+    padding: 0;
   }
 `;
 
