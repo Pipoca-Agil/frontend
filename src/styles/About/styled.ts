@@ -23,7 +23,6 @@ export const Wrapper = styled.section`
 
     @media (max-width: 926px) and (max-height: 926px) {
         flex-direction: column;
-        padding-bottom: 30px;
       }
 `;
 
@@ -156,7 +155,6 @@ export const BalloonDiv = styled.div`
 
     @media (max-width: 1025px) {
         position: relative;
-        padding-bottom: 2rem;
         margin-left: 45%;
     }
 

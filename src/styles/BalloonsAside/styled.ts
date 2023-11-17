@@ -11,8 +11,7 @@ export const BalloonsWrapper = styled.div`
     }
     
     @media (max-width: 926px) and (max-height: 926px) {
-        max-width: 100%;
-        padding-bottom: 10rem;
+       display: none;
       }
 
 `;
