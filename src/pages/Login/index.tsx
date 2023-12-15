@@ -3,9 +3,10 @@ import { StyledLoginPage, LogoImage, Title, SubTitle, FormStyle, ImageWrapper, I
 import LogoPipocaAgil from './Imgs/LogoPipocaAgil.png'
 import ImagemLogin from './Imgs/ImagemLogin.png'
 import ErrorIcon from './Imgs/password_requirements_check.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+import { postLogin } from "../../../src/api/Login";
 
 type LoginData = {
   email: string,
@@ -26,6 +27,7 @@ export default function Login() {
   const [submitted, setSubmitted] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [errorInput, setErrorInput] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -55,7 +57,7 @@ export default function Login() {
     });
   }
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async(event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     setSubmitted(true);
@@ -67,6 +69,21 @@ export default function Login() {
     } else {
       setError('');
       setErrorInput(false);
+    }
+
+    try {
+      const loginResponse = await postLogin(formData);
+
+      if (loginResponse.status === "success") {
+        navigate('/home');
+      } else {
+        setError('Ocorreu um problema ao fazer login, Verificar seu e-mail ou senha, ou crie uma conta');
+        setErrorInput(true);
+      }
+    } catch (error) {
+      console.log("ERROR: ", error);
+      setError('Ocorreu um erro durante o login. Por favor, tente novamente.');
+      setErrorInput(true);
     }
   };
 
